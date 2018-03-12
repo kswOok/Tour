@@ -1,0 +1,22 @@
+<view class="fixed-block" style="bottom:54px;">
+  <view class="relative-block">
+    <scroll-view scroll-y style="height:100%;">
+      <view class="form-block">
+        <image class="form-image" src="/images/bg_academy_city.png"></image>
+       
+        <view class="form-name">Rotorua</view>
+      </view>
+
+      <view class="form-title-block" style="text-align:left;">
+        <button >不可错过</button>
+        <button >活动日历</button>
+         <button >当地美食</button>
+          <button >购物攻略</button>
+           <button >地铁公交</button>
+            <button >一键求救</button>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+ 
+ 

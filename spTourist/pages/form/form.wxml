@@ -1,0 +1,246 @@
+<view class="fixed-block" style="bottom:54px;">
+  <view class="relative-block">
+    <scroll-view scroll-y style="height:100%;">
+      <view class="form-block">
+        <image class="form-image" src="/images/bg_academy_city.png"></image>
+        <view class="form-mask"></view>
+        <view class="form-name-eng">Your Dream, Our Mission</view>
+        <view class="form-name">Rotorua</view>
+      </view>
+      <view class="form-title-block">
+        <view style="padding:5px;font-size:16px;">免费留学评估</view>
+        <view style="padding:5px;font-size:14px;">保密声明：我们会对您提交的资料进行保密，为保证评估质量，请您提交准确的信息。</view>
+      </view>
+      <view class="form-title-block" style="text-align:center;">
+        <view class="{{_num == 1?'select-item active':'select-item'}}" data-id="{{_num}}"  bindtap='master'>硕士留学申请</view>
+        <view class="{{_num == 2?'select-item active':'select-item'}}" data-id="{{_num}}" bindtap='bachelor'>本科留学申请</view>
+      </view>
+        <!-- 硕士留学申请 -->
+      <view wx:if='{{_num==1}}' class="form-input-block">
+      <view class="form-input-item">
+          <view class="form-input-name">目标国家</view>
+           <picker bindchange="mTargetCountry" value="{{mTargetCountryNum}}" range="{{mTargetCountryList}}">
+          <view class="form-input-value">{{mTargetCountryListStr}}</view>
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+         </picker>
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">目标专业</view>
+           <picker bindchange="mTarget" value="{{targetNum}}" range="{{mMajorList}}">
+          <view class="form-input-value">{{mMajorListTargetStr}}</view>
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+          </picker>
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">就读学校</view>
+           <!-- <picker bindchange="mSchool" value="{{schoolNum}}" range="{{mSchoolList}}">
+          <view class="form-input-value">{{mSchoolListStr}}</view>
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+         </picker> -->
+         <view class="form-input-value" >{{mSchoolListStr}}</view>
+          <image bindtap='mSchool' class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">就读专业</view>
+           <picker bindchange="mMajor" value="{{majorNum}}" range="{{mMajorList}}">
+          <view class="form-input-value">{{mMajorListMajorStr}}</view>
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+          </picker>
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">在校成绩(GPA)</view>
+          <picker bindchange="mGPA" value="{{mGPANum}}" range="{{mGPAList}}">
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+          </picker>
+          <input class="form-input-value" type="digit" bindinput='inputGPA' placeholder="{{GPAPlaceholder}}"></input>
+          <view class="form-input-value" style='left:316px;'>{{GPAType}}</view>
+          
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">语言成绩</view>
+          <picker bindchange="mLanguage" value="{{mLanguageNum}}" range="{{mLanguageList}}">
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+          </picker>
+          <input class="form-input-value" bindinput='inputLanguage' type="number" placeholder="{{languagePlaceholder}}"></input>
+          <view class="form-input-value" style='left:316px;'>{{mLanguageType}}</view>
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">标准化考试</view>
+           <picker bindchange="mStandardization" value="{{mStandardizationNum}}" range="{{mStandardizationList}}">
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+          </picker>
+          <input class="form-input-value" bindinput='inputStandardization' disabled='{{mStandardizationDisabled}}' type="number" placeholder="{{standardizationPlaceholder}}"></input>
+          <view class="form-input-value" style='left:316px;'>{{mStandardizationType}}</view>
+        </view>
+                    
+          <view class="form-input-item">
+            <view class="form-input-name">入学时间</view>
+            <view class="form-input-value">{{ers}}</view>
+            <picker bindchange="mToSchool" value="{{mToSchoolNum}}" range="{{mToSchoolList}}">
+            <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+            </picker>
+          </view>
+          <!-- 隐藏 -->
+        <view bindtap='mMore' style='width:100%;height:40px;background-color:#f5f5f5;text-align:center;line-height:40px;font-size:14px;color:#333333;'>点击此处完善更多信息（有助于提高评估准确度）</view>
+        <view wx:if='{{mDisplay==true}}'>
+          <view class="form-input-item">
+            <view class="form-input-name">研究经历</view>
+            <picker bindchange="mExperience" value="{{mExperienceNum}}" range="{{mExperienceList}}">
+            <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+            </picker>
+            <input class="form-input-value" disabled='true' type="text" placeholder="{{mExperiencePlaceholder}}"></input>
+          </view>
+          <view class="form-input-item">
+            <view class="form-input-name">论文发表经历</view>
+            <picker bindchange="mPaper" value="{{mPaperNum}}" range="{{mPaperList}}">
+            <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+            </picker>
+            <input class="form-input-value" disabled='true' type="text" placeholder="{{mPaperPlaceholder}}"></input>
+          </view>
+          <view class="form-input-item">
+            <view class="form-input-name">推荐信</view>
+            <picker bindchange="mRecommendation" value="{{mRecommendationNum}}" range="{{mRecommendationList}}">
+            <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+            </picker>
+            <input class="form-input-value" disabled='true' type="text" placeholder="{{mRecommendationPlaceholder}}"></input>
+          </view>
+          <view class="form-input-item">
+            <view class="form-input-name">海外经历</view>
+            <picker bindchange="mOverseas" value="{{mOverseasNum}}" range="{{mOverseasList}}">
+            <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+            </picker>
+            <input class="form-input-value" disabled='true' type="text" placeholder="{{mOverseasPlaceholder}}"></input>
+          </view>
+          <view class="form-input-item">
+            <view class="form-input-name">工作或实习经历</view>
+            <picker bindchange="mPractice" value="{{mPracticeNum}}" range="{{mPracticeList}}">
+            <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+            </picker>
+            <input class="form-input-value" disabled='true' type="text" placeholder="{{mPracticePlaceholder}}"></input>
+          </view>
+        </view>
+
+      </view>
+  <!-- 本科留学申请 -->
+          <view wx:if='{{_num==2}}' class="form-input-block">
+          <view class="form-input-item">
+          <view class="form-input-name">目标国家</view>
+           <picker bindchange="bTargetCountry" value="{{bTargetCountryNum}}" range="{{bTargetCountryList}}">
+          <view class="form-input-value">{{bTargetCountryListStr}}</view>
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+         </picker>
+         </view>
+         <view class="form-input-item">
+          <view class="form-input-name">在校成绩(GPA)</view>
+          <picker bindchange="bGPA" value="{{bGPANum}}" range="{{bGPAList}}">
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+          </picker>
+          <input class="form-input-value" type="digit" bindinput='bInputGPA' placeholder="{{bGPAPlaceholder}}"></input>
+          <view class="form-input-value" style='left:316px;'>{{bGPAType}}</view>
+          
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">语言成绩</view>
+          <picker bindchange="bLanguage" value="{{bLanguageNum}}" range="{{bLanguageList}}">
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+          </picker>
+          <input class="form-input-value" bindinput='bInputLanguage' type="number" placeholder="{{bLanguagePlaceholder}}"></input>
+          <view class="form-input-value" style='left:316px;'>{{bLanguageType}}</view>
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">标准化考试</view>
+          <picker bindchange="bStandardization" value="{{bStandardizationNum}}" range="{{bStandardizationList}}">
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+           </picker>
+          <input class="form-input-value" bindinput='inputStandardizations' disabled='{{bStandardizationDisabled}}' type="number" placeholder="{{bStandardizationPlaceholder}}"></input>
+          <view class="form-input-value" style='left:316px;'>{{bStandardizationType}}</view>
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">入学时间</view>
+          <view class="form-input-value">{{bToSchoolPlaceholder}}</view>
+        <picker bindchange="bToSchool" value="{{bToSchoolNum}}" range="{{bToSchoolList}}">
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+           </picker>
+        </view>
+        <!-- 隐藏 -->
+        <view bindtap='bMore' style='width:100%;height:40px;background-color:#f5f5f5;text-align:center;line-height:40px;font-size:14px;color:#333333;'>点击此处完善更多信息有助于提高评估准确度</view>
+        <view  wx:if='{{bDisplay==true}}'>
+        <view class="form-input-item">
+          <view class="form-input-name">倾向的学校类型</view>
+          <view class="form-input-value">{{bInclinationPlaceholder}}</view>
+         <picker bindchange="bInclination" value="{{bInclinationNum}}" range="{{bInclinationList}}">
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+           </picker>
+        </view>
+        <view class="form-input-item">
+        <view class="form-input-name">毕业的高中类型</view>
+          <view class="form-input-value">{{bGraduationPlaceholder}}</view>
+         <picker bindchange="bGraduation" value="{{bGraduationNum}}" range="{{bGraduationList}}">
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+           </picker>
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">在校排名</view>
+          <view class="form-input-value">{{bRankPlaceholder}}</view>
+         <picker bindchange="bRank" value="{{bRankNum}}" range="{{bRankList}}">
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+           </picker>
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">推荐信</view>
+         <view class="form-input-value">{{bRecommendPlaceholder}}</view>
+         <picker bindchange="bRecommend" value="{{bRecommendNum}}" range="{{bRecommendList}}">
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+           </picker>
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">最高奖项</view>
+         <view class="form-input-value">{{bPrizePlaceholder}}</view>
+         <picker bindchange="bPrize" value="{{bPrizeNum}}" range="{{bPrizeList}}">
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+           </picker>
+
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">暑期项目类型</view>
+          <view class="form-input-value">{{bSummerPlaceholder}}</view>
+         <picker bindchange="bSummer" value="{{bSummerNum}}" range="{{bSummerList}}">
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+           </picker>
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">志愿者经历</view>
+           <view class="form-input-value">{{bVolunteerPlaceholder}}</view>
+         <picker bindchange="bVolunteer" value="{{bVolunteerNum}}" range="{{bVolunteerList}}">
+          <image class="form-input-arrow" src="/images/icon_arrow_down.png"></image>
+           </picker>
+        </view>
+      </view>
+       </view>
+      <view class="form-title-block">
+        <!-- <view class="checkbox-block">
+          <image src="/images/icon_checkbox.png"></image>
+        </view> -->
+        <!-- <view class="agree-text">同意资讯老师联系评估</view> -->
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<view class="submit-block">
+  <view class="submit-btn" bindtap='submit'>AI评估一下</view>
+</view>
+
+<view class="loading-mask" style="display:{{wait}};">
+  <view class="relative-block" style='background-color:rgba(21, 162, 231, 0.2);'>
+    <view style='position:absolute;left:50%;top:50%;width:200px;height:200px;margin-top:-180px;margin-left:-100px;'>
+      <view class="relative-block">
+        <image animation="{{animationData1}}" src='/images/circle_01.png' style='width:200px;height:200px;position:absolute;'></image>
+        <image animation="{{animationData2}}" src='/images/circle_02.png' style='width:190px;height:190px;position:absolute;top:5px;left:5px;'></image>
+        <image animation="{{animationData3}}" src='/images/circle_03.png' style='width:180px;height:180px;position:absolute;top:10px;left:10px;'></image>
+        <image animation="{{animationData4}}" src='/images/circle_04.png' style='width:170px;height:170px;position:absolute;top:15px;left:15px;'></image>
+        <image style='width:80px;height:80px;border-radius:50%;position:absolute;top:60px;left:60px;' src="/images/icon_logo_btn.png"></image>
+      </view>
+    </view>
+    <view class="loading-text">正在评估，请稍等片刻</view>
+  </view>
+</view>

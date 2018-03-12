@@ -1,0 +1,127 @@
+<view class="fixed-block">
+  <view class="relative-block">
+    <scroll-view scroll-y style="height:100%;">
+      <swiper interval="2000" duration="300" style="width:100%;height:200px;">
+        <swiper-item><image src="{{Picture}}" style="width:100%;height:200px;"/></swiper-item>
+      </swiper>
+      <view class="info-title">
+        <image src="/images/icon_info_detail.png"></image>
+        <text>院校简介</text>
+      </view>
+      <view class="info-value"><text>{{yuanxiaojianjie}}</text></view>
+      <view class="info-title">
+        <image src="/images/icon_info_rank.png"></image>
+        <text>院校排名</text>
+      </view>
+      <view style='padding:0 40px;'>
+        <view class="school-rank">
+          <view class="rank-num">{{US_NEWS_Rank}}</view>
+          <view class="rank-name">US NEWS 排名</view>
+        </view>
+        <view class="school-rank">
+          <view class="rank-num">{{TIMES_Rank}}</view>
+          <view class="rank-name">TIMES 排名</view>
+        </view>
+        <view class="school-rank">
+          <view class="rank-num">{{QS_Rank}}</view>
+          <view class="rank-name">Q.S. 排名</view>
+        </view>
+        <view class="school-rank">
+          <view class="rank-num">{{ARWU_Rank}}</view>
+          <view class="rank-name">ARWU 排名</view>
+        </view>
+      </view>
+      <view class="info-title">
+        <image src="/images/icon_info_xuexiao.png"></image>
+        <text>校园</text>
+      </view>
+      <view class="info-value-title"><text>公立/私立</text></view>
+      <view class="info-value"><text>{{Type}}</text></view>
+      <view class="info-value-title"><text>校园位置</text></view>
+      <view class="info-value"><text>{{xiaoyuanweizhi}}</text></view>
+      <view class="info-value-title"><text>犯罪率（犯罪数量/学生数量）</text></view>
+      <view class="info-value"><text>{{fanzuilv}}</text></view>
+      <view class="info-value-title"><text>地理位置</text></view>
+      <view class="info-value"><text>{{diliweizhi}}</text></view>
+      <view class="info-title">
+        <image src="/images/icon_info_org.png"></image>
+        <text>学生组成</text>
+      </view>
+      <view class="info-value-title"><text>州外学生比例</text></view>
+      <view class="info-value"><text>{{zhouwaixueshengbili}}</text></view>
+      <view class="info-value-title"><text>本科生数量</text></view>
+      <view class="info-value"><text>{{benkeshengshuliang}}</text></view>
+      <view class="info-value-title"><text>研究生数量</text></view>
+      <view class="info-value"><text>{{yanjiushengshuliang}}</text></view>
+      <view class="info-value-title"><text>学生组织数量</text></view>
+      <view class="info-value"><text>{{xueshengzuzhishuliang}}</text></view>
+      <view class="info-value-title"><text>兄弟会数量</text></view>
+      <view class="info-value"><text>{{xiongdihuishuliang}}</text></view>
+      <view class="info-value-title"><text>姐妹会数量</text></view>
+      <view class="info-value"><text>{{jiemeihuishuliang}}</text></view>
+      <!-- <view class="info-value-title"><text>学术族裔分布（Hispanic）</text></view>
+      <view class="info-value"><text>{{xueshuzuyifenbubai}}</text></view> -->
+      <view class="info-value-title"><text>学术族裔分布（Black）</text></view>
+      <view class="info-value"><text>{{xueshuzuyifenbuhei}}</text></view>
+      <view class="info-value-title"><text>学术族裔分布（White）</text></view>
+      <view class="info-value"><text>{{xueshuzuyifenbubai}}</text></view>
+      <view class="info-value-title"><text>学术族裔分布（Asian）</text></view>
+      <view class="info-value"><text>{{xueshuzuyifenbuyazhou}}</text></view>
+      <view class="info-title">
+        <image src="/images/icon_info_tongji.png"></image>
+        <text>入学统计</text>
+      </view>
+      <view class="info-value-title"><text>录取难度</text></view>
+      <view class="info-value"><text>{{luqunandu}}</text></view>
+      <view class="info-value-title"><text>录取率</text></view>
+      <view class="info-value"><text>{{luqulv}}</text></view>
+      <view class="info-value-title"><text>录取数量</text></view>
+      <view class="info-value"><text>{{luqushuliang}}</text></view>
+      <view class="info-value-title"><text>录取后入学比例</text></view>
+      <view class="info-value"><text>{{luquhouruxuebili}}</text></view>
+      <view class="info-value-title"><text>申请者高中成绩前50%比例</text></view>
+      <view class="info-value"><text>{{qianwushibili}}</text></view>
+      <view class="info-value-title"><text>申请者高中成绩前10%比例</text></view>
+      <view class="info-value"><text>{{qianshibili}}</text></view>
+      <view class="info-title">
+        <image src="/images/icon_info_exam.png"></image>
+        <text>标准化考试</text>
+      </view>
+      <view class="info-value-title"><text>SAT语言</text></view>
+      <view class="info-value"><text>{{satyuyandi}}-{{satyuyangao}}</text></view>
+      <view class="info-value-title"><text>SAT数学</text></view>
+      <view class="info-value"><text>{{satshuxuedi}}-{{stashuxuegao}}</text></view>
+      <view class="info-value-title"><text>SAT写作</text></view>
+      <view class="info-value"><text>{{satxiezuodi}}-{{satxiezuogao}}</text></view>
+      <view class="info-value-title"><text>ACT综合</text></view>
+      <view class="info-value"><text>{{actzonghedi}}-{{actzonghegao}}</text></view>
+      <view class="info-title">
+        <image src="/images/icon_info_feiyong.png"></image>
+        <text>学费花销</text>
+      </view>
+      <view class="info-value-title"><text>学杂费（州内）</text></view>
+      <view class="info-value"><text>{{xuezafeizhounei}}</text></view>
+      <view class="info-value-title"><text>总体花费（州内）</text></view>
+      <view class="info-value"><text>{{zongtihuafeizhounei}}</text></view>
+      <view class="info-value-title"><text>学杂费（州外）</text></view>
+      <view class="info-value"><text>{{xuezafeizhouwai}}</text></view>
+      <view class="info-value-title"><text>总体花费（州外）</text></view>
+      <view class="info-value"><text>{{zongtihuafeizhouwai}}</text></view>
+      <view class="info-title">
+        <image src="/images/icon_info_shishi.png"></image>
+        <text>事实</text>
+      </view>
+      <view class="info-value"><text>{{shishi}}</text></view>
+      <view class="info-title">
+        <image src="/images/icon_info_group.png"></image>
+        <text>知名校友</text>
+      </view>
+      <view class="info-value"><text>{{zhimingxiaoyou}}</text></view>
+      <view class="info-title">
+        <image src="/images/icon_info_tiyu.png"></image>
+        <text>体育</text>
+      </view>
+      <view class="info-value"><text>{{yiyu}}</text></view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<view class="fixed-block">
+  <view class="relative-block">
+    <view class="right-list">
+      <scroll-view scroll-y style="height:100%;">
+      <view class="right-title">匹配学校列表</view>
+      <view class="content-list">
+       <block wx:for="{{schoolList}}">
+        <view class="academy-item" bindtap='schoolDetail' data-id="{{item.University_ID}}"> 
+          <image src="{{item.Picture}}" data-id="{{item.University_ID}}"></image>
+          <view class="academy-name" data-id="{{item.University_ID}}">{{item.UniversityName_CN}} {{item.UniversityName_EN}}</view>
+          <view class="academy-country" data-id="{{item.University_ID}}">国家：{{item.CountryName}}</view>
+          <view class="academy-city" data-id="{{item.University_ID}}">城市：{{item.weizhi}}</view>
+          <view class="academy-rank" data-id="{{item.University_ID}}">国内排名：<text>{{item.US_NEWS_Rank}}</text></view>
+          <view class="academy-cost" data-id="{{item.University_ID}}">学费：${{item.zhouwaiMoney}}</view>
+          <view class="academy-btn-{{item.type}}" data-id="{{item.University_ID}}">{{item.typeName}}</view>
+        </view>
+        </block>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

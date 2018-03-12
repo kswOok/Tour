@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/academy/academy",
+    "pages/self/self",
+    "pages/form/form",
+    "pages/info/info",
+    "pages/result/result",
+    "pages/record/record",
+    "pages/schoolSearch/schoolSearch"
+  ],
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#0f0f0f",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "selectedIconPath": "images/icon_appraise_filled.png",
+        "iconPath": "images/icon_appraise.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/icon_academy_filled.png",
+        "iconPath": "images/icon_academy.png",
+        "pagePath": "pages/academy/academy",
+        "text": "指南"
+      },
+      {
+        "selectedIconPath": "images/icon_academy_filled.png",
+        "iconPath": "images/icon_academy.png",
+        "pagePath": "pages/academy/academy",
+        "text": "问答"
+      },
+      {
+        "selectedIconPath": "images/icon_self_filled.png",
+        "iconPath": "images/icon_self.png",
+        "pagePath": "pages/self/self",
+        "text": "我的"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}
