@@ -22,3 +22,9 @@ C:\Users\honkcal\Desktop\xiaocheng\DTcms_50_sql_src\DTcms.Common\bin\Debug\DTcms
 C:\Users\honkcal\Desktop\xiaocheng\DTcms_50_sql_src\DTcms.Common\bin\Debug\DTcms.Common.pdb
 C:\Users\honkcal\Desktop\xiaocheng\DTcms_50_sql_src\DTcms.Common\obj\Debug\DTcms.Common.dll
 C:\Users\honkcal\Desktop\xiaocheng\DTcms_50_sql_src\DTcms.Common\obj\Debug\DTcms.Common.pdb
+C:\VS2017Proj\Tour\TouristProject\DTcms.Common\bin\Debug\DTcms.Common.dll
+C:\VS2017Proj\Tour\TouristProject\DTcms.Common\bin\Debug\DTcms.Common.pdb
+C:\VS2017Proj\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.csprojResolveAssemblyReference.cache
+C:\VS2017Proj\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.csproj.CoreCompileInputs.cache
+C:\VS2017Proj\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.dll
+C:\VS2017Proj\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.pdb

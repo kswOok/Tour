@@ -1,0 +1,16 @@
+C:\VS2017Proj\Tour\TouristProject\DTcms.School\bin\Debug\DTcms.School.dll.config
+C:\VS2017Proj\Tour\TouristProject\DTcms.School\bin\Debug\DTcms.School.dll
+C:\VS2017Proj\Tour\TouristProject\DTcms.School\bin\Debug\DTcms.School.pdb
+C:\VS2017Proj\Tour\TouristProject\DTcms.School\bin\Debug\EntityFramework.dll
+C:\VS2017Proj\Tour\TouristProject\DTcms.School\bin\Debug\EntityFramework.SqlServer.dll
+C:\VS2017Proj\Tour\TouristProject\DTcms.School\bin\Debug\EntityFramework.xml
+C:\VS2017Proj\Tour\TouristProject\DTcms.School\bin\Debug\EntityFramework.SqlServer.xml
+C:\VS2017Proj\Tour\TouristProject\DTcms.School\obj\Debug\DTcms.School.csprojResolveAssemblyReference.cache
+C:\VS2017Proj\Tour\TouristProject\DTcms.School\obj\Debug\DTcms.School.csproj.CoreCompileInputs.cache
+C:\VS2017Proj\Tour\TouristProject\DTcms.School\obj\Debug\DTcms.School.csproj.CopyComplete
+C:\VS2017Proj\Tour\TouristProject\DTcms.School\obj\Debug\DTcms.School.dll
+C:\VS2017Proj\Tour\TouristProject\DTcms.School\obj\Debug\DTcms.School.pdb
+C:\VS2017Proj\Tour\TouristProject\DTcms.School\bin\Debug\Newtonsoft.Json.dll
+C:\VS2017Proj\Tour\TouristProject\DTcms.School\bin\Debug\Newtonsoft.Json.xml
+C:\VS2017Proj\Tour\TouristProject\DTcms.School\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\VS2017Proj\Tour\TouristProject\DTcms.School\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
