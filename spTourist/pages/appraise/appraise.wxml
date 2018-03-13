@@ -1,0 +1,25 @@
+<view class="fixed-block">
+  <view class="relative-block">
+    <view class="top-bg"></view>
+    <image class="logo-image" src="/images/icon_home_logo.png"></image>
+    <view class="logo-text">留学AI分析系统</view>
+    <view class="top-button-bg-1"></view>
+    <view class="top-button-bg-2"></view>
+    <view class="top-button">
+      <view class="relative-block" bindtap='academy'>
+        <image src="/images/icon_home_logo_btn.png"></image>
+        <!--
+        <image src="/images/icon_appraise_white.png"></image>
+        <view class="top-button-text" >点击评估</view>
+        -->
+      </view>
+    </view>
+    <view class="home-text">为了确保测试的准确度,请尽多详细填写和完善信息，系统后台会根据AI算法自动匹配最佳合适的学校。</view>
+    <view class="record-btn-block">
+      <view class="record-btn">
+        <text bindtap='jump'>我的测试记录 ></text>
+        <image src="/images/icon_home_record.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
