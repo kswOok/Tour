@@ -1,0 +1,22 @@
+<view class="fixed-block">
+  <view class="relative-block">
+    <view class="top-search">
+      <!-- <view class="search-block"> -->
+       <input class="search-block" type="text" bindinput='search' placeholder='搜索国内学校' style='font-size:13px;'>
+        <image src="/images/icon_search.png"></image>
+        <text>搜索</text>
+        </input>
+      <!-- </view> -->
+    </view>
+    <view class="right-list" style='left:0px;'>
+      <scroll-view scroll-y style="height:100%;">
+       <block wx:for="{{schoolList}}">
+        <view class="academy-item" bindtap='chooseSchool' data-id="{{item.UniversityName_CN}}"> 
+          <image src="{{item.Picture}}" data-id="{{item.item.UniversityName_CN}}"></image>
+          <view class="academy-name" data-id="{{item.item.UniversityName_CN}}">{{item.UniversityName_CN}} {{item.UniversityName_EN}}</view>
+        </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>
