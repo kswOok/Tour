@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AIUniversityModelStoreContainer" CdmEntityContainer="AIUniversityEntities">
+    <EntitySetMapping Name="Country">
+      <EntityTypeMapping TypeName="AIUniversityModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+          <ScalarProperty Name="Country_Name" ColumnName="Country_Name" />
+          <ScalarProperty Name="Country_Code" ColumnName="Country_Code" />
+          <ScalarProperty Name="Region_Code" ColumnName="Region_Code" />
+          <ScalarProperty Name="Region_Name" ColumnName="Region_Name" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="University">
+      <EntityTypeMapping TypeName="AIUniversityModel.University">
+        <MappingFragment StoreEntitySet="University">
+          <ScalarProperty Name="University_ID" ColumnName="University_ID" />
+          <ScalarProperty Name="University_Code" ColumnName="University_Code" />
+          <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+          <ScalarProperty Name="UniversityName_CN" ColumnName="UniversityName_CN" />
+          <ScalarProperty Name="UniversityName_EN" ColumnName="UniversityName_EN" />
+          <ScalarProperty Name="Rank_World" ColumnName="Rank_World" />
+          <ScalarProperty Name="Rank_Country" ColumnName="Rank_Country" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+          <ScalarProperty Name="Tuition" ColumnName="Tuition" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="FoundationDate" ColumnName="FoundationDate" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="City" ColumnName="City" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="University_Enroll_Status">
+      <EntityTypeMapping TypeName="AIUniversityModel.University_Enroll_Status">
+        <MappingFragment StoreEntitySet="University_Enroll_Status">
+          <ScalarProperty Name="University_ID" ColumnName="University_ID" />
+          <ScalarProperty Name="院校简介" ColumnName="院校简介" />
+          <ScalarProperty Name="公立_私立" ColumnName="公立/私立" />
+          <ScalarProperty Name="校园位置" ColumnName="校园位置" />
+          <ScalarProperty Name="犯罪率_犯罪数量_学生数量_" ColumnName="犯罪率(犯罪数量/学生数量）" />
+          <ScalarProperty Name="地理位置" ColumnName="地理位置" />
+          <ScalarProperty Name="校园" ColumnName="校园" />
+          <ScalarProperty Name="宿舍" ColumnName="宿舍" />
+          <ScalarProperty Name="US_NEWS_排名" ColumnName="US_NEWS_排名" />
+          <ScalarProperty Name="TIMES_排名" ColumnName="TIMES_排名" />
+          <ScalarProperty Name="QS_排名" ColumnName="QS_排名" />
+          <ScalarProperty Name="ARWU_排名" ColumnName="ARWU_排名" />
+          <ScalarProperty Name="录取难度" ColumnName="录取难度" />
+          <ScalarProperty Name="录取率" ColumnName="录取率" />
+          <ScalarProperty Name="录取数量" ColumnName="录取数量" />
+          <ScalarProperty Name="录取后入学比例" ColumnName="录取后入学比例" />
+          <ScalarProperty Name="申请者高中成绩前50_比例" ColumnName="申请者高中成绩前50%比例" />
+          <ScalarProperty Name="申请者高中成绩前10_比例" ColumnName="申请者高中成绩前10%比例" />
+          <ScalarProperty Name="SAT语言_GAO" ColumnName="SAT语言_GAO" />
+          <ScalarProperty Name="SAT语言_DI" ColumnName="SAT语言_DI" />
+          <ScalarProperty Name="SAT数学_GAO" ColumnName="SAT数学_GAO" />
+          <ScalarProperty Name="SAT数学_DI" ColumnName="SAT数学_DI" />
+          <ScalarProperty Name="SAT写作_GAO" ColumnName="SAT写作_GAO" />
+          <ScalarProperty Name="SAT写作_DI" ColumnName="SAT写作_DI" />
+          <ScalarProperty Name="ACT综合_GAO" ColumnName="ACT综合_GAO" />
+          <ScalarProperty Name="ACT综合_DI" ColumnName="ACT综合_DI" />
+          <ScalarProperty Name="州外学生比例" ColumnName="州外学生比例" />
+          <ScalarProperty Name="本科生数量" ColumnName="本科生数量" />
+          <ScalarProperty Name="研究生数量" ColumnName="研究生数量" />
+          <ScalarProperty Name="学生组织数量" ColumnName="学生组织数量" />
+          <ScalarProperty Name="兄弟会数量" ColumnName="兄弟会数量" />
+          <ScalarProperty Name="姐妹会数量" ColumnName="姐妹会数量" />
+          <ScalarProperty Name="学术族裔分布_白" ColumnName="学术族裔分布_白" />
+          <ScalarProperty Name="学术族裔分布_亚洲" ColumnName="学术族裔分布_亚洲" />
+          <ScalarProperty Name="学术族裔分布_黑" ColumnName="学术族裔分布_黑" />
+          <ScalarProperty Name="学杂费_州内_" ColumnName="学杂费(州内)" />
+          <ScalarProperty Name="总体花费_州内_" ColumnName="总体花费(州内)" />
+          <ScalarProperty Name="学杂费_州外_" ColumnName="学杂费(州外)" />
+          <ScalarProperty Name="总体花费_州外" ColumnName="总体花费(州外" />
+          <ScalarProperty Name="事实" ColumnName="事实" />
+          <ScalarProperty Name="知名校友" ColumnName="知名校友" />
+          <ScalarProperty Name="体育" ColumnName="体育" />
+          <ScalarProperty Name="图片" ColumnName="图片" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="AIUniversityModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Zhuanye" ColumnName="Zhuanye" />
+          <ScalarProperty Name="Xueli" ColumnName="Xueli" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="IELTS" ColumnName="IELTS" />
+          <ScalarProperty Name="SAT1" ColumnName="SAT1" />
+          <ScalarProperty Name="TOFEL" ColumnName="TOFEL" />
+          <ScalarProperty Name="GMAT" ColumnName="GMAT" />
+          <ScalarProperty Name="GRE" ColumnName="GRE" />
+          <ScalarProperty Name="GPA" ColumnName="GPA" />
+          <ScalarProperty Name="Major_Master" ColumnName="Major_Master" />
+          <ScalarProperty Name="Majoy_Bechelar" ColumnName="Majoy_Bechelar" />
+          <ScalarProperty Name="University_Doctor" ColumnName="University_Doctor" />
+          <ScalarProperty Name="University_Master" ColumnName="University_Master" />
+          <ScalarProperty Name="University_Bechelar" ColumnName="University_Bechelar" />
+          <ScalarProperty Name="MiddleSchool" ColumnName="MiddleSchool" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Zuoyouming" ColumnName="Zuoyouming" />
+          <ScalarProperty Name="WechatName" ColumnName="WechatName" />
+          <ScalarProperty Name="WechatID" ColumnName="WechatID" />
+          <ScalarProperty Name="OpenID" ColumnName="OpenID" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Result_Log">
+      <EntityTypeMapping TypeName="AIUniversityModel.User_Result_Log">
+        <MappingFragment StoreEntitySet="User_Result_Log">
+          <ScalarProperty Name="sort" ColumnName="sort" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="University_ResultId" ColumnName="University_ResultId" />
+          <ScalarProperty Name="Insert_Date" ColumnName="Insert_Date" />
+          <ScalarProperty Name="University_Conservative1" ColumnName="University_Conservative1" />
+          <ScalarProperty Name="University_Conservative" ColumnName="University_Conservative" />
+          <ScalarProperty Name="University_Challenge1" ColumnName="University_Challenge1" />
+          <ScalarProperty Name="University_Challenge" ColumnName="University_Challenge" />
+          <ScalarProperty Name="University_Sprint1" ColumnName="University_Sprint1" />
+          <ScalarProperty Name="University_Sprint" ColumnName="University_Sprint" />
+          <ScalarProperty Name="UserLog_ID" ColumnName="UserLog_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="University_Master_CN">
+      <EntityTypeMapping TypeName="AIUniversityModel.University_Master_CN">
+        <MappingFragment StoreEntitySet="University_Master_CN">
+          <ScalarProperty Name="InsertDate" ColumnName="InsertDate" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="UniversityName_EN" ColumnName="UniversityName_EN" />
+          <ScalarProperty Name="UniversityName_CN" ColumnName="UniversityName_CN" />
+          <ScalarProperty Name="University_Code" ColumnName="University_Code" />
+          <ScalarProperty Name="University_ID" ColumnName="University_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MajorGroup">
+      <EntityTypeMapping TypeName="AIUniversityModel.MajorGroup">
+        <MappingFragment StoreEntitySet="MajorGroup">
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="MajorGroup_Name" ColumnName="MajorGroup_Name" />
+          <ScalarProperty Name="MajorGroup_ID" ColumnName="MajorGroup_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Period">
+      <EntityTypeMapping TypeName="AIUniversityModel.Period">
+        <MappingFragment StoreEntitySet="Period">
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Period_Time" ColumnName="Period_Time" />
+          <ScalarProperty Name="Period_ID" ColumnName="Period_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Bachelor_Log">
+      <EntityTypeMapping TypeName="AIUniversityModel.User_Bachelor_Log">
+        <MappingFragment StoreEntitySet="User_Bachelor_Log">
+          <ScalarProperty Name="Insert_Date" ColumnName="Insert_Date" />
+          <ScalarProperty Name="Volunteer_Experience" ColumnName="Volunteer_Experience" />
+          <ScalarProperty Name="Summer_Program" ColumnName="Summer_Program" />
+          <ScalarProperty Name="Award" ColumnName="Award" />
+          <ScalarProperty Name="Recommendation" ColumnName="Recommendation" />
+          <ScalarProperty Name="MiddleSchool_GradeLevel" ColumnName="MiddleSchool_GradeLevel" />
+          <ScalarProperty Name="MiddleSchool_Type" ColumnName="MiddleSchool_Type" />
+          <ScalarProperty Name="Prefed_SchoolType" ColumnName="Prefed_SchoolType" />
+          <ScalarProperty Name="Target_JoinTime" ColumnName="Target_JoinTime" />
+          <ScalarProperty Name="ACT" ColumnName="ACT" />
+          <ScalarProperty Name="SAT" ColumnName="SAT" />
+          <ScalarProperty Name="IELTS" ColumnName="IELTS" />
+          <ScalarProperty Name="TOEFL" ColumnName="TOEFL" />
+          <ScalarProperty Name="GPA_Hundred" ColumnName="GPA_Hundred" />
+          <ScalarProperty Name="GPA_Four" ColumnName="GPA_Four" />
+          <ScalarProperty Name="Target_Country" ColumnName="Target_Country" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Master_Log">
+      <EntityTypeMapping TypeName="AIUniversityModel.User_Master_Log">
+        <MappingFragment StoreEntitySet="User_Master_Log">
+          <ScalarProperty Name="Insert_Date" ColumnName="Insert_Date" />
+          <ScalarProperty Name="Working_Experience" ColumnName="Working_Experience" />
+          <ScalarProperty Name="Abroad_Experience" ColumnName="Abroad_Experience" />
+          <ScalarProperty Name="Recommendation" ColumnName="Recommendation" />
+          <ScalarProperty Name="Paper_Publish" ColumnName="Paper_Publish" />
+          <ScalarProperty Name="Research_Experience" ColumnName="Research_Experience" />
+          <ScalarProperty Name="Target_JoinTime" ColumnName="Target_JoinTime" />
+          <ScalarProperty Name="CMAT_Score" ColumnName="CMAT_Score" />
+          <ScalarProperty Name="GRE_Score" ColumnName="GRE_Score" />
+          <ScalarProperty Name="IELTS" ColumnName="IELTS" />
+          <ScalarProperty Name="TOEFL" ColumnName="TOEFL" />
+          <ScalarProperty Name="GPA_Hundred" ColumnName="GPA_Hundred" />
+          <ScalarProperty Name="GPA_Four" ColumnName="GPA_Four" />
+          <ScalarProperty Name="Target_Major" ColumnName="Target_Major" />
+          <ScalarProperty Name="Current_Major" ColumnName="Current_Major" />
+          <ScalarProperty Name="Current_University" ColumnName="Current_University" />
+          <ScalarProperty Name="Target_Country" ColumnName="Target_Country" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

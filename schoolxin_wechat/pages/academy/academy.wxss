@@ -1,0 +1,153 @@
+.top-search {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background-color: #efeff4;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.search-block {
+  width: 100%;
+  height: 30px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  line-height: 28px;
+  text-align: center;
+}
+
+.search-block image {
+  width: 20px;
+  height: 20px;
+  vertical-align: -4px;
+  margin-right: 5px;
+}
+
+.search-block text {
+  font-size: 14px;
+  color: #b2b2b2;
+}
+
+.left-menu {
+  position: absolute;
+  top: 47px;
+  left: 0;
+  width: 100px;
+  bottom: 0;
+}
+
+.city-item {
+  width: 100%;
+  height: 39px;
+  line-height: 39px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+}
+
+.city-item.active {
+  color: #15a2e7;
+  background-color: #ffffff;
+}
+
+.city-item.active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #15a2e7;
+}
+
+.right-list {
+  position: absolute;
+  top: 47px;
+  right: 0;
+  left: 100px;
+  bottom: 0;
+  background-color: #ffffff;
+}
+
+.academy-item {
+  width: 100%;
+  height: 120px;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+}
+
+.academy-item .academy-name {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 10px;
+  font-size: 14px;
+  line-height: 30px;
+  height: 30px;
+  color: #333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.academy-item image {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  left: 10px;
+  top: 35px;
+  border-radius: 4px;
+  box-shadow: 0 0 4px #cccccc;
+}
+
+.academy-item .academy-country {
+  position: absolute;
+  top: 35px;
+  left: 90px;
+  line-height: 20px;
+  height: 20px;
+  font-size: 13px;
+  color: #666666;
+}
+
+.academy-item .academy-city {
+  position: absolute;
+  top: 35px;
+  left: 160px;
+  line-height: 20px;
+  height: 20px;
+  font-size: 13px;
+  color: #666666;
+}
+
+.academy-item .academy-rank {
+  position: absolute;
+  top: 60px;
+  left: 90px;
+  line-height: 20px;
+  height: 20px;
+  font-size: 13px;
+  color: #666666;
+}
+
+.academy-item .academy-rank text {
+  color: #ff0000;
+}
+
+.academy-item .academy-cost {
+  position: absolute;
+  top: 85px;
+  left: 90px;
+  line-height: 20px;
+  height: 20px;
+  font-size: 13px;
+  color: #666666;
+}
+::-webkit-scrollbar {
+ width: 0;
+ height: 0;
+ color: transparent;
+}

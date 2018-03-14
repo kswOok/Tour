@@ -1,0 +1,17 @@
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\bin\Release\DTcms.Web.UI.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\bin\Release\DTcms.Web.UI.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\bin\Release\DTcms.API.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\bin\Release\DTcms.BLL.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\bin\Release\DTcms.Common.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\bin\Release\DTcms.Model.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\bin\Release\DTcms.DAL.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\bin\Release\DTcms.DBUtility.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\bin\Release\DTcms.API.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\bin\Release\DTcms.BLL.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\bin\Release\DTcms.Common.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\bin\Release\DTcms.Model.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\bin\Release\DTcms.DAL.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\bin\Release\DTcms.DBUtility.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\obj\Release\DTcms.Web.UI.csprojResolveAssemblyReference.cache
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\obj\Release\DTcms.Web.UI.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web.UI\obj\Release\DTcms.Web.UI.pdb

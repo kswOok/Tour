@@ -42,3 +42,10 @@ C:\VS2017Proj\Tour\TouristProject\DTcms.DBUtility\obj\Debug\DTcms.DBUtility.cspr
 C:\VS2017Proj\Tour\TouristProject\DTcms.DBUtility\obj\Debug\DTcms.DBUtility.csproj.CopyComplete
 C:\VS2017Proj\Tour\TouristProject\DTcms.DBUtility\obj\Debug\DTcms.DBUtility.dll
 C:\VS2017Proj\Tour\TouristProject\DTcms.DBUtility\obj\Debug\DTcms.DBUtility.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DBUtility\bin\Debug\DTcms.DBUtility.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DBUtility\bin\Debug\DTcms.DBUtility.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DBUtility\bin\Debug\DTcms.Common.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DBUtility\bin\Debug\DTcms.Common.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DBUtility\obj\Debug\DTcms.DBUtility.csprojResolveAssemblyReference.cache
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DBUtility\obj\Debug\DTcms.DBUtility.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DBUtility\obj\Debug\DTcms.DBUtility.pdb

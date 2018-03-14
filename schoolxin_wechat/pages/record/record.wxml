@@ -1,0 +1,12 @@
+<view class="fixed-block">
+  <view class="relative-block">
+    <scroll-view scroll-y style="height:100%;">
+      <block wx:for="{{list}}">
+          <view class="record-item" bindtap='queryRecord' data-id='{{item.UserLog_ID}}'>
+            <view data-id='{{item.UserLog_ID}}'>{{item.Insert_Date}} 评估记录</view>
+            <image src="/images/icon_arrow_right.png" data-id='{{item.UserLog_ID}}'></image>
+          </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

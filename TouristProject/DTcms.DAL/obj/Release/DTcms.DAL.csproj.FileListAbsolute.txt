@@ -1,0 +1,11 @@
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DAL\bin\Release\DTcms.DAL.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DAL\bin\Release\DTcms.DAL.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DAL\bin\Release\DTcms.Common.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DAL\bin\Release\DTcms.DBUtility.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DAL\bin\Release\DTcms.Model.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DAL\bin\Release\DTcms.Common.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DAL\bin\Release\DTcms.DBUtility.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DAL\bin\Release\DTcms.Model.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DAL\obj\Release\DTcms.DAL.csprojResolveAssemblyReference.cache
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DAL\obj\Release\DTcms.DAL.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DAL\obj\Release\DTcms.DAL.pdb

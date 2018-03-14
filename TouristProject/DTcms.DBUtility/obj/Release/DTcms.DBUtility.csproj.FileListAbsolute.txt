@@ -1,0 +1,7 @@
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DBUtility\bin\Release\DTcms.DBUtility.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DBUtility\bin\Release\DTcms.DBUtility.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DBUtility\bin\Release\DTcms.Common.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DBUtility\bin\Release\DTcms.Common.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DBUtility\obj\Release\DTcms.DBUtility.csprojResolveAssemblyReference.cache
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DBUtility\obj\Release\DTcms.DBUtility.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.DBUtility\obj\Release\DTcms.DBUtility.pdb
