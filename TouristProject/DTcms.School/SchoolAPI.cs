@@ -47,7 +47,7 @@ namespace DTcms.School
                                  univer.Rank_World,
                                  univer.CountryName,
                                  univer.DistrictName,
-                                 univer.Picture,
+                                 Picture = univer.Picture.Replace("www.", ""),
                                  US_NEWS_Rank = univer.Rank_World,
                                  zhouwaiMoney = tt.总体花费_州外,
                                  weizhi = univer.DistrictName
@@ -83,14 +83,14 @@ namespace DTcms.School
                                  univer.Rank_World,
                                  univer.CountryName,
                                  univer.DistrictName,
-                                 univer.Picture,
+                                 Picture = univer.Picture.Replace("www.", ""),
                                  US_NEWS_Rank = tt.US_NEWS_排名,
                                  zhouwaiMoney = tt.总体花费_州外,
                                  weizhi = tt.地理位置
                              };
                 return Obj2Json(new
                 {
-                    schoolList = query1.ToList(),
+                    schoolList = query1.Take(1000).ToList(),
                     result = 1
                 });
             }
@@ -450,7 +450,7 @@ namespace DTcms.School
                                  univer.Rank_World,
                                  univer.CountryName,
                                  univer.DistrictName,
-                                 univer.Picture,
+                                 Picture = univer.Picture.Replace("www.", ""),
                                  US_NEWS_Rank = tt.US_NEWS_排名,
                                  zhouwaiMoney = tt.总体花费_州外,
                                  weizhi = tt.地理位置,
@@ -536,7 +536,7 @@ namespace DTcms.School
                                  univer.Rank_World,
                                  univer.CountryName,
                                  univer.DistrictName,
-                                 univer.Picture,
+                                 Picture = univer.Picture.Replace("www.", ""),
                                  US_NEWS_Rank = univer.Rank_World,
                                  zhouwaiMoney = tt.总体花费_州外,
                                  weizhi = tt.地理位置
@@ -610,17 +610,17 @@ namespace DTcms.School
                 var user = db.User.SingleOrDefault(s => s.ID == userId);
                 if(user != null)
                 {
-                    if (nickName != null || nickName != "") user.Name = nickName;
-                    if (mobile != null || mobile != "") user.Phone = mobile;
-                    if (xueli != null || xueli != "") user.Xueli = xueli;
-                    if (zhuanye != null || zhuanye != "") user.Zhuanye = zhuanye;
-                    if (age != null || age != "") user.Age = age;
+                    if (nickName != null && nickName != "") user.Name = nickName;
+                    if (mobile != null && mobile != "") user.Phone = mobile;
+                    if (xueli != null && xueli != "") user.Xueli = xueli;
+                    if (zhuanye != null && zhuanye != "") user.Zhuanye = zhuanye;
+                    if (age != null && age != "") user.Age = age;
                 }
-                db.SaveChanges();
                 var ret = new
                 {
-                    result = 1
-                };
+                    user,
+                    result = db.SaveChanges()
+            };
                 return Obj2Json(ret);
             }
         }

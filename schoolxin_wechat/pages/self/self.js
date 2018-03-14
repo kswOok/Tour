@@ -99,6 +99,7 @@ Page({
         'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
       success: function (res) {
+        console.log(res)
         updateType == 1 ? wx.setStorageSync('nickName', nickName) : ''
         updateType == 2 ? wx.setStorageSync('mobile', mobile) : ''
         updateType == 3 ? wx.setStorageSync('xueli', xueli) : ''

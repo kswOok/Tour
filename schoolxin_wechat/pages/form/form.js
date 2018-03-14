@@ -147,17 +147,17 @@ Page({
        const c = []
        const d = []
        for (var i = 0; i < res.data.schoolDetail.length;i++){
-         a.push(res.data.schoolDetail[i].UniversityName_CN);
+         a.push(res.data.schoolDetail[i]);
        }
        for (var i = 0; i < res.data.majorList.length; i++) {
-         b.push(res.data.majorList[i].MajorGroup_Name);
+         b.push(res.data.majorList[i]);
        }
        for (var i = 0; i < res.data.periodList.length; i++) {
-         c.push(res.data.periodList[i].Period_Time);
+         c.push(res.data.periodList[i]);
        }
        for (var i = 0; i < res.data.countryList.length; i++) {
          if (res.data.countryList[i].Country_Name!='中国'){
-           d.push(res.data.countryList[i].Country_Name);
+           d.push(res.data.countryList[i]);
          }
          
        }

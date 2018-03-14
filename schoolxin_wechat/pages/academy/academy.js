@@ -108,6 +108,7 @@ Page({
        'content-type': 'application/x-www-form-urlencoded' // 默认值
      },
      success: function (res) {
+       console.log(e.target.dataset.id)
        if (res.data.result == 1) {
          wx.hideToast()
        }
