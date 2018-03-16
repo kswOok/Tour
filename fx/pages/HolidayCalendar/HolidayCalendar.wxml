@@ -1,0 +1,21 @@
+
+<view class="container log-list">
+  <block wx:for-items="{{calenArray}}" wx:key="">
+    <view class="holidayList">
+      <navigator url="/pages/HolidayCalendarDetail/HolidayCalendarDetail?id={{item.id}}&title={{item.title}}&brief={{item.brief}}">
+        <view wx:if="{{!item.g}}" class="holidayDate gay-border">{{item.date}}</view>
+        <view wx:if="{{item.g}}" class="holidayDate black-border">{{item.date}}</view>
+        <view class="holidayIntroduce">
+          <view class="whilt-line"></view>
+          <image class="blueDisc gay-circle" src="../../images/gay-circle.png"></image>
+          <image wx:if="{{item.g}}" class="blueDisc block-circle" src="../../images/block-circle.png"></image>
+          <text wx:if="{{!item.g}}" class="name gay-color">{{item.title}}</text>
+          <text wx:if="{{!item.g}}" class="signification gay-color">{{item.brief}}</text>
+          <text wx:if="{{item.g}}" class="name block-color" >{{item.title}}</text>
+          <text wx:if="{{item.g}}" class="signification block-color" >{{item.brief}}</text>
+        </view>
+      </navigator>
+    </view>
+  </block>
+  <image class="loading" hidden="{{loading}}" src="../../images/loading.gif"></image>
+</view>

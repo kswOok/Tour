@@ -1,0 +1,166 @@
+body {
+  height: 100%;
+  background-size: 100% 100%;
+}
+
+.loading {
+  width: 42px;
+  height: 46px;
+  position: fixed;
+  top: 192px;
+  left: 128px;
+}
+
+.index-header {
+  width: 100%;
+  position: relative;
+  height: 47%;
+}
+
+.index-header .layout {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.index-header .index-img {
+  width: 512px;
+  height: 100%;
+  margin: 0 calc(50% - 256px);
+}
+
+.index-header .index-icon {
+  width: 108px;
+  height: 50px;
+  position: absolute;
+  top: calc(50% - 16px);
+  right: calc(50% - 60px);
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.table .td wx-image {
+  width: 35px;
+  height: 36px;
+  vertical-align: middle;
+}
+
+.table .td wx-text {
+  vertical-align: middle;
+  margin-left: 17px;
+  color: #222;
+  font-size: 16px;
+}
+
+.table {
+  border: 0px solid darkgray;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  z-index: 99;
+  height: 53%;
+  box-sizing: border-box;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+.tr {
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 80px;
+  line-height: 70px;
+  -webkit-align-content: center;
+  align-content: center;
+}
+
+.td {
+  width: 50%;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.td image {
+  width: 10rpt;
+  height: 10rpt;
+}
+
+.tr .td:first-child {
+  text-align: right;
+  padding-right: 45px;
+}
+
+.tr .td:nth-child(2) {
+  text-align: left;
+  padding-left: 45px;
+}
+
+.call-layout {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+
+.content-layout {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  z-index: 99999;
+}
+
+.emergency-calls, .plolice-calls, .cancle-call {
+  text-align: center;
+  height: 211px;
+  line-height: 211px;
+  font-size: 57px;
+  background: #fff;
+}
+
+.plolice-calls {
+  color: #000;
+  border-bottom: 5px solid #909090;
+}
+
+.plolice-calls wx-text {
+  letter-spacing: 13px;
+  margin-left: 13px;
+}
+
+.emergency-calls {
+  border-bottom: 1px solid #e3e3e3;
+  letter-spacing: 13px;
+  color: #000;
+  width: 88%;
+  margin: 0 auto;
+}
+
+.emergency-calls wx-text {
+  letter-spacing: 13px;
+  margin-left: 13px;
+}
+
+.cancle-call {
+  background: #222;
+  color: #fff;
+}
+
+.cancle-call wx-text {
+  letter-spacing: 57px;
+  margin-left: 57px;
+}

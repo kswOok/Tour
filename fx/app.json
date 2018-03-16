@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index2/index2",
+    "pages/logs/logs",
+    "pages/guide/guide",
+    "pages/qa/qa",
+    "pages/my/my",
+    "pages/index/index",
+    "pages/no-miss/no-miss",
+    "pages/HolidayCalendar/HolidayCalendar",
+    "pages/local-food/local-food",
+    "pages/strategy-new/strategy-new",
+    "pages/subway/subway",
+    "pages/HolidayCalendarDetail/HolidayCalendarDetail"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index2/index2",
+        "text": "首页",
+        "iconPath": "images/home-g.png",
+        "selectedIconPath": "images/home-b.png"
+      },
+      {
+        "pagePath": "pages/guide/guide",
+        "text": "指南",
+        "iconPath": "images/zhinan-g.png",
+        "selectedIconPath": "images/zhinan-b.png"
+      },
+      {
+        "pagePath": "pages/qa/qa",
+        "text": "问答",
+        "iconPath": "images/answer-g.png",
+        "selectedIconPath": "images/answer-b.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/mine-g.png",
+        "selectedIconPath": "images/mine-b.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "发现罗托鲁瓦",
+    "navigationBarTextStyle": "black"
+  }
+}

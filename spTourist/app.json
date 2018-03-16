@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/academy/academy",
     "pages/self/self",
@@ -7,7 +7,8 @@
     "pages/info/info",
     "pages/result/result",
     "pages/record/record",
-    "pages/schoolSearch/schoolSearch"
+    "pages/schoolSearch/schoolSearch",
+    "pages/index2/index2"
   ],
   "tabBar": {
     "color": "#bfbfbf",
@@ -41,10 +42,10 @@
       }
     ]
   },
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }
