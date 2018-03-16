@@ -21,10 +21,29 @@ namespace DTcms.EFAPI
                             {
                                 t.id,
                                 t.title,
+                                t.img_url
+                            }).ToList(),
+                    result = 1
+                });
+            }
+        }
+
+        public static string get_channel_article_news_detail(int id)
+        {
+            using (var db = new TouristDBEntities())
+            {
+                return Obj2Json(new
+                {
+                    data = (from t in db.dt_channel_article_news
+                            where t.id == id
+                            select new
+                            {
+                                t.id,
+                                t.title,
                                 t.img_url,
                                 t.zhaiyao,
                                 t.content
-                            }).ToList(),
+                            }).FirstOrDefault(),
                     result = 1
                 });
             }
