@@ -12,7 +12,8 @@
     "pages/strategy-new/strategy-new",
     "pages/subway/subway",
     "pages/HolidayCalendarDetail/HolidayCalendarDetail",
-    "pages/no-missDetail/no-missDetail"
+    "pages/no-missDetail/no-missDetail",
+    "pages/local-foodDetail/local-foodDetail"
   ],
   "tabBar": {
     "list": [
