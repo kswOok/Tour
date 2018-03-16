@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DTcms.School
+namespace DTcms.EFAPI
 {
     using System;
     using System.Collections.Generic;

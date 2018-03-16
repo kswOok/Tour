@@ -1216,6 +1216,9 @@
     <Compile Include="tools\submit_ajax.ashx.cs">
       <DependentUpon>submit_ajax.ashx</DependentUpon>
     </Compile>
+    <Compile Include="tools\tour_api.ashx.cs">
+      <DependentUpon>tour_api.ashx</DependentUpon>
+    </Compile>
     <Compile Include="tools\upload_ajax.ashx.cs">
       <DependentUpon>upload_ajax.ashx</DependentUpon>
     </Compile>
@@ -1240,9 +1243,9 @@
       <Project>{2BBC90CB-5D42-4F0F-BF96-4DA42F4DDB39}</Project>
       <Name>DTcms.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DTcms.School\DTcms.School.csproj">
+    <ProjectReference Include="..\DTcms.School\DTcms.EFAPI.csproj">
       <Project>{f485f66d-ae20-42d6-8b0a-3b1fc39b6f5d}</Project>
-      <Name>DTcms.School</Name>
+      <Name>DTcms.EFAPI</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTcms.Web.UI\DTcms.Web.UI.csproj">
       <Project>{091D59DA-1EDB-4325-984D-F3B5547F781E}</Project>
@@ -1277,6 +1280,7 @@
     <Content Include="tools\school_api.ashx" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="tools\tour_api.ashx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

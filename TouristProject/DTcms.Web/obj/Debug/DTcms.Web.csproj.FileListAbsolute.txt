@@ -119,10 +119,7 @@ C:\VS2017Proj\Tour\TouristProject\DTcms.Web\obj\Debug\DTcms.Web.csproj.CoreCompi
 C:\VS2017Proj\Tour\TouristProject\DTcms.Web\obj\Debug\DTcms.Web.csproj.CopyComplete
 C:\VS2017Proj\Tour\TouristProject\DTcms.Web\obj\Debug\DTcms.Web.dll
 C:\VS2017Proj\Tour\TouristProject\DTcms.Web\obj\Debug\DTcms.Web.pdb
-C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\DTcms.School.dll
 C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\EntityFramework.dll
-C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\DTcms.School.pdb
-C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\DTcms.School.dll.config
 C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\EntityFramework.xml
 C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\Newtonsoft.Json.dll
 C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\Newtonsoft.Json.xml
@@ -161,3 +158,6 @@ C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\zh-H
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\obj\Debug\DTcms.Web.csprojResolveAssemblyReference.cache
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\obj\Debug\DTcms.Web.dll
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\obj\Debug\DTcms.Web.pdb
+C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\DTcms.EFAPI.dll
+C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\DTcms.EFAPI.pdb
+C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\DTcms.EFAPI.dll.config

@@ -8,7 +8,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTcms.School
+namespace DTcms.EFAPI
 {
     public class SchoolAPI
     {
