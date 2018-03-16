@@ -34,6 +34,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    baseUrl: 'https://guomengtech.com/',
+    apiUrl: 'https://guomengtech.com/tools/tour_api.ashx'
   }
 })

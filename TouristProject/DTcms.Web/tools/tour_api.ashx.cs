@@ -18,6 +18,9 @@ namespace DTcms.Web.tools
             string action = DTRequest.GetFormString("action");
             switch (action)
             {
+                case "get_holidays":
+                    OutPut(context, TourAPI.get_holidays());
+                    break;
                 case "get_channel_article_news":
                     OutPut(context, TourAPI.get_channel_article_news());
                     break;

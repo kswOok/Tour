@@ -28,6 +28,12 @@ namespace DTcms.EFAPI
             }
         }
 
+        public static string get_holidays()
+        {
+            var list = new List<HolidayItem>();
+            return Obj2Json(list);
+        }
+
         public static string get_channel_article_news_detail(int id)
         {
             using (var db = new TouristDBEntities())
@@ -42,7 +48,8 @@ namespace DTcms.EFAPI
                                 t.title,
                                 t.img_url,
                                 t.zhaiyao,
-                                t.content
+                                t.content,
+                                t.update_time
                             }).FirstOrDefault(),
                     result = 1
                 });
@@ -55,5 +62,15 @@ namespace DTcms.EFAPI
             iso.DateTimeFormat = "yyyy-MM-dd HH:mm:ss";
             return JsonConvert.SerializeObject(ret, iso);
         }
+    }
+
+    public class HolidayItem
+    {
+        public int id { get; set; }
+        public string date { get; set; }
+        public string title { get; set; }
+        public string brief { get; set; }
+        public bool g { get; set; }
+        private DateTime dt { get;set; }
     }
 }
