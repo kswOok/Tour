@@ -28,24 +28,6 @@ namespace DTcms.EFAPI
             }
         }
 
-        public static string get_channel_article_food()
-        {
-            using (var db = new TouristDBEntities())
-            {
-                return Obj2Json(new
-                {
-                    data = (from t in db.dt_channel_article_food
-                            select new
-                            {
-                                t.id,
-                                t.title,
-                                t.img_url
-                            }).ToList(),
-                    result = 1
-                });
-            }
-        }
-
         public static string get_holidays()
         {
             var list = new List<HolidayItem>();
@@ -74,6 +56,24 @@ namespace DTcms.EFAPI
             }
         }
 
+        public static string get_channel_article_food()
+        {
+            using (var db = new TouristDBEntities())
+            {
+                return Obj2Json(new
+                {
+                    data = (from t in db.dt_channel_article_food
+                            select new
+                            {
+                                t.id,
+                                t.title,
+                                t.img_url
+                            }).ToList(),
+                    result = 1
+                });
+            }
+        }
+
         public static string get_channel_article_food_detail(int id)
         {
             using (var db = new TouristDBEntities())
@@ -81,6 +81,46 @@ namespace DTcms.EFAPI
                 return Obj2Json(new
                 {
                     data = (from t in db.dt_channel_article_food
+                            where t.id == id
+                            select new
+                            {
+                                t.id,
+                                t.title,
+                                t.img_url,
+                                t.zhaiyao,
+                                t.content,
+                                t.update_time
+                            }).FirstOrDefault(),
+                    result = 1
+                });
+            }
+        }
+
+        public static string get_channel_article_guidance()
+        {
+            using (var db = new TouristDBEntities())
+            {
+                return Obj2Json(new
+                {
+                    data = (from t in db.dt_channel_article_guidance
+                            select new
+                            {
+                                t.id,
+                                t.title,
+                                t.img_url
+                            }).ToList(),
+                    result = 1
+                });
+            }
+        }
+
+        public static string get_channel_article_guidance_detail(int id)
+        {
+            using (var db = new TouristDBEntities())
+            {
+                return Obj2Json(new
+                {
+                    data = (from t in db.dt_channel_article_guidance
                             where t.id == id
                             select new
                             {

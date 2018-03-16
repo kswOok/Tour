@@ -12,7 +12,32 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this
+
+    wx.showToast({
+      icon: "loading",
+      title: "正在加载...",
+      duration: 2000000,
+    })
+    wx.request({
+      method: 'POST',
+      url: getApp().globalData.apiUrl,
+      data: {
+        action: 'get_channel_article_guidance'
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        console.log(res)
+        if (res.data.result == 1) {
+          wx.hideToast()
+        } 
+        that.setData({
+          list: res.data.data, 
+        })
+      }
+    })
   },
 
   /**

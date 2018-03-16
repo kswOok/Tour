@@ -13,7 +13,8 @@
     "pages/subway/subway",
     "pages/HolidayCalendarDetail/HolidayCalendarDetail",
     "pages/no-missDetail/no-missDetail",
-    "pages/local-foodDetail/local-foodDetail"
+    "pages/local-foodDetail/local-foodDetail",
+    "pages/guideDetail/guideDetail"
   ],
   "tabBar": {
     "list": [

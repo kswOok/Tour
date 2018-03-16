@@ -27,5 +27,6 @@ namespace DTcms.EFAPI
     
         public virtual DbSet<dt_channel_article_news> dt_channel_article_news { get; set; }
         public virtual DbSet<dt_channel_article_food> dt_channel_article_food { get; set; }
+        public virtual DbSet<dt_channel_article_guidance> dt_channel_article_guidance { get; set; }
     }
 }
