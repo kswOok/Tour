@@ -1,8 +1,8 @@
-
+<!-- url="/pages/HolidayCalendarDetail/HolidayCalendarDetail?id={{item.id}}&title={{item.title}}&brief={{item.brief}}" -->
 <view class="container log-list">
   <block wx:for-items="{{calenArray}}" wx:key="">
     <view class="holidayList">
-      <navigator url="/pages/HolidayCalendarDetail/HolidayCalendarDetail?id={{item.id}}&title={{item.title}}&brief={{item.brief}}">
+      <navigator >
         <view wx:if="{{!item.g}}" class="holidayDate gay-border">{{item.date}}</view>
         <view wx:if="{{item.g}}" class="holidayDate black-border">{{item.date}}</view>
         <view class="holidayIntroduce">

@@ -14,9 +14,9 @@
         <image src="itemChiled"></image>
       </block>
       <view class="photoBy">摄影：{{item.author}}</view>
-      <block wx:for-items="{{main.content}}" wx:key="">
+      <block wx:for-items="{{main.zhaiyao}}" wx:key="">
         <view>
-          <block wx:for-items="{{main.content}}" wx:key="">
+          <block wx:for-items="{{main.zhaiyao}}" wx:key="">
             <view>
               <text class="content">itemTemp2</text>
             </view>

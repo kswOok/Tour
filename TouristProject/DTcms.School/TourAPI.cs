@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTcms.Common;
+
+
 
 namespace DTcms.EFAPI
 {
@@ -21,6 +24,7 @@ namespace DTcms.EFAPI
                             {
                                 t.id,
                                 t.title,
+                                t.content,
                                 t.img_url
                             }).ToList(),
                     result = 1
@@ -67,7 +71,8 @@ namespace DTcms.EFAPI
                             {
                                 t.id,
                                 t.title,
-                                t.img_url
+                                t.img_url,
+                                t.content
                             }).ToList(),
                     result = 1
                 });
@@ -107,7 +112,8 @@ namespace DTcms.EFAPI
                             {
                                 t.id,
                                 t.title,
-                                t.img_url
+                                t.img_url,
+                                t.content
                             }).ToList(),
                     result = 1
                 });

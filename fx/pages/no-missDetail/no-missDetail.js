@@ -36,7 +36,7 @@ Page({
         that.setData({
           title: res.data.data.title,
           time: res.data.data.update_time,
-          detail: res.data.data.zhaiyao,
+          detail: res.data.data.content,
           image: getApp().globalData.baseUrl + res.data.data.img_url,
         })
       }
