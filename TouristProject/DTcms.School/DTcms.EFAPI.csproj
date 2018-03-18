@@ -168,11 +168,5 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DTcms.Common\DTcms.Common.csproj">
-      <Project>{408686e7-0249-4899-85e0-77aca8f9f07f}</Project>
-      <Name>DTcms.Common</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
