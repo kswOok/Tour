@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\TouristProject\\DTcms.Web",
-    "\\TouristProject\\DTcms.Web\\tools"
+    "\\fx",
+    "\\fx\\images",
+    "\\fx\\pages",
+    "\\fx\\pages\\guide"
   ],
   "PreviewInSolutionExplorer": false
 }

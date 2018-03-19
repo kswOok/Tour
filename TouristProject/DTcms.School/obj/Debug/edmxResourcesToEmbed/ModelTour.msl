@@ -106,5 +106,37 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="dt_users">
+      <EntityTypeMapping TypeName="TouristDBModel.dt_users">
+        <MappingFragment StoreEntitySet="dt_users">
+          <ScalarProperty Name="interest" ColumnName="interest" />
+          <ScalarProperty Name="openid" ColumnName="openid" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="reg_ip" ColumnName="reg_ip" />
+          <ScalarProperty Name="reg_time" ColumnName="reg_time" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="exp" ColumnName="exp" />
+          <ScalarProperty Name="point" ColumnName="point" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="msn" ColumnName="msn" />
+          <ScalarProperty Name="qq" ColumnName="qq" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="telphone" ColumnName="telphone" />
+          <ScalarProperty Name="birthday" ColumnName="birthday" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="nick_name" ColumnName="nick_name" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="salt" ColumnName="salt" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="site_id" ColumnName="site_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

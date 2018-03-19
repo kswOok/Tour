@@ -102,9 +102,41 @@
     <Property Name="source" Type="nvarchar" MaxLength="50" />
     <Property Name="author" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="dt_users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="site_id" Type="int" />
+    <Property Name="group_id" Type="int" />
+    <Property Name="user_name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="salt" Type="nvarchar" MaxLength="20" />
+    <Property Name="password" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="mobile" Type="nvarchar" MaxLength="20" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="avatar" Type="nvarchar" MaxLength="255" />
+    <Property Name="nick_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="sex" Type="nvarchar" MaxLength="20" />
+    <Property Name="birthday" Type="datetime" />
+    <Property Name="telphone" Type="nvarchar" MaxLength="50" />
+    <Property Name="area" Type="nvarchar" MaxLength="255" />
+    <Property Name="address" Type="nvarchar" MaxLength="255" />
+    <Property Name="qq" Type="nvarchar" MaxLength="20" />
+    <Property Name="msn" Type="nvarchar" MaxLength="100" />
+    <Property Name="amount" Type="decimal" Precision="9" Scale="2" />
+    <Property Name="point" Type="int" />
+    <Property Name="exp" Type="int" />
+    <Property Name="status" Type="tinyint" />
+    <Property Name="reg_time" Type="datetime" />
+    <Property Name="reg_ip" Type="nvarchar" MaxLength="20" />
+    <Property Name="age" Type="int" />
+    <Property Name="openid" Type="nvarchar" MaxLength="100" />
+    <Property Name="interest" Type="nvarchar" MaxLength="255" />
+  </EntityType>
   <EntityContainer Name="TouristDBModelStoreContainer">
     <EntitySet Name="dt_channel_article_food" EntityType="Self.dt_channel_article_food" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="dt_channel_article_guidance" EntityType="Self.dt_channel_article_guidance" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="dt_channel_article_news" EntityType="Self.dt_channel_article_news" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dt_users" EntityType="Self.dt_users" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

@@ -46,6 +46,16 @@ namespace DTcms.Web.tools
                     OutPut(context, TourAPI.getOpenId(
                         DTRequest.GetFormString("code")));
                     break;
+                case "add_or_update_user":
+                    OutPut(context, TourAPI.add_or_update_user(
+                        DTRequest.GetFormString("openid"),
+                        DTRequest.GetFormString("photo"),
+                        DTRequest.GetFormIntValue("sex"),
+                        DTRequest.GetFormString("nickname"),
+                        DTRequest.GetFormIntValue("age"),
+                        DTRequest.GetFormString("phone"),
+                        DTRequest.GetFormString("interest")));
+                    break;
                 default:
                     OutPut(context, "not implement action : " + action);
                     break;
