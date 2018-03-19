@@ -38,6 +38,7 @@
     <EntitySet Name="dt_channel_article_news" EntityType="Self.dt_channel_article_news" />
     <EntitySet Name="dt_channel_article_food" EntityType="TouristDBModel.dt_channel_article_food" />
     <EntitySet Name="dt_channel_article_guidance" EntityType="TouristDBModel.dt_channel_article_guidance" />
+    <EntitySet Name="dt_users" EntityType="TouristDBModel.dt_users" />
   </EntityContainer>
   <EntityType Name="dt_channel_article_food">
     <Key>
@@ -106,5 +107,36 @@
     <Property Name="update_time" Type="DateTime" Precision="3" />
     <Property Name="source" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="dt_users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="site_id" Type="Int32" />
+    <Property Name="group_id" Type="Int32" />
+    <Property Name="user_name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="salt" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="avatar" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="nick_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="sex" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="birthday" Type="DateTime" Precision="3" />
+    <Property Name="telphone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="area" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="qq" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="msn" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="amount" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="point" Type="Int32" />
+    <Property Name="exp" Type="Int32" />
+    <Property Name="status" Type="Byte" />
+    <Property Name="reg_time" Type="DateTime" Precision="3" />
+    <Property Name="reg_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="openid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="interest" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>
