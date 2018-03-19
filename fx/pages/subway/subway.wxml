@@ -1,2 +1,27 @@
 <!--pages/subway/subway.wxml-->
-<text>pages/subway/subway.wxml</text>
+ 
+
+
+<!--pages/qa/qa.wxml-->
+<view class="fixed-block">
+  <view class="relative-block">
+    <scroll-view scroll-y style="height:100%;">
+
+     <view class="info-title">
+        <text>在新西兰驾车，应该在道路的哪一侧?</text>
+      </view>
+      <view class="info-value"><text>左侧。所以如果你来自美国、欧洲或亚洲，需要稍作调整；而来自英国和澳洲则不必担心。
+</text></view>
+
+     <view class="info-title">
+        <text>i-SITE游客中心</text>
+      </view>
+      <view class="info-value"><text>i-SITE游客中心提供景点、住宿、租车、巴士、活动等等各方面的信息。经验丰富的团队成员可以为你提供信息咨询与预定协助。最重要的是，不收取任何服务费。
+取阅各种地图和宣传册，或者和员工畅聊一番，助你充分享受一个愉悦假期。
+i-SITE游客中心是全国巴士和观光巴士服务的经停站，同时也是罗托鲁瓦及周边各种旅行团及班车服务的常规接送点。无疑是你罗托鲁瓦旅游的一站式服务点。
+</text></view>
+
+
+    </scroll-view>
+  </view>
+</view>
