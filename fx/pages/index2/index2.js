@@ -12,6 +12,30 @@ Page({
     transformLeft: 0, 
     indexImg: "http://p.qpic.cn/automall_pic/0/20180208201640_72095/640" 
   }, 
+  onLoad: function(options) {
+    var that = this;
+    var globalData = getApp().globalData;
+    if (wx.getStorageSync('openId') == null || wx.getStorageSync('openId') == '') { //没有openId就登录
+      wx.login({
+        success: function (res) {
+          //console.log(res.code);
+          wx.setStorageSync('code', res.code);//存储code
+          wx.getUserInfo({
+            success: function (res) {
+              globalData.userInfo = res.userInfo
+              if (globalData.userInfoReadyCallback) {
+                globalData.userInfoReadyCallback(res)
+              }
+              console.log(res.userInfo);
+              wx.setStorageSync('photo', res.userInfo.avatarUrl);//存储头像
+              wx.setStorageSync('nickName', res.userInfo.nickName);//存储昵称
+              wx.setStorageSync('sex', res.userInfo.gender);
+            }
+          });
+        }
+      });
+    }
+  },
   onShow: function () { 
     var a = (t = this).data.transformLeft; 
     t.data.transformY; 

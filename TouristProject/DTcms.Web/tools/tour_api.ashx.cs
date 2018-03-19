@@ -42,6 +42,10 @@ namespace DTcms.Web.tools
                     OutPut(context, TourAPI.get_channel_article_guidance_detail(
                         DTRequest.GetFormIntValue("id")));
                     break;
+                case "getOpenId":
+                    OutPut(context, TourAPI.getOpenId(
+                        DTRequest.GetFormString("code")));
+                    break;
                 default:
                     OutPut(context, "not implement action : " + action);
                     break;

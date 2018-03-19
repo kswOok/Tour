@@ -2,7 +2,9 @@
 using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -71,6 +73,26 @@ namespace DTcms.EFAPI
                             }).ToList(),
                     result = 1
                 });
+            }
+        }
+
+        public static string getOpenId(string code)
+        {
+            var request = (HttpWebRequest)WebRequest.Create("https://api.weixin.qq.com/sns/jscode2session" +
+                "?appid=wx1bb751d7d8712af4&secret=c0efc039a5d26c7e7d402a6c80f3834b" +
+                "&js_code=" + code + "&grant_type=authorization_code");
+            var response = (HttpWebResponse)request.GetResponse();
+            using (var sr = new StreamReader(response.GetResponseStream()))
+            {
+                string responseString = sr.ReadToEnd();
+                var obj = JsonConvert.DeserializeObject<dynamic>(responseString);
+                var ret = new
+                {
+                    obj.openid,
+                    obj,
+                    result = 1
+                };
+                return Obj2Json(ret);
             }
         }
 
