@@ -1,5 +1,3 @@
-<!--pages/HolidayCalendarDetail/HolidayCalendarDetail.wxml-->
-<text>pages/HolidayCalendarDetail/HolidayCalendarDetail.wxml</text>
-<view >{{id}}</view>
-<view >{{title}}</view>
-<view >{{brief}}</view>
+<view style='display:none'>{{id}}</view>
+<view class="holidayName">{{title}}</view>
+<view class="holidayInfor">{{brief}}</view>
