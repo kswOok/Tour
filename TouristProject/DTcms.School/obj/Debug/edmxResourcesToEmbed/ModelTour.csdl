@@ -39,6 +39,8 @@
     <EntitySet Name="dt_channel_article_food" EntityType="TouristDBModel.dt_channel_article_food" />
     <EntitySet Name="dt_channel_article_guidance" EntityType="TouristDBModel.dt_channel_article_guidance" />
     <EntitySet Name="dt_users" EntityType="TouristDBModel.dt_users" />
+    <EntitySet Name="dt_article_category" EntityType="TouristDBModel.dt_article_category" />
+    <EntitySet Name="dt_channel_article_goods" EntityType="TouristDBModel.dt_channel_article_goods" />
   </EntityContainer>
   <EntityType Name="dt_channel_article_food">
     <Key>
@@ -138,5 +140,62 @@
     <Property Name="age" Type="Int32" />
     <Property Name="openid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="interest" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="dt_article_category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="site_id" Type="Int32" />
+    <Property Name="channel_id" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="call_index" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="parent_id" Type="Int32" />
+    <Property Name="class_list" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="class_layer" Type="Int32" />
+    <Property Name="sort_id" Type="Int32" />
+    <Property Name="link_url" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="img_url" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="seo_title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="seo_keywords" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="seo_description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="is_lock" Type="Byte" />
+  </EntityType>
+  <EntityType Name="dt_channel_article_goods">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="site_id" Type="Int32" Nullable="false" />
+    <Property Name="channel_id" Type="Int32" Nullable="false" />
+    <Property Name="category_id" Type="Int32" Nullable="false" />
+    <Property Name="call_index" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="link_url" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="img_url" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="seo_title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="seo_keywords" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="seo_description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="tags" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="zhaiyao" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sort_id" Type="Int32" Nullable="false" />
+    <Property Name="click" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="is_msg" Type="Int32" Nullable="false" />
+    <Property Name="is_top" Type="Int32" Nullable="false" />
+    <Property Name="is_red" Type="Int32" Nullable="false" />
+    <Property Name="is_hot" Type="Int32" Nullable="false" />
+    <Property Name="is_slide" Type="Int32" Nullable="false" />
+    <Property Name="is_sys" Type="Int32" Nullable="false" />
+    <Property Name="user_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="like_count" Type="Int32" Nullable="false" />
+    <Property Name="add_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="update_time" Type="DateTime" Precision="3" />
+    <Property Name="sub_title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="goods_no" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="market_price" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="source" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

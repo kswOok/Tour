@@ -28,6 +28,13 @@ namespace DTcms.Web.tools
                     OutPut(context, TourAPI.get_channel_article_news_detail(
                         DTRequest.GetFormIntValue("id")));
                     break;
+                case "get_channel_article_goods":
+                    OutPut(context, TourAPI.get_channel_article_goods());
+                    break;
+                case "get_channel_article_goods_detail":
+                    OutPut(context, TourAPI.get_channel_article_goods_detail(
+                        DTRequest.GetFormIntValue("id")));
+                    break;
                 case "get_channel_article_food":
                     OutPut(context, TourAPI.get_channel_article_food());
                     break;
@@ -55,6 +62,13 @@ namespace DTcms.Web.tools
                         DTRequest.GetFormIntValue("age"),
                         DTRequest.GetFormString("phone"),
                         DTRequest.GetFormString("interest")));
+                    break;
+                case "get_brand_list":
+                    OutPut(context, TourAPI.get_brand_list());
+                    break;
+                case "get_brand_detail":
+                    OutPut(context, TourAPI.get_brand_detail(
+                        DTRequest.GetFormIntValue("id")));
                     break;
                 default:
                     OutPut(context, "not implement action : " + action);

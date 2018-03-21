@@ -1,2 +1,42 @@
-<!--pages/strategy-new/strategy-new.wxml-->
-<text>pages/strategy-new/strategy-new.wxml</text>
+<view class="container">
+  <view>
+    <text class="title" style="display:{{temp}}">你不能错过的当地品牌</text>
+    <view class="table">
+      <view class="tr">
+        <block wx:for-items="{{brandList1}}" wx:key="">
+          <view class="td">
+            <navigator style="width:100%;height:100%" url="/pages/brandDetail/brandDetail?id={{item.id}}">
+              <image src="{{item.img_url}}"></image>
+              <text class="intro">{{item.title}}</text>
+            </navigator>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="drawback">
+    <text class="title" style="display:{{temp}}">罗托鲁瓦退税我知道:</text>
+    <view class="cont">
+      <block wx:for-items="{{knowItem1}}" wx:key="">
+        <view class="know-item">
+          <view>
+            <text>{{item.Q}}</text>
+            <block wx:for-items="{{item.A}}" wx:key="">
+              <view>
+                <text>{{item.answer}}</text>
+              </view>
+            </block>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <block wx:for-items="{{noMissList}}" wx:key="">
+    <view class="foot-img">
+      <navigator hoverClass="navigator-hover" url="/pages/strategy-new-detail/strategy-new-detail?id={{item.id}}">
+        <image src="https://guomengtech.com{{item.img_url}}"></image>
+        <text class="intro">{{item.title}}</text>
+      </navigator>
+    </view>
+  </block>
+</view>

@@ -1,66 +1,96 @@
-// pages/strategy-new/strategy-new.js
-Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
-  },
+Page({ 
+  data: { 
+    brandList1: "", 
+    noMissList: "",
+    knowItem1: [{ Q: "谁可以享受退税购物？", A: [{ answer: "如果您是..." }, { answer: "如果您..." }] }, { Q: "我能退多少税？", A: [{ answer: "标准..."}]}], 
+    showMore: !0, 
+    slider: [], 
+    loading: !1, 
+    temp: "block" 
+  }, 
+  onLoad: function (n) { 
+    var that = this
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
+    wx.showToast({
+      icon: "loading",
+      title: "正在加载...",
+      duration: 2000000,
+    })
+    wx.request({
+      method: 'POST',
+      url: getApp().globalData.apiUrl,
+      data: {
+        action: 'get_brand_list'
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        console.log(res)
+        if (res.data.result == 1) {
+          wx.hideToast()
+        }
+        that.setData({
+          brandList1: res.data.data,
+        })
+      }
+    })
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
+    wx.showToast({
+      icon: "loading",
+      title: "正在加载...",
+      duration: 2000000,
+    })
+    wx.request({
+      method: 'POST',
+      url: getApp().globalData.apiUrl,
+      data: {
+        action: 'get_channel_article_goods'
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        console.log(res)
+        if (res.data.result == 1) {
+          wx.hideToast()
+        }
+        that.setData({
+          noMissList: res.data.data,
+        })
+      }
+    })
+  }, 
+  onReady: function () { 
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
+  }, 
+  onShow: function () { 
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
+  }, 
+  onHide: function () { 
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
+  }, 
+  onUnload: function () { 
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
+  }, 
+  onPullDownRefresh: function () { 
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
+  }, 
+  onReachBottom: function () { 
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
-})
+  }, 
+  onShareAppMessage: function () { 
+
+  }, 
+  checkMore: function (t) { 
+    this.setData({ 
+      showMore: !1 
+    }) 
+  }, 
+  hide: function (t) { 
+    this.setData({ 
+      showMore: !0 
+    }) 
+  } 
+});

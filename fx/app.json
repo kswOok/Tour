@@ -14,7 +14,9 @@
     "pages/HolidayCalendarDetail/HolidayCalendarDetail",
     "pages/no-missDetail/no-missDetail",
     "pages/local-foodDetail/local-foodDetail",
-    "pages/guideDetail/guideDetail"
+    "pages/guideDetail/guideDetail",
+    "pages/brandDetail/brandDetail",
+    "pages/strategy-new-detail/strategy-new-detail"
   ],
   "tabBar": {
     "list": [

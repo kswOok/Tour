@@ -1,3 +1,4 @@
+<import src="../../wxParse/wxParse.wxml"/>
 <view class="container">
   <view class="image">
     <image src="{{image}}"></image>
@@ -5,7 +6,7 @@
   <view class="text">
     <text class="title">{{title}}</text>
     <text class="time">{{time}}</text>
-    <text class="detail">{{detail}}</text>
+    <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
   </view>
   <block wx:for-items="{{main}}" wx:key="">
     <view class="wrap">

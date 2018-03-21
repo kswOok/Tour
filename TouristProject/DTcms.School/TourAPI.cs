@@ -30,33 +30,93 @@ namespace DTcms.EFAPI
             }
         }
 
+        public static string get_channel_article_news_detail(int id)
+        {
+            using (var db = new TouristDBEntities())
+            {
+                var obj = (from t in db.dt_channel_article_news
+                           where t.id == id
+                           select new
+                           {
+                               t.id,
+                               t.title,
+                               t.img_url,
+                               t.zhaiyao,
+                               t.content,
+                               t.update_time
+                           }).FirstOrDefault();
+                return Obj2Json(new
+                {
+                    data = new
+                    {
+                        obj.id,
+                        obj.title,
+                        obj.img_url,
+                        obj.zhaiyao,
+                        obj.update_time,
+                        content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload")
+                    },
+                    result = 1
+                });
+            }
+        }
+
+        public static string get_channel_article_goods()
+        {
+            using (var db = new TouristDBEntities())
+            {
+                return Obj2Json(new
+                {
+                    data = (from t in db.dt_channel_article_goods
+                            select new
+                            {
+                                t.id,
+                                t.title,
+                                t.img_url
+                            }).ToList(),
+                    result = 1
+                });
+            }
+        }
+
+        public static string get_channel_article_goods_detail(int id)
+        {
+            using (var db = new TouristDBEntities())
+            {
+                var obj = (from t in db.dt_channel_article_goods
+                           where t.id == id
+                           select new
+                           {
+                               t.id,
+                               t.title,
+                               t.img_url,
+                               t.zhaiyao,
+                               t.content,
+                               t.update_time
+                           }).FirstOrDefault();
+                return Obj2Json(new
+                {
+                    data = new
+                    {
+                        obj.id,
+                        obj.title,
+                        obj.img_url,
+                        obj.zhaiyao,
+                        obj.update_time,
+                        content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload")
+                    },
+                    result = 1
+                });
+            }
+        }
+
         public static string get_holidays()
         {
             var list = new List<HolidayItem>();
             return Obj2Json(list);
         }
 
-        public static string get_channel_article_news_detail(int id)
-        {
-            using (var db = new TouristDBEntities())
-            {
-                return Obj2Json(new
-                {
-                    data = (from t in db.dt_channel_article_news
-                            where t.id == id
-                            select new
-                            {
-                                t.id,
-                                t.title,
-                                t.img_url,
-                                t.zhaiyao,
-                                t.content,
-                                t.update_time
-                            }).FirstOrDefault(),
-                    result = 1
-                });
-            }
-        }
+        
 
         public static string get_channel_article_food()
         {
@@ -73,6 +133,45 @@ namespace DTcms.EFAPI
                             }).ToList(),
                     result = 1
                 });
+            }
+        }
+
+        public static string get_brand_detail(int id)
+        {
+            using (var db = new TouristDBEntities())
+            {
+                return Obj2Json(new
+                {
+                    data = (from t in db.dt_article_category
+                            where t.id == id
+                            select new
+                            {
+                                t.id,
+                                t.title,
+                                t.img_url,
+                                t.content
+                            }).FirstOrDefault(),
+                    result = 1
+                }).Replace("/upload/", "https://guomengtech.com/upload/");
+            }
+        }
+
+        public static string get_brand_list()
+        {
+            using (var db = new TouristDBEntities())
+            {
+                return Obj2Json(new
+                {
+                    data = (from t in db.dt_article_category
+                            where t.channel_id == 2
+                            select new
+                            {
+                                t.id,
+                                t.title,
+                                t.img_url
+                            }).ToList(),
+                    result = 1
+                }).Replace("/upload/", "https://guomengtech.com/upload/");
             }
         }
 
@@ -141,19 +240,28 @@ namespace DTcms.EFAPI
         {
             using (var db = new TouristDBEntities())
             {
+                var obj = (from t in db.dt_channel_article_food
+                           where t.id == id
+                           select new
+                           {
+                               t.id,
+                               t.title,
+                               t.img_url,
+                               t.zhaiyao,
+                               t.content,
+                               t.update_time
+                           }).FirstOrDefault();
                 return Obj2Json(new
                 {
-                    data = (from t in db.dt_channel_article_food
-                            where t.id == id
-                            select new
-                            {
-                                t.id,
-                                t.title,
-                                t.img_url,
-                                t.zhaiyao,
-                                t.content,
-                                t.update_time
-                            }).FirstOrDefault(),
+                    data = new
+                    {
+                        obj.id,
+                        obj.title,
+                        obj.img_url,
+                        obj.zhaiyao,
+                        obj.update_time,
+                        content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload")
+                    },
                     result = 1
                 });
             }
@@ -181,19 +289,28 @@ namespace DTcms.EFAPI
         {
             using (var db = new TouristDBEntities())
             {
+                var obj = (from t in db.dt_channel_article_guidance
+                           where t.id == id
+                           select new
+                           {
+                               t.id,
+                               t.title,
+                               t.img_url,
+                               t.zhaiyao,
+                               t.content,
+                               t.update_time
+                           }).FirstOrDefault();
                 return Obj2Json(new
                 {
-                    data = (from t in db.dt_channel_article_guidance
-                            where t.id == id
-                            select new
-                            {
-                                t.id,
-                                t.title,
-                                t.img_url,
-                                t.zhaiyao,
-                                t.content,
-                                t.update_time
-                            }).FirstOrDefault(),
+                    data = new
+                    {
+                        obj.id,
+                        obj.title,
+                        obj.img_url,
+                        obj.zhaiyao,
+                        obj.update_time,
+                        content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload")
+                    },
                     result = 1
                 });
             }

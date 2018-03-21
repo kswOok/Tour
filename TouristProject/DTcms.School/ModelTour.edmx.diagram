@@ -9,6 +9,8 @@
         <EntityTypeShape EntityType="TouristDBModel.dt_channel_article_food" Width="1.5" PointX="3.375" PointY="0.75" />
         <EntityTypeShape EntityType="TouristDBModel.dt_channel_article_guidance" Width="1.5" PointX="5.375" PointY="0.75" />
         <EntityTypeShape EntityType="TouristDBModel.dt_users" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="TouristDBModel.dt_article_category" Width="1.5" PointX="7.75" PointY="7.75" />
+        <EntityTypeShape EntityType="TouristDBModel.dt_channel_article_goods" Width="1.5" PointX="0.75" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

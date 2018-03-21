@@ -1,3 +1,4 @@
+var WxParse = require("../../wxParse/wxParse.js");
 // pages/guideDetail/guideDetail.js
 Page({
 
@@ -33,6 +34,8 @@ Page({
         if (res.data.result == 1) {
           wx.hideToast()
         }
+        var content = res.data.data.content;
+        WxParse.wxParse('content', 'html', content, that, 5);
         that.setData({
           title: res.data.data.title,
           time: res.data.data.update_time,
