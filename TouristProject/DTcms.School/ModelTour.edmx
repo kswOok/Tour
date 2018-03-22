@@ -194,6 +194,10 @@
           <Property Name="age" Type="int" />
           <Property Name="openid" Type="nvarchar" MaxLength="100" />
           <Property Name="interest" Type="nvarchar" MaxLength="255" />
+          <Property Name="latitude" Type="float" />
+          <Property Name="longitude" Type="float" />
+          <Property Name="accuracy" Type="float" />
+          <Property Name="address_component" Type="nvarchar" MaxLength="2000" />
         </EntityType>
         <EntityContainer Name="TouristDBModelStoreContainer">
           <EntitySet Name="dt_article_category" EntityType="Self.dt_article_category" Schema="dbo" store:Type="Tables" />
@@ -347,6 +351,10 @@
           <Property Name="age" Type="Int32" />
           <Property Name="openid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="interest" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="latitude" Type="Double" />
+          <Property Name="longitude" Type="Double" />
+          <Property Name="accuracy" Type="Double" />
+          <Property Name="address_component" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="dt_article_category">
           <Key>
@@ -519,6 +527,10 @@
           <EntitySetMapping Name="dt_users">
             <EntityTypeMapping TypeName="TouristDBModel.dt_users">
               <MappingFragment StoreEntitySet="dt_users">
+                <ScalarProperty Name="address_component" ColumnName="address_component" />
+                <ScalarProperty Name="accuracy" ColumnName="accuracy" />
+                <ScalarProperty Name="longitude" ColumnName="longitude" />
+                <ScalarProperty Name="latitude" ColumnName="latitude" />
                 <ScalarProperty Name="interest" ColumnName="interest" />
                 <ScalarProperty Name="openid" ColumnName="openid" />
                 <ScalarProperty Name="age" ColumnName="age" />

@@ -61,7 +61,10 @@ namespace DTcms.Web.tools
                         DTRequest.GetFormString("nickname"),
                         DTRequest.GetFormIntValue("age"),
                         DTRequest.GetFormString("phone"),
-                        DTRequest.GetFormString("interest")));
+                        DTRequest.GetFormString("interest"),
+                        DTRequest.GetFormFloat("latitude", -1),
+                        DTRequest.GetFormFloat("longitude", -1),
+                        DTRequest.GetFormFloat("accuracy", -1)));
                     break;
                 case "get_brand_list":
                     OutPut(context, TourAPI.get_brand_list());

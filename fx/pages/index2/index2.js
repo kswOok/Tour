@@ -35,6 +35,78 @@ Page({
         }
       });
     }
+
+    wx.getLocation({
+      type: 'wgs84',
+      success: function (res) {
+        var latitude = res.latitude
+        var longitude = res.longitude
+        var speed = res.speed
+        var accuracy = res.accuracy
+        console.log(latitude + "," + longitude + "," + speed + "," + accuracy);
+        wx.setStorageSync('latitude', res.latitude);//纬度
+        wx.setStorageSync('longitude', res.longitude);//精度
+        wx.setStorageSync('accuracy', res.accuracy);//位置的精确度
+      }
+    })
+
+    wx.showToast({
+      icon: "loading",
+      title: "正在加载...",
+      duration: 2000000,
+    })
+    wx.request({
+      method: 'POST',
+      url: getApp().globalData.apiUrl,
+      data: {
+        action: 'add_or_update_user',
+        openid: wx.getStorageSync('openId'),
+        photo: wx.getStorageSync('photo'),
+        sex: wx.getStorageSync('sex') == 1 ? "男" : "女",
+        nickname: wx.getStorageSync('nickName'),
+        age: -1,
+        phone: "",
+        interest: "",
+        latitude: wx.getStorageSync('latitude'),
+        longitude: wx.getStorageSync('longitude'),
+        accuracy: wx.getStorageSync('accuracy'),
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        wx.hideToast()
+        console.log(res)
+      }
+    })
+
+    /*wx.getLocation({
+      type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+      success: function (res) {
+        var latitude = res.latitude
+        var longitude = res.longitude
+        wx.openLocation({
+          latitude: latitude,
+          longitude: longitude,
+          scale: 28
+        })
+      }
+    })*/
+
+    wx.addCard({
+      cardList: [
+        {
+          cardId: '',
+          cardExt: '{"code": "", "openid": "", "timestamp": "", "signature":""}'
+        }, {
+          cardId: '',
+          cardExt: '{"code": "", "openid": "", "timestamp": "", "signature":""}'
+        }
+      ],
+      success: function (res) {
+        console.log(res.cardList) // 卡券添加结果
+      }
+    })
   },
   onShow: function () { 
     var a = (t = this).data.transformLeft; 

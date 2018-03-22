@@ -2,9 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\fx",
-    "\\fx\\images",
     "\\fx\\pages",
-    "\\fx\\pages\\guide"
+    "\\fx\\pages\\guide",
+    "\\fx\\pages\\HolidayCalendarDetail",
+    "\\TouristProject",
+    "\\TouristProject\\DTcms.School"
   ],
+  "SelectedNode": "\\fx",
   "PreviewInSolutionExplorer": false
 }

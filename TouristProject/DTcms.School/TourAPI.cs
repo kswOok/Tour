@@ -175,7 +175,8 @@ namespace DTcms.EFAPI
             }
         }
 
-        public static string add_or_update_user(string openid, string photo, int sex, string nickname, int age, string phone, string interest)
+        public static string add_or_update_user(string openid, string photo, int sex, string nickname, 
+            int age, string phone, string interest, float latitude, float longitude, float accuracy)
         {
             using (var db = new TouristDBEntities())
             {
@@ -194,6 +195,10 @@ namespace DTcms.EFAPI
                         user.age = age;
                         user.mobile = phone;
                         user.interest = interest;
+                        user.latitude = latitude;
+                        user.longitude = longitude;
+                        user.accuracy = accuracy;
+                        user.GetAddress();
                         db.dt_users.Add(user);
                     }
                     else
@@ -204,6 +209,10 @@ namespace DTcms.EFAPI
                         if (age != -1) user.age = age;
                         if (phone != null && phone != "") user.mobile = phone;
                         if (interest != null && interest != "") user.interest = interest;
+                        if(latitude != -1) user.latitude = latitude;
+                        if(longitude != -1) user.longitude = longitude;
+                        if(accuracy != -1) user.accuracy = accuracy;
+                        user.GetAddress();
                     }
                     db.SaveChanges();
                 }
@@ -333,4 +342,26 @@ namespace DTcms.EFAPI
         public bool g { get; set; }
         private DateTime dt { get;set; }
     }
+
+    public partial class dt_users
+    {
+        public void GetAddress()
+        {
+            var request = (HttpWebRequest)WebRequest.Create("http://apis.map.qq.com/ws/geocoder/v1/?location=" +
+                latitude.ToString() + "," + longitude.ToString() + "&coord_type=1&key=I7WBZ-Z4DWJ-EYCFX-K6XIC-R65E3-HJFQD");
+            var response = (HttpWebResponse)request.GetResponse();
+            using (var sr = new StreamReader(response.GetResponseStream()))
+            {
+                string responseString = sr.ReadToEnd();
+                var obj = JsonConvert.DeserializeObject<dynamic>(responseString);
+                int status = obj.status;
+                if (status == 0)
+                {
+                    address = obj.result.address;
+                    address_component = obj.result.address_component.ToString();
+                }
+            }
+        }
+    }
+
 }

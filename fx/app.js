@@ -22,12 +22,12 @@ App({
             header: {
               'content-type': 'application/x-www-form-urlencoded' // 默认值
             },
-            success: res => {
-              console.log(res);
-              if(res.openid) {
-                wx.setStorageSync('openId', res.openid);//存储openid  
+            success: res2 => {
+              if (res2.data.openid) {
+                wx.setStorageSync('openId', res2.data.openid);//存储openid
+
               }
-            }
+            } 
           })
         }
       }

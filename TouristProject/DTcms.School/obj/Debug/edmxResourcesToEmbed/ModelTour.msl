@@ -109,6 +109,10 @@
     <EntitySetMapping Name="dt_users">
       <EntityTypeMapping TypeName="TouristDBModel.dt_users">
         <MappingFragment StoreEntitySet="dt_users">
+          <ScalarProperty Name="address_component" ColumnName="address_component" />
+          <ScalarProperty Name="accuracy" ColumnName="accuracy" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
           <ScalarProperty Name="interest" ColumnName="interest" />
           <ScalarProperty Name="openid" ColumnName="openid" />
           <ScalarProperty Name="age" ColumnName="age" />

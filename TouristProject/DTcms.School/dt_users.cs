@@ -40,5 +40,9 @@ namespace DTcms.EFAPI
         public Nullable<int> age { get; set; }
         public string openid { get; set; }
         public string interest { get; set; }
+        public Nullable<double> latitude { get; set; }
+        public Nullable<double> longitude { get; set; }
+        public Nullable<double> accuracy { get; set; }
+        public string address_component { get; set; }
     }
 }

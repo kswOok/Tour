@@ -140,6 +140,10 @@
     <Property Name="age" Type="Int32" />
     <Property Name="openid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="interest" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="latitude" Type="Double" />
+    <Property Name="longitude" Type="Double" />
+    <Property Name="accuracy" Type="Double" />
+    <Property Name="address_component" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="dt_article_category">
     <Key>

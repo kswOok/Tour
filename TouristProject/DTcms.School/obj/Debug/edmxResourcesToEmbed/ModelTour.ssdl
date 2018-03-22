@@ -189,6 +189,10 @@
     <Property Name="age" Type="int" />
     <Property Name="openid" Type="nvarchar" MaxLength="100" />
     <Property Name="interest" Type="nvarchar" MaxLength="255" />
+    <Property Name="latitude" Type="float" />
+    <Property Name="longitude" Type="float" />
+    <Property Name="accuracy" Type="float" />
+    <Property Name="address_component" Type="nvarchar" MaxLength="2000" />
   </EntityType>
   <EntityContainer Name="TouristDBModelStoreContainer">
     <EntitySet Name="dt_article_category" EntityType="Self.dt_article_category" Schema="dbo" store:Type="Tables" />
