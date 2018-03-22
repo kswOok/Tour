@@ -347,6 +347,20 @@ namespace DTcms.EFAPI
     {
         public void GetAddress()
         {
+            var translate = (HttpWebRequest)WebRequest.Create("http://apis.map.qq.com/ws/coord/v1/translate?locations=" +
+                latitude.ToString() + "," + longitude.ToString() + "&type=1&key=I7WBZ-Z4DWJ-EYCFX-K6XIC-R65E3-HJFQD");
+            var response1 = (HttpWebResponse)translate.GetResponse();
+            using (var sr1 = new StreamReader(response1.GetResponseStream()))
+            {
+                string responseString = sr1.ReadToEnd();
+                var obj = JsonConvert.DeserializeObject<dynamic>(responseString);
+                int status = obj.status;
+                if(status == 0)
+                {
+                    latitude = obj.locations[0].lat;
+                    longitude = obj.locations[0].lng;
+                }
+            }
             var request = (HttpWebRequest)WebRequest.Create("http://apis.map.qq.com/ws/geocoder/v1/?location=" +
                 latitude.ToString() + "," + longitude.ToString() + "&coord_type=1&key=I7WBZ-Z4DWJ-EYCFX-K6XIC-R65E3-HJFQD");
             var response = (HttpWebResponse)request.GetResponse();
