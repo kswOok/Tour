@@ -1,40 +1,58 @@
-<view class="container">
-  <view class="index-header" style="position:fixed">
-    <image class="index-img" src="{{indexImg}}" style="-webkit-transition: transform .5s ease-out;-webkit-transform:translate3d({{transformLeft}}px,0,0)"></image>
-    <image class="index-icon" src="../../images/Rotorua.png"></image>
-    <view class="layout"></view>
+<scroll-view class="container">
+  
+  
+  <view class="index-header">
+    <swiper indicator-dots="{{indicatorDots}}" class="index-swiper"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="index-img"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <image class="index-icon" src="../../images/Rotorua2.png"></image>
   </view>
-
-  <view class="table">
-  <text>主题推荐</text>
-    <view class="tr bg-g">
-      <view class="td">
-        <navigator  style="width:100%;height:100%" hoverClass="none" url="/pages/no-miss/no-miss">
-          <image src="../../images/bukecuoguo.jpg"></image>
-          <text class="intro">不可错过</text>
-        </navigator>
-      </view>
-      <view class="td">
-        <navigator hoverClass="none" url="/pages/HolidayCalendar/HolidayCalendar">
-          <image src="../../images/shenduchangyou.jpg"></image>
-          <text>深度畅游</text>
-        </navigator>
-      </view>
+  <text class="title">主题推荐</text>
+  <view style="margin-top:30rpx;"/>
+  <view class="item-column">
+    <view class="item-row">
+      <navigator class="item-nav" url="/pages/no-miss/no-miss">
+        <image class="item-img" src="../../images/bukecuoguo.jpg"></image>
+        <text class="item-text">不可错过</text>
+      </navigator>
     </view>
-    <view class="tr bg-g">
-      <view class="td">
-        <navigator hoverClass="none" url="/pages/local-food/local-food">
-          <image src="../../images/dangdimeishi.jpg"></image>
-          <text>当地美食</text>
-        </navigator>
-      </view>
-      <view class="td">
-        <navigator hoverClass="none" url="/pages/strategy-new/strategy-new">
-          <image src="../../images/gouwugonglue.jpg"></image>
-          <text>购物攻略</text>
-        </navigator>
-      </view>
+    <view class="item-row">
+      <navigator class="item-nav" url="/pages/HolidayCalendar/HolidayCalendar">
+        <image class="item-img" src="../../images/shenduchangyou.jpg"></image>
+        <text class="item-text">深度畅游</text>
+      </navigator>
     </view>
-
   </view>
-</view>
+  <view class="item-column">
+    <view class="item-row">
+      <navigator class="item-nav" url="/pages/local-food/local-food">
+        <image class="item-img" src="../../images/dangdimeishi.jpg"></image>
+        <text class="item-text">当地美食</text>
+      </navigator>
+    </view>
+    <view class="item-row">
+      <navigator class="item-nav" url="/pages/strategy-new/strategy-new">
+        <image class="item-img" src="../../images/gouwugonglue.jpg"></image>
+        <text class="item-text">购物攻略</text>
+      </navigator>
+    </view>
+  </view>
+  <text class="title">推荐列表</text>
+  <view style="margin-top:30rpx;"/>
+  <view class='item-top5'>
+    <block wx:for-items="{{list}}" wx:key="key">
+      <navigator class="lists" url="/pages/no-missDetail/no-missDetail?id={{item.id}}">
+        <view class="singleList">
+          <image class="listImage" src="https://guomengtech.com{{item.img_url}}"></image>
+          <text class="listText">{{item.title}}</text>
+        </view>
+      </navigator>
+    </block>
+  </view>
+  <view style="margin-top:30rpx;"/>
+</scroll-view>

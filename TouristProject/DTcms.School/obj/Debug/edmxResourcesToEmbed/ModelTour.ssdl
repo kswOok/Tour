@@ -194,6 +194,16 @@
     <Property Name="accuracy" Type="float" />
     <Property Name="address_component" Type="nvarchar" MaxLength="2000" />
   </EntityType>
+  <EntityType Name="dt_wx_token">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="appid" Type="nvarchar" MaxLength="50" />
+    <Property Name="type" Type="nvarchar" MaxLength="50" />
+    <Property Name="value" Type="nvarchar" MaxLength="500" />
+    <Property Name="refresh_time" Type="datetime" />
+  </EntityType>
   <EntityContainer Name="TouristDBModelStoreContainer">
     <EntitySet Name="dt_article_category" EntityType="Self.dt_article_category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="dt_channel_article_food" EntityType="Self.dt_channel_article_food" Schema="dbo" store:Type="Tables" />
@@ -201,5 +211,6 @@
     <EntitySet Name="dt_channel_article_guidance" EntityType="Self.dt_channel_article_guidance" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="dt_channel_article_news" EntityType="Self.dt_channel_article_news" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="dt_users" EntityType="Self.dt_users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dt_wx_token" EntityType="Self.dt_wx_token" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

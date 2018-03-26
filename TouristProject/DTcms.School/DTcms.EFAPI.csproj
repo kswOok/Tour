@@ -70,6 +70,9 @@
     <Compile Include="dt_users.cs">
       <DependentUpon>ModelTour.tt</DependentUpon>
     </Compile>
+    <Compile Include="dt_wx_token.cs">
+      <DependentUpon>ModelTour.tt</DependentUpon>
+    </Compile>
     <Compile Include="MajorGroup.cs">
       <DependentUpon>ModelSchool.tt</DependentUpon>
     </Compile>

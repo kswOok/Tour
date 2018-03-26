@@ -4,6 +4,15 @@ getApp(),
 //require("../../utils/auth.js"); 
 Page({ 
   data: { 
+    imgUrls: [
+      '../../images/ltlw.jpg',
+      '../../images/ltlw2.jpg',
+      '../../images/ltlw3.jpg'
+    ],
+    indicatorDots: false,
+    autoplay: true,
+    interval: 5000,
+    duration: 2000,
     nation: "", 
     jwd: "", 
     com: "", 
@@ -93,18 +102,45 @@ Page({
       }
     })*/
 
+    var that = this
+
+    wx.showToast({
+      icon: "loading",
+      title: "正在加载...",
+      duration: 2000000,
+    })
+    wx.request({
+      method: 'POST',
+      url: getApp().globalData.apiUrl,
+      data: {
+        action: 'get_channel_article_news_top5'
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        console.log(res)
+        if (res.data.result == 1) {
+          wx.hideToast()
+        }
+        that.setData({
+          list: res.data.data,
+        })
+      }
+    })
+
     wx.addCard({
       cardList: [
         {
-          cardId: '',
-          cardExt: '{"code": "", "openid": "", "timestamp": "", "signature":""}'
-        }, {
-          cardId: '',
+          cardId: 'p8GQ5wpytA4-7ecutqatO850mFiI',
           cardExt: '{"code": "", "openid": "", "timestamp": "", "signature":""}'
         }
       ],
       success: function (res) {
-        console.log(res.cardList) // 卡券添加结果
+        console.log("wx.addCard" + res.cardList) // 卡券添加结果
+      },
+      fail: res => {
+        console.log(res) // 卡券添加结果
       }
     })
   },

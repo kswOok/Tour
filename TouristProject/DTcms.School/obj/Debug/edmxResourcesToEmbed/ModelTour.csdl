@@ -41,6 +41,7 @@
     <EntitySet Name="dt_users" EntityType="TouristDBModel.dt_users" />
     <EntitySet Name="dt_article_category" EntityType="TouristDBModel.dt_article_category" />
     <EntitySet Name="dt_channel_article_goods" EntityType="TouristDBModel.dt_channel_article_goods" />
+    <EntitySet Name="dt_wx_token" EntityType="TouristDBModel.dt_wx_token" />
   </EntityContainer>
   <EntityType Name="dt_channel_article_food">
     <Key>
@@ -201,5 +202,15 @@
     <Property Name="goods_no" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="market_price" Type="Decimal" Precision="9" Scale="2" />
     <Property Name="source" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="dt_wx_token">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="appid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="value" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="refresh_time" Type="DateTime" Precision="3" />
   </EntityType>
 </Schema>

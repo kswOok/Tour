@@ -199,6 +199,16 @@
           <Property Name="accuracy" Type="float" />
           <Property Name="address_component" Type="nvarchar" MaxLength="2000" />
         </EntityType>
+        <EntityType Name="dt_wx_token">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="appid" Type="nvarchar" MaxLength="50" />
+          <Property Name="type" Type="nvarchar" MaxLength="50" />
+          <Property Name="value" Type="nvarchar" MaxLength="500" />
+          <Property Name="refresh_time" Type="datetime" />
+        </EntityType>
         <EntityContainer Name="TouristDBModelStoreContainer">
           <EntitySet Name="dt_article_category" EntityType="Self.dt_article_category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="dt_channel_article_food" EntityType="Self.dt_channel_article_food" Schema="dbo" store:Type="Tables" />
@@ -206,6 +216,7 @@
           <EntitySet Name="dt_channel_article_guidance" EntityType="Self.dt_channel_article_guidance" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="dt_channel_article_news" EntityType="Self.dt_channel_article_news" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="dt_users" EntityType="Self.dt_users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="dt_wx_token" EntityType="Self.dt_wx_token" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -252,6 +263,7 @@
           <EntitySet Name="dt_users" EntityType="TouristDBModel.dt_users" />
           <EntitySet Name="dt_article_category" EntityType="TouristDBModel.dt_article_category" />
           <EntitySet Name="dt_channel_article_goods" EntityType="TouristDBModel.dt_channel_article_goods" />
+          <EntitySet Name="dt_wx_token" EntityType="TouristDBModel.dt_wx_token" />
         </EntityContainer>
         <EntityType Name="dt_channel_article_food">
           <Key>
@@ -412,6 +424,16 @@
           <Property Name="goods_no" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="market_price" Type="Decimal" Precision="9" Scale="2" />
           <Property Name="source" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="dt_wx_token">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="appid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="value" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="refresh_time" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -615,6 +637,17 @@
                 <ScalarProperty Name="category_id" ColumnName="category_id" />
                 <ScalarProperty Name="channel_id" ColumnName="channel_id" />
                 <ScalarProperty Name="site_id" ColumnName="site_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dt_wx_token">
+            <EntityTypeMapping TypeName="TouristDBModel.dt_wx_token">
+              <MappingFragment StoreEntitySet="dt_wx_token">
+                <ScalarProperty Name="refresh_time" ColumnName="refresh_time" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="appid" ColumnName="appid" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

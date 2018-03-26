@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,10 @@ namespace DTcms.EFAPI
 {
     public class TourAPI
     {
-        public static string get_channel_article_news()
+        private static string APPID = "wxc39f5007a3ffb70c";
+        private static string SECRET = "22d1b5f04ab1f5ce33c087a33fa7e33b";
+
+        public static string get_channel_article_news(int count)
         {
             using (var db = new TouristDBEntities())
             {
@@ -24,7 +28,7 @@ namespace DTcms.EFAPI
                                 t.id,
                                 t.title,
                                 t.img_url
-                            }).ToList(),
+                            }).Take(count).ToList(),
                     result = 1
                 });
             }
@@ -107,6 +111,97 @@ namespace DTcms.EFAPI
                     },
                     result = 1
                 });
+            }
+        }
+
+        public static string getAppCard(string card_id)
+        {
+            string api_ticket = getApiTicket();
+            DateTime dt_start = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
+            int timestamp = (int)(DateTime.Now - dt_start).TotalSeconds;
+            List<string> lst = new List<string>();
+            lst.Add(api_ticket);
+            lst.Add(timestamp.ToString());
+            lst.Add(card_id);
+            lst.Sort();
+            string str = lst[0] + lst[1] + lst[2];
+            byte[] str1 = Encoding.UTF8.GetBytes(str);
+            SHA1 sha1 = new SHA1CryptoServiceProvider();
+            byte[] buf = sha1.ComputeHash(str1);
+            string signature = BitConverter.ToString(buf).ToLower();
+            signature = signature.Replace("-", "");
+            return Obj2Json(new
+            {
+                card_id,
+                timestamp,
+                signature
+            });
+        }
+
+        private static string getApiTicket()
+        {
+            using (var db = new TouristDBEntities())
+            {
+                var obj = db.dt_wx_token.SingleOrDefault(s => s.appid == APPID && s.type == "api_ticket");
+                if (obj == null)
+                {
+                    obj = new dt_wx_token
+                    {
+                        appid = APPID,
+                        type = "api_ticket",
+                        refresh_time = DateTime.Now.Subtract(new TimeSpan(3, 0, 0))
+                    };
+                    db.dt_wx_token.Add(obj);
+                }
+                if (DateTime.Now.Subtract(obj.refresh_time.Value).TotalSeconds > 5400)
+                {
+                    var request = (HttpWebRequest)WebRequest.Create(
+                        "https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=" + getAccessToken() + "&type=wx_card");
+                    var response = (HttpWebResponse)request.GetResponse();
+                    using (var sr = new StreamReader(response.GetResponseStream()))
+                    {
+                        string responseString = sr.ReadToEnd();
+                        var temp = JsonConvert.DeserializeObject<dynamic>(responseString);
+                        obj.value = temp.ticket;
+                        obj.refresh_time = DateTime.Now;
+                    }
+                }
+                db.SaveChanges();
+                return obj.value;
+            }
+        }
+
+        private static string getAccessToken()
+        {
+            using (var db = new TouristDBEntities())
+            {
+                var obj = db.dt_wx_token.SingleOrDefault(s => s.appid == APPID && s.type == "access_token");
+                if(obj == null)
+                {
+                    obj = new dt_wx_token
+                    {
+                        appid = APPID,
+                        type = "access_token",
+                        refresh_time = DateTime.Now.Subtract(new TimeSpan(3, 0, 0))
+                    };
+                    db.dt_wx_token.Add(obj);
+                }
+                if(DateTime.Now.Subtract(obj.refresh_time.Value).TotalSeconds > 5400)
+                {
+                    var request = (HttpWebRequest)WebRequest.Create(
+                        "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" + 
+                        APPID + "&secret=" + SECRET);
+                    var response = (HttpWebResponse)request.GetResponse();
+                    using (var sr = new StreamReader(response.GetResponseStream()))
+                    {
+                        string responseString = sr.ReadToEnd();
+                        var temp = JsonConvert.DeserializeObject<dynamic>(responseString);
+                        obj.value = temp.access_token;
+                        obj.refresh_time = DateTime.Now;
+                    }
+                }
+                db.SaveChanges();
+                return obj.value;
             }
         }
 
@@ -228,8 +323,7 @@ namespace DTcms.EFAPI
         public static string getOpenId(string code)
         {
             var request = (HttpWebRequest)WebRequest.Create("https://api.weixin.qq.com/sns/jscode2session" +
-                "?appid=wxc39f5007a3ffb70c&secret=22d1b5f04ab1f5ce33c087a33fa7e33b" +
-                "&js_code=" + code + "&grant_type=authorization_code");
+                "?appid=" + APPID + "&secret=" + SECRET + "&js_code=" + code + "&grant_type=authorization_code");
             var response = (HttpWebResponse)request.GetResponse();
             using (var sr = new StreamReader(response.GetResponseStream()))
             {

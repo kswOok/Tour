@@ -201,5 +201,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="dt_wx_token">
+      <EntityTypeMapping TypeName="TouristDBModel.dt_wx_token">
+        <MappingFragment StoreEntitySet="dt_wx_token">
+          <ScalarProperty Name="refresh_time" ColumnName="refresh_time" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="appid" ColumnName="appid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

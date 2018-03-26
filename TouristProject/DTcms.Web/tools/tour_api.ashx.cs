@@ -22,7 +22,10 @@ namespace DTcms.Web.tools
                     OutPut(context, TourAPI.get_holidays());
                     break;
                 case "get_channel_article_news":
-                    OutPut(context, TourAPI.get_channel_article_news());
+                    OutPut(context, TourAPI.get_channel_article_news(1000));
+                    break;
+                case "get_channel_article_news_top5":
+                    OutPut(context, TourAPI.get_channel_article_news(5));
                     break;
                 case "get_channel_article_news_detail":
                     OutPut(context, TourAPI.get_channel_article_news_detail(
@@ -72,6 +75,10 @@ namespace DTcms.Web.tools
                 case "get_brand_detail":
                     OutPut(context, TourAPI.get_brand_detail(
                         DTRequest.GetFormIntValue("id")));
+                    break;
+                case "getAppCard":
+                    OutPut(context, TourAPI.getAppCard(
+                        DTRequest.GetFormString("card_id")));
                     break;
                 default:
                     OutPut(context, "not implement action : " + action);
