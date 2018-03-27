@@ -13,8 +13,10 @@ namespace DTcms.EFAPI
 {
     public class TourAPI
     {
-        private static string APPID = "wxc39f5007a3ffb70c";
-        private static string SECRET = "22d1b5f04ab1f5ce33c087a33fa7e33b";
+        //private static string APPID = "wxc39f5007a3ffb70c";
+        //private static string SECRET = "22d1b5f04ab1f5ce33c087a33fa7e33b";
+        private static string APPID = "wx6e25266d24577e88";
+        private static string SECRET = "5bcb4c2b9105fcbcd3ddba8de7609f92";
 
         public static string get_channel_article_news(int count)
         {
@@ -114,6 +116,73 @@ namespace DTcms.EFAPI
             }
         }
 
+        public static string coupon_query_coupon(string poi_id)
+        {
+            string sign_key = "8c49bf5ca8da4ac5ad3d637f882d4ea5";
+            string signString = "merchant_id=826779031&nonce_str=abcde&service=create_query_coupon_page_store";
+            if(poi_id != "")
+                signString = "merchant_id=826779031&nonce_str=abcde&poi_id=" + poi_id + "&service=create_query_coupon_page_store";
+            using (MD5 md5 = MD5.Create())
+            {
+                string signature = GetMd5Hash(md5, signString + sign_key);
+                string postData = signString + "&signature=" + signature + "&sign_type=MD5";
+                var request = (HttpWebRequest)WebRequest.Create("https://coupon.kiwifast.com/interface");
+                request.Method = "POST";
+                request.ContentType = "application/x-www-form-urlencoded";
+                byte[] data = Encoding.UTF8.GetBytes(postData);
+                request.ContentLength = data.Length;
+                using (Stream reqStream = request.GetRequestStream())
+                {
+                    reqStream.Write(data, 0, data.Length);
+                    reqStream.Close();
+                }
+                var response = (HttpWebResponse)request.GetResponse();
+                using (var sr = new StreamReader(response.GetResponseStream()))
+                {
+                    string responseString = sr.ReadToEnd();
+                    return responseString;
+                }
+            }
+        }
+
+        public static string coupon_query_store()
+        {
+            string sign_key = "8c49bf5ca8da4ac5ad3d637f882d4ea5";
+            string signString = "merchant_id=826779031&nonce_str=abcde&service=create_query_store_page_merchant";
+            using (MD5 md5 = MD5.Create())
+            {
+                string signature = GetMd5Hash(md5, signString + sign_key);
+                string postData = signString + "&signature=" + signature + "&sign_type=MD5";
+                var request = (HttpWebRequest)WebRequest.Create("https://coupon.kiwifast.com/interface");
+                request.Method = "POST";
+                request.ContentType = "application/x-www-form-urlencoded";
+                byte[] data = Encoding.UTF8.GetBytes(postData);
+                request.ContentLength = data.Length;
+                using (Stream reqStream = request.GetRequestStream())
+                {
+                    reqStream.Write(data, 0, data.Length);
+                    reqStream.Close();
+                }
+                var response = (HttpWebResponse)request.GetResponse();
+                using (var sr = new StreamReader(response.GetResponseStream()))
+                {
+                    string responseString = sr.ReadToEnd();
+                    return responseString;
+                }
+            }
+        }
+
+        private static string GetMd5Hash(MD5 md5Hash, string input)
+        {
+            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+            StringBuilder sBuilder = new StringBuilder();
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+            return sBuilder.ToString();
+        }
+
         public static string getAppCard(string card_id)
         {
             string api_ticket = getApiTicket();
@@ -128,8 +197,15 @@ namespace DTcms.EFAPI
             byte[] str1 = Encoding.UTF8.GetBytes(str);
             SHA1 sha1 = new SHA1CryptoServiceProvider();
             byte[] buf = sha1.ComputeHash(str1);
-            string signature = BitConverter.ToString(buf).ToLower();
-            signature = signature.Replace("-", "");
+
+            StringBuilder sBuilder = new StringBuilder();
+            for (int i = 0; i < buf.Length; i++)
+            {
+                sBuilder.Append(buf[i].ToString("x2"));
+            }
+            string signature = sBuilder.ToString();
+            //string signature = BitConverter.ToString(buf).ToLower();
+            //signature = signature.Replace("-", "");
             return Obj2Json(new
             {
                 card_id,

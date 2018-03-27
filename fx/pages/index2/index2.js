@@ -129,18 +129,36 @@ Page({
       }
     })
 
-    wx.addCard({
-      cardList: [
-        {
-          cardId: 'p8GQ5wpytA4-7ecutqatO850mFiI',
-          cardExt: '{"code": "", "openid": "", "timestamp": "", "signature":""}'
-        }
-      ],
-      success: function (res) {
-        console.log("wx.addCard" + res.cardList) // 卡券添加结果
+    wx.request({
+      method: 'POST',
+      url: getApp().globalData.apiUrl, //仅为示例，并非真实的接口地址
+      data: {
+        action: 'getAppCard',
+        card_id: 'p8GQ5wpytA4-7ecutqatO850mFiI'
       },
-      fail: res => {
-        console.log(res) // 卡券添加结果
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        console.log(res)
+        console.log('{"timestamp":"' + res.data.timestamp + '","signature":"' + res.data.signature + '"}')
+        wx.addCard({
+          cardList: [
+            {
+              cardId: res.data.card_id,
+              cardExt: '{"timestamp":"' + res.data.timestamp + '","signature":"' + res.data.signature + '"}'
+            }
+          ],
+          success: function (res) {
+            console.log(res.cardList) // 卡券添加结果
+            wx.showToast({
+              title: res.cardList,
+            })
+          },
+          fail: res => {
+            console.log(res) // 卡券添加结果
+          }
+        })
       }
     })
   },

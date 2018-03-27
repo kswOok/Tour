@@ -80,6 +80,13 @@ namespace DTcms.Web.tools
                     OutPut(context, TourAPI.getAppCard(
                         DTRequest.GetFormString("card_id")));
                     break;
+                case "coupon_query_store":
+                    OutPut(context, TourAPI.coupon_query_store());
+                    break;
+                case "coupon_query_coupon":
+                    OutPut(context, TourAPI.coupon_query_coupon(
+                        DTRequest.GetFormString("poi_id")));
+                    break;
                 default:
                     OutPut(context, "not implement action : " + action);
                     break;
