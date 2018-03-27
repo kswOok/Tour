@@ -52,7 +52,6 @@ Page({
         var longitude = res.longitude
         var speed = res.speed
         var accuracy = res.accuracy
-        console.log(latitude + "," + longitude + "," + speed + "," + accuracy);
         wx.setStorageSync('latitude', res.latitude);//纬度
         wx.setStorageSync('longitude', res.longitude);//精度
         wx.setStorageSync('accuracy', res.accuracy);//位置的精确度
@@ -119,7 +118,6 @@ Page({
         'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
       success: function (res) {
-        console.log(res)
         if (res.data.result == 1) {
           wx.hideToast()
         }
@@ -129,7 +127,7 @@ Page({
       }
     })
 
-    wx.request({
+    /*wx.request({
       method: 'POST',
       url: getApp().globalData.apiUrl, //仅为示例，并非真实的接口地址
       data: {
@@ -140,8 +138,6 @@ Page({
         'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
       success: function (res) {
-        console.log(res)
-        console.log('{"timestamp":"' + res.data.timestamp + '","signature":"' + res.data.signature + '"}')
         wx.addCard({
           cardList: [
             {
@@ -160,7 +156,7 @@ Page({
           }
         })
       }
-    })
+    })*/
   },
   onShow: function () { 
     var a = (t = this).data.transformLeft; 

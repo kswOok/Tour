@@ -23,9 +23,9 @@ App({
               'content-type': 'application/x-www-form-urlencoded' // 默认值
             },
             success: res2 => {
+              console.log(res2)
               if (res2.data.openid) {
                 wx.setStorageSync('openId', res2.data.openid);//存储openid
-
               }
             } 
           })

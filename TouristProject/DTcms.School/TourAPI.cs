@@ -15,8 +15,10 @@ namespace DTcms.EFAPI
     {
         //private static string APPID = "wxc39f5007a3ffb70c";
         //private static string SECRET = "22d1b5f04ab1f5ce33c087a33fa7e33b";
-        private static string APPID = "wx6e25266d24577e88";
-        private static string SECRET = "5bcb4c2b9105fcbcd3ddba8de7609f92";
+        //private static string APPID = "wx6e25266d24577e88";
+        //private static string SECRET = "5bcb4c2b9105fcbcd3ddba8de7609f92";
+        private static string APPID = "wxae5205c0ff08a0fe";
+        private static string SECRET = "a615926cfb1342fcf10eb9dbcebc7926";
 
         public static string get_channel_article_news(int count)
         {
@@ -185,7 +187,7 @@ namespace DTcms.EFAPI
 
         public static string getAppCard(string card_id)
         {
-            string api_ticket = getApiTicket();
+            string api_ticket = getKiwifastApiTicket();// getApiTicket();
             DateTime dt_start = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
             int timestamp = (int)(DateTime.Now - dt_start).TotalSeconds;
             List<string> lst = new List<string>();
@@ -210,8 +212,31 @@ namespace DTcms.EFAPI
             {
                 card_id,
                 timestamp,
-                signature
+                signature,
+                cardExt = "{\"code\":\"\", \"openid\":\"\", \"timestamp\": \"" + timestamp.ToString() + "\", \"signature\": \"" + signature + "\"}"
             });
+        }
+
+        private static string getKiwifastApiTicket()
+        {
+            string postData = "type=wx_card";
+            var request = (HttpWebRequest)WebRequest.Create("https://coupon.kiwifast.com/interface/getTicket");
+            request.Method = "POST";
+            request.ContentType = "application/x-www-form-urlencoded";
+            byte[] data = Encoding.UTF8.GetBytes(postData);
+            request.ContentLength = data.Length;
+            using (Stream reqStream = request.GetRequestStream())
+            {
+                reqStream.Write(data, 0, data.Length);
+                reqStream.Close();
+            }
+            var response = (HttpWebResponse)request.GetResponse();
+            using (var sr = new StreamReader(response.GetResponseStream()))
+            {
+                string responseString = sr.ReadToEnd();
+                var temp = JsonConvert.DeserializeObject<dynamic>(responseString);
+                return temp.ticket;
+            }
         }
 
         private static string getApiTicket()
