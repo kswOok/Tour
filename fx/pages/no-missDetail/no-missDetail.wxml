@@ -1,8 +1,5 @@
 <import src="../../wxParse/wxParse.wxml"/>
 <view class="container">
-  <view class="image">
-    <image src="{{image}}"></image>
-  </view>
   <view class="text">
     <text class="title">{{title}}</text>
     <text class="time">{{time}}</text>

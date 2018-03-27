@@ -32,6 +32,7 @@
 .title {
   margin-left: 30rpx;
   font-size: 40rpx;
+  color: #663300;
 }
 
 .item-nav {
@@ -77,12 +78,12 @@
   position: relative;
   margin-bottom: 14rpx;
   width: 750rpx;
-  height: 210rpx;
+  height: 300rpx;
 }
 
 .singleList .listImage {
   width: 690rpx;
-  height: 210rpx;
+  height: 300rpx;
   margin-left: 30rpx;
   margin-right: 30rpx;
   border-radius: 10rpx;
@@ -94,7 +95,7 @@
   color: #fff;
   font-size: 30rpx;
   margin-left: 50rpx;
-  margin-top: 160rpx;
+  margin-top: 230rpx;
   text-shadow: black 0.1rem 0.1rem 0.2rem;
   font-style: italic;
 }

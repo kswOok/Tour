@@ -17,7 +17,7 @@
   <view class="item-column">
     <view class="item-row">
       <navigator class="item-nav" url="/pages/no-miss/no-miss">
-        <image class="item-img" src="../../images/bukecuoguo.jpg"></image>
+        <image class="item-img" src="../../images/bukecuoguo.png"></image>
         <text class="item-text">不可错过</text>
       </navigator>
     </view>
@@ -42,7 +42,7 @@
       </navigator>
     </view>
   </view>
-  <text class="title">推荐列表</text>
+  <text class="title">当季推荐</text>
   <view style="margin-top:30rpx;"/>
   <view class='item-top5'>
     <block wx:for-items="{{list}}" wx:key="key">
