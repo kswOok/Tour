@@ -44,5 +44,6 @@ namespace DTcms.EFAPI
         public Nullable<double> longitude { get; set; }
         public Nullable<double> accuracy { get; set; }
         public string address_component { get; set; }
+        public string unionid { get; set; }
     }
 }

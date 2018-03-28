@@ -193,6 +193,7 @@
     <Property Name="longitude" Type="float" />
     <Property Name="accuracy" Type="float" />
     <Property Name="address_component" Type="nvarchar" MaxLength="2000" />
+    <Property Name="unionid" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="dt_wx_token">
     <Key>

@@ -1,0 +1,19 @@
+<view class="container1">
+  <view class="userInfo">
+    <text class="userNickName">{{userInfo.nickName}}</text>
+    <image class="userPhoto" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  
+  <text class="title">我的优惠劵</text>
+  <block wx:for-items="{{couponList}}" wx:key="">
+    <view class='index-swiper'>
+      <view class='coupon' bindtap='onAddCard' data-id='{{item.card_id}}'>
+        <image src="{{item.logo_url}}" class="index-img" mode='scaleToFill'/>
+        <view class='info' style="background-color:#{{item.color}};">
+          <text class='card_title'>{{item.card_title}}</text>
+          <text class='sub_title'>{{item.sub_title}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

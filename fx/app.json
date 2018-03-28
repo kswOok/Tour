@@ -16,7 +16,8 @@
     "pages/local-foodDetail/local-foodDetail",
     "pages/guideDetail/guideDetail",
     "pages/brandDetail/brandDetail",
-    "pages/strategy-new-detail/strategy-new-detail"
+    "pages/strategy-new-detail/strategy-new-detail",
+    "pages/my2/my2"
   ],
   "tabBar": {
     "list": [
@@ -39,7 +40,7 @@
         "selectedIconPath": "images/answer-b.png"
       },
       {
-        "pagePath": "pages/my/my",
+        "pagePath": "pages/my2/my2",
         "text": "我的",
         "iconPath": "images/mine-g.png",
         "selectedIconPath": "images/mine-b.png"

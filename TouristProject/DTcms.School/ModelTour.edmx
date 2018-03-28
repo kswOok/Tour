@@ -198,6 +198,7 @@
           <Property Name="longitude" Type="float" />
           <Property Name="accuracy" Type="float" />
           <Property Name="address_component" Type="nvarchar" MaxLength="2000" />
+          <Property Name="unionid" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="dt_wx_token">
           <Key>
@@ -367,6 +368,7 @@
           <Property Name="longitude" Type="Double" />
           <Property Name="accuracy" Type="Double" />
           <Property Name="address_component" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="unionid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="dt_article_category">
           <Key>
@@ -549,6 +551,7 @@
           <EntitySetMapping Name="dt_users">
             <EntityTypeMapping TypeName="TouristDBModel.dt_users">
               <MappingFragment StoreEntitySet="dt_users">
+                <ScalarProperty Name="unionid" ColumnName="unionid" />
                 <ScalarProperty Name="address_component" ColumnName="address_component" />
                 <ScalarProperty Name="accuracy" ColumnName="accuracy" />
                 <ScalarProperty Name="longitude" ColumnName="longitude" />

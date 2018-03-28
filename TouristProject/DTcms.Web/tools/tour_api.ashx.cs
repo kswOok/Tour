@@ -59,6 +59,7 @@ namespace DTcms.Web.tools
                 case "add_or_update_user":
                     OutPut(context, TourAPI.add_or_update_user(
                         DTRequest.GetFormString("openid"),
+                        DTRequest.GetFormString("unionid"),
                         DTRequest.GetFormString("photo"),
                         DTRequest.GetFormIntValue("sex"),
                         DTRequest.GetFormString("nickname"),
@@ -86,6 +87,16 @@ namespace DTcms.Web.tools
                 case "coupon_query_coupon":
                     OutPut(context, TourAPI.coupon_query_coupon(
                         DTRequest.GetFormString("poi_id")));
+                    break;
+                case "coupon_query_user":
+                    OutPut(context, TourAPI.coupon_query_user(
+                        DTRequest.GetFormString("unionid")));
+                    break;
+                case "getUnionId":
+                    OutPut(context, TourAPI.getUnionId(
+                        DTRequest.GetFormString("session_key"),
+                        DTRequest.GetFormString("iv"),
+                        DTRequest.GetFormString("encryptedData")));
                     break;
                 default:
                     OutPut(context, "not implement action : " + action);

@@ -145,6 +145,7 @@
     <Property Name="longitude" Type="Double" />
     <Property Name="accuracy" Type="Double" />
     <Property Name="address_component" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="unionid" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="dt_article_category">
     <Key>

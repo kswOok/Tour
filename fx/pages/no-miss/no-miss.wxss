@@ -1,28 +1,19 @@
-.container {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
 
 .lists {
-  width: 100%;
+  width: 750rpx;
 }
 
 .singleList {
   position: relative;
-  margin-bottom: 14px;
-  width: 100%;
-  height: 210px;
+  margin-bottom: 25rpx;
+  width: 750rpx;
+  height: 300rpx;
 }
 
 .singleList .listImage {
-  width: 100%;
-  height: 210px;
+  width: 750rpx;
+  height: 300rpx;
+  position: absolute;
 }
 
  
@@ -30,19 +21,29 @@
 .singleList .listText {
   width: 100%;
   color: #ececec;
-  font-size: 18px;
+  font-size: 30rpx;
   position: absolute;
   text-align: center;
   bottom: 0;
-  line-height: 50px;
+  line-height: 50rpx;
   box-sizing: border-box;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   display: block;
-  height: 50px;
+  height: 50rpx;
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
   background: -o-linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
   background: -moz-linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
   background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+}
+
+.singleList .listText2 {
+  position: absolute;
+  color: #fff;
+  font-size: 30rpx;
+  margin-left: 50rpx;
+  margin-top: 230rpx;
+  text-shadow: black 0.1rem 0.1rem 0.2rem;
+  font-style: italic;
 }

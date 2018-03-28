@@ -118,6 +118,56 @@ namespace DTcms.EFAPI
             }
         }
 
+        public static string coupon_query_user(string unionid)
+        {
+            string sign_key = "8c49bf5ca8da4ac5ad3d637f882d4ea5";
+            string signString = "merchant_id=826779031&nonce_str=abcde&service=create_query_coupon_page_user&unionid=" + unionid;
+            using (MD5 md5 = MD5.Create())
+            {
+                string signature = GetMd5Hash(md5, signString + sign_key);
+                string postData = signString + "&signature=" + signature + "&sign_type=MD5";
+                var request = (HttpWebRequest)WebRequest.Create("https://coupon.kiwifast.com/interface");
+                request.Method = "POST";
+                request.ContentType = "application/x-www-form-urlencoded";
+                byte[] data = Encoding.UTF8.GetBytes(postData);
+                request.ContentLength = data.Length;
+                using (Stream reqStream = request.GetRequestStream())
+                {
+                    reqStream.Write(data, 0, data.Length);
+                    reqStream.Close();
+                }
+                var response = (HttpWebResponse)request.GetResponse();
+                using (var sr = new StreamReader(response.GetResponseStream()))
+                {
+                    string responseString = sr.ReadToEnd();
+                    return responseString;
+                }
+            }
+        }
+
+        public static string getUnionId(string session_key, string iv, string encryptedData)
+        {
+            byte[] data = Convert.FromBase64String(encryptedData);
+            RijndaelManaged rm = new RijndaelManaged();
+            rm.Key = Convert.FromBase64String(session_key);
+            rm.IV = Convert.FromBase64String(iv);
+            rm.Mode = CipherMode.CBC;
+            rm.Padding = PaddingMode.PKCS7;
+            ICryptoTransform transform = rm.CreateDecryptor();
+            byte[] buf = transform.TransformFinalBlock(data, 0, data.Length);
+            string result = Encoding.UTF8.GetString(buf);
+
+            return Obj2Json(new
+            {
+                data = new
+                {
+                    userinfo = JsonConvert.DeserializeObject<dynamic>(result)
+            //result_text,
+                },
+                result = 1
+            });
+        }
+
         public static string coupon_query_coupon(string poi_id)
         {
             string sign_key = "8c49bf5ca8da4ac5ad3d637f882d4ea5";
@@ -371,7 +421,7 @@ namespace DTcms.EFAPI
             }
         }
 
-        public static string add_or_update_user(string openid, string photo, int sex, string nickname, 
+        public static string add_or_update_user(string openid, string unionid, string photo, int sex, string nickname, 
             int age, string phone, string interest, float latitude, float longitude, float accuracy)
         {
             using (var db = new TouristDBEntities())
@@ -384,6 +434,7 @@ namespace DTcms.EFAPI
                     {
                         user = new dt_users();
                         user.openid = openid;
+                        user.unionid = unionid;
                         user.user_name = nickname;
                         user.password = "123";
                         user.avatar = photo;
@@ -399,6 +450,7 @@ namespace DTcms.EFAPI
                     }
                     else
                     {
+                        if (unionid != null && unionid != "") user.unionid = unionid;
                         if (photo != null && photo != "") user.avatar = photo;
                         if (sex != -1) user.sex = sex.ToString();
                         if (nickname != null && nickname != "") user.user_name = nickname;
@@ -432,6 +484,7 @@ namespace DTcms.EFAPI
                 var obj = JsonConvert.DeserializeObject<dynamic>(responseString);
                 var ret = new
                 {
+                    obj.unionid,
                     obj.openid,
                     obj,
                     result = 1

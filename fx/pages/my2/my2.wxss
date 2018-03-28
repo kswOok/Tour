@@ -1,0 +1,111 @@
+.container1 {
+  width: 100%;
+  display: block;
+  padding-top: 10rpx;
+  border-top: 3rpx solid #b7b7b7;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 72rpx;
+}
+
+.userInfo .userPhoto {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 80rpx;
+}
+
+.userNickName {
+  line-height: 260rpx;
+  margin-left: 60rpx;
+  flex: 1;
+  font-size: 45rpx;
+}
+
+.userPhoto {
+  margin-right: 60rpx;
+}
+
+.title {
+  margin-left: 60rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.mineCollect {
+  margin-left: 60rpx;
+  margin-top: 20rpx;
+}
+
+.collectContent {
+  width: 630rpx;
+}
+
+.mineCollect .contentName {
+  font-size: 30rpx;
+  color: #888;
+}
+
+.collectContent .nav-group {
+  width: 630rpx;
+}
+
+.collectContent .nav-group image {
+  width: 630rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.btn {
+  margin: 60rpx;
+}
+
+.index-swiper {
+  width: 630rpx;
+  height: 200rpx;
+  border: 1rpx solid #ccc;
+  margin: 30rpx 60rpx;
+}
+
+.index-img {
+  width: 200rpx;
+  height: 200rpx;
+  
+}
+
+.coupon1 {
+  width: 630rpx;
+  height: 200rpx;
+  margin: 60rpx;
+  border: 1rpx solid #ccc;
+  display: flex;
+  flex-direction: row;
+}
+
+.coupon {
+  width: 630rpx;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.info {
+  width: 430rpx;
+  display: flex;
+  border-left: 1rpx solid #ccc;
+  flex-direction: column;
+}
+
+.card_title {
+  font-size: 35rpx;
+  margin-left: 35rpx;
+  margin-top: 30rpx;
+}
+
+.sub_title {
+  font-size: 30rpx;
+  margin-left: 35rpx;
+  margin-top: 20rpx;
+}

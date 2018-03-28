@@ -1,5 +1,19 @@
 <view class="container">
   <view>
+    <swiper indicator-dots="false" class="index-swiper"
+      autoplay="true" interval="5000" duration="2000">
+      <block wx:for-items="{{couponList}}" wx:key="">
+        <swiper-item>
+          <view class='coupon' bindtap='onAddCard' data-id='{{item.card_id}}'>
+            <image src="{{item.logo_url}}" class="index-img" mode='scaleToFill'/>
+            <view class='info' style="background-color:#{{item.color}};">
+              <text class='card_title'>{{item.card_title}}</text>
+              <text class='sub_title'>{{item.sub_title}}</text>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
     <text class="title" style="display:{{temp}}">你不能错过的当地品牌</text>
     <view class="table">
       <view class="tr">
