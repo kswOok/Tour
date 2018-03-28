@@ -36,12 +36,12 @@
 
 .td {
   text-align: center;
-  margin-right: 50rpx;
+  margin-right: 30rpx;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 10rpx;
   position: relative;
   display: inline-block;
-  margin-bottom: 50rpx;
+  margin-bottom: 30rpx;
   width: 300rpx;
   height: 300rpx;
 }
