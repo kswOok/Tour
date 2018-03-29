@@ -10,7 +10,7 @@
         </swiper-item>
       </block>
     </swiper>
-    <image class="index-icon" src="../../images/Rotorua2.png"></image>
+   
   </view>
   <text class="title">主题推荐</text>
   <view style="margin-top:30rpx;"/>
@@ -18,13 +18,13 @@
     <view class="item-row">
       <navigator class="item-nav" url="/pages/no-miss/no-miss">
         <image class="item-img" src="../../images/bukecuoguo.png"></image>
-        <text class="item-text">不可错过</text>
+        <text class="item-text">主要景点</text>
       </navigator>
     </view>
     <view class="item-row">
       <navigator class="item-nav" url="/pages/HolidayCalendar/HolidayCalendar">
         <image class="item-img" src="../../images/shenduchangyou.jpg"></image>
-        <text class="item-text">深度畅游</text>
+        <text class="item-text">活动日历</text>
       </navigator>
     </view>
   </view>
@@ -32,13 +32,13 @@
     <view class="item-row">
       <navigator class="item-nav" url="/pages/local-food/local-food">
         <image class="item-img" src="../../images/dangdimeishi.jpg"></image>
-        <text class="item-text">当地美食</text>
+        <text class="item-text">特色美食</text>
       </navigator>
     </view>
     <view class="item-row">
       <navigator class="item-nav" url="/pages/strategy-new/strategy-new">
         <image class="item-img" src="../../images/gouwugonglue.jpg"></image>
-        <text class="item-text">购物攻略</text>
+        <text class="item-text">超值购物</text>
       </navigator>
     </view>
   </view>

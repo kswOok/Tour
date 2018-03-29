@@ -16,12 +16,6 @@
 </text></view>
 
             <view class="info-title">
-        <text>在罗托鲁瓦地区有什么徒步选择?</text>
-      </view>
-      <view class="info-value"><text>欢迎前往i-SITE游客中心，了解本地区所有免费步道的详情。
-</text></view>
-
-            <view class="info-title">
         <text>在哪可以看到间歇泉?</text>
       </view>
       <view class="info-value"><text>蒂普亚 (Te Puia)、法卡雷瓦雷瓦 (Whakarewarewa) 以及怀奥塔普 (Wai-O-Tapu)。
@@ -73,12 +67,7 @@
       </view>
       <view class="info-value"><text>蒂普亚 (Te Puia) 、罗托鲁瓦博物馆 (Rotorua Museum)、法卡雷瓦雷瓦 (Whakarewarewa)、各纪念品店以及奥希奈姆图村庄 (Ohinemutu Village)。</text></view>      
       
-      <view class="info-title">
-        <text>有什么住宿推荐吗?</text>
-      </view>
-      <view class="info-value"><text>欢迎前往i-SITE游客中心，咨询更多住宿推荐。</text></view>
-
-
+  
       <view class="info-title">
         <text>哪里可以看到湖泊？</text>
       </view>
@@ -91,10 +80,6 @@
       <view class="info-value"><text>这是由地下的地热活动形成的气味。
 </text></view>
 
-            <view class="info-title">
-        <text>如果遇到雨天还可以参加什么活动吗？</text>
-      </view>
-      <view class="info-value"><text>罗托鲁瓦博物馆 (Rotorua Museum)、爱歌顿农场 (Agrodome)、漂移卡丁车馆 (Drift Kartz) 以及奇异鸟保育所 (Kiwi Encounter)。如果你不介意被淋湿，也有很多其他活动可选。罗托鲁瓦i-SITE游客中心为游客准备了一份免费的活动列表，欢迎前往取阅.</text></view>
 
             <view class="info-title">
         <text>驾车去哪里可以俯瞰罗托鲁瓦风光?</text>
