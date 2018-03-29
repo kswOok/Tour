@@ -1,8 +1,6 @@
 /* pages/strategy-new/strategy-new.wxss */
 
 .container {
-  height: 100%;
-  width: 100%;
   display: block;
 }
 
@@ -17,42 +15,30 @@
 .table {
   padding: 0 50rpx;
   box-sizing: border-box;
-  width: 100%;
-}
-
-.tr1 {
-  display: -webkit-flex;
-  display: flex;
-  width: 100%;
-  height: auto;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-content: center;
-  align-content: center;
-  box-sizing: border-box;
+  width: 750rpx;
 }
 
 
 
 .td {
   text-align: center;
-  margin-right: 30rpx;
+  margin-right: 20rpx;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 10rpx;
   position: relative;
   display: inline-block;
-  margin-bottom: 30rpx;
-  width: 300rpx;
-  height: 300rpx;
+  margin-bottom: 20rpx;
+  width: 200rpx;
+  height: 200rpx;
 }
 
-.tr .td:nth-child(2n) {
+.tr .td:nth-child(3n) {
   margin-right: 0;
 }
 
 .td image {
-  width: 300rpx;
-  height: 300rpx;
+  width: 200rpx;
+  height: 200rpx;
 }
 
 .intro {

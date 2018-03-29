@@ -107,7 +107,19 @@ Page({
   
   },
 
-  
+  onOpenCard: function(res) {
+    console.log(res.currentTarget.dataset.id);
+    wx.openCard({
+      cardList: [
+        {
+          cardId: res.currentTarget.dataset.id,
+          code: res.currentTarget.dataset.code
+        }
+      ],
+      success: function (res) {
+      }
+    })
+  },
 
   onQueryCard: function() {
     
