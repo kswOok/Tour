@@ -134,7 +134,6 @@ C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcm
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.BLL.dll
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.Common.dll
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.Model.dll
-C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.School.dll
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.Web.UI.dll
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\EntityFramework.dll
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\EntityFramework.SqlServer.dll
@@ -145,8 +144,6 @@ C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcm
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.BLL.pdb
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.Common.pdb
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.Model.pdb
-C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.School.pdb
-C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.School.dll.config
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.Web.UI.pdb
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\EntityFramework.xml
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\EntityFramework.SqlServer.xml
@@ -161,3 +158,6 @@ C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\obj\Debu
 C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\DTcms.EFAPI.dll
 C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\DTcms.EFAPI.pdb
 C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\DTcms.EFAPI.dll.config
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.EFAPI.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.EFAPI.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.EFAPI.dll.config

@@ -1,0 +1,14 @@
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Release\DTcms.EFAPI.dll.config
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Release\DTcms.EFAPI.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Release\DTcms.EFAPI.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Release\EntityFramework.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Release\Newtonsoft.Json.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Release\EntityFramework.xml
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Release\Newtonsoft.Json.xml
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Release\zh-Hans\EntityFramework.resources.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\obj\Release\DTcms.EFAPI.csprojResolveAssemblyReference.cache
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\obj\Release\DTcms.EFAPI.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\obj\Release\DTcms.EFAPI.pdb

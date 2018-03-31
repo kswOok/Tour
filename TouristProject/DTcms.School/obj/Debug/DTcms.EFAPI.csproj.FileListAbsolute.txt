@@ -14,3 +14,17 @@ C:\VS2017Proj\Tour\TouristProject\DTcms.School\bin\Debug\DTcms.EFAPI.dll
 C:\VS2017Proj\Tour\TouristProject\DTcms.School\bin\Debug\DTcms.EFAPI.pdb
 C:\VS2017Proj\Tour\TouristProject\DTcms.School\obj\Debug\DTcms.EFAPI.dll
 C:\VS2017Proj\Tour\TouristProject\DTcms.School\obj\Debug\DTcms.EFAPI.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Debug\DTcms.EFAPI.dll.config
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Debug\DTcms.EFAPI.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Debug\DTcms.EFAPI.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Debug\EntityFramework.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Debug\Newtonsoft.Json.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Debug\EntityFramework.xml
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Debug\Newtonsoft.Json.xml
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\obj\Debug\DTcms.EFAPI.csprojResolveAssemblyReference.cache
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\obj\Debug\DTcms.EFAPI.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.School\obj\Debug\DTcms.EFAPI.pdb
