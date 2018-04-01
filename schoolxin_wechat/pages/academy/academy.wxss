@@ -116,7 +116,7 @@
 .academy-item .academy-city {
   position: absolute;
   top: 35px;
-  left: 160px;
+  left: 90px;
   line-height: 20px;
   height: 20px;
   font-size: 13px;

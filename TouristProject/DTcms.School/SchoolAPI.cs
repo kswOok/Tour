@@ -37,7 +37,7 @@ namespace DTcms.EFAPI
                              join enroll in db.University_Enroll_Status
                              on univer.University_ID_STR equals enroll.University_ID into temp
                              from tt in temp.DefaultIfEmpty()
-                             orderby tt.US_NEWS_排名
+                             orderby tt.QS_排名
                              select new
                              {
                                  University_ID = univer.University_ID_INT,
@@ -52,7 +52,7 @@ namespace DTcms.EFAPI
                                  zhouwaiMoney = tt.总体花费_州外,
                                  weizhi = univer.DistrictName
                              };
-                var list = query2.Take(50).ToList();
+                var list = query2.Take(30).ToList();
                 var ret = new
                 {
                     schoolList = list,
@@ -73,7 +73,7 @@ namespace DTcms.EFAPI
                              on univer.University_ID.ToString() equals enroll.University_ID
                              into temp
                              from tt in temp.DefaultIfEmpty()
-                             orderby tt.US_NEWS_排名
+                             orderby tt.QS_排名
                              select new
                              {
                                  univer.University_ID,
