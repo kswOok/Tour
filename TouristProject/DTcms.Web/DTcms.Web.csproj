@@ -1335,13 +1335,13 @@
       <Project>{408686E7-0249-4899-85E0-77ACA8F9F07F}</Project>
       <Name>DTcms.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DTcms.EFAPI\DTcms.EFAPI.csproj">
+      <Project>{f485f66d-ae20-42d6-8b0a-3b1fc39b6f5d}</Project>
+      <Name>DTcms.EFAPI</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DTcms.Model\DTcms.Model.csproj">
       <Project>{2BBC90CB-5D42-4F0F-BF96-4DA42F4DDB39}</Project>
       <Name>DTcms.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DTcms.School\DTcms.EFAPI.csproj">
-      <Project>{f485f66d-ae20-42d6-8b0a-3b1fc39b6f5d}</Project>
-      <Name>DTcms.EFAPI</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTcms.Web.UI\DTcms.Web.UI.csproj">
       <Project>{091D59DA-1EDB-4325-984D-F3B5547F781E}</Project>

@@ -161,3 +161,5 @@ C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\zh-H
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\obj\Debug\DTcms.Web.csprojResolveAssemblyReference.cache
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\obj\Debug\DTcms.Web.dll
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\obj\Debug\DTcms.Web.pdb
+C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\log4net.dll
+C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\log4net.xml

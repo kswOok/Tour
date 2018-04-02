@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3db094636b4e400fbfed6f4dce28127c" Name="Diagram1">
+        <EntityTypeShape EntityType="AIUniversityModel.Country" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AIUniversityModel.MajorGroup" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AIUniversityModel.Period" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="AIUniversityModel.University" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="AIUniversityModel.University_Enroll_Status" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AIUniversityModel.University_Master_CN" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AIUniversityModel.User" Width="1.5" PointX="6.75" PointY="4.75" />
+        <EntityTypeShape EntityType="AIUniversityModel.User_Bachelor_Log" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AIUniversityModel.User_Master_Log" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="AIUniversityModel.User_Result_Log" Width="1.5" PointX="8.75" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -16,6 +16,7 @@ namespace DTcms.Web.tools
         public void ProcessRequest(HttpContext context)
         {
             string action = DTRequest.GetFormString("action");
+            LogHelper.WriteInfo("LINE19:" + action);
             switch (action)
             {
                 case "get_holidays":

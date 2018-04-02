@@ -17,7 +17,8 @@ namespace DTcms.Web.tools
         public void ProcessRequest(HttpContext context)
         {
             string action = DTRequest.GetFormString("action");
-            switch(action)
+            LogHelper.WriteInfo("LINE20:" + action);
+            switch (action)
             {
                 case "updateUser"://更新个人信息
                     OutPut(context, SchoolAPI.updateUser(

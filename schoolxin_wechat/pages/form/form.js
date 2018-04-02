@@ -625,11 +625,11 @@ Page({
           })
           return
       }
-      // wx.showToast({
-      //   icon: "loading",
-      //   title: "正在加载...",
-      //   duration: 2000000,
-      // })
+       wx.showToast({
+         icon: "loading",
+         title: "正在加载...",
+         duration: 2000000,
+       })
 
       wx.request({
         method: 'POST',
@@ -658,6 +658,7 @@ Page({
           'content-type': 'application/x-www-form-urlencoded' // 默认值
         },
         success: function (res) {
+          wx.hideToast()
           that.setData({
             wait: 'block'
           })
@@ -710,11 +711,7 @@ Page({
     } else {//添加本科数据
       var that = this
 
-      // wx.showToast({
-      //   icon: "loading",
-      //   title: "正在加载...",
-      //   duration: 2000000,
-      // })
+       
       if (that.data.bTargetCountryListStr == '请选择') {
         wx.showModal({
           title: '评估失败',
@@ -833,6 +830,12 @@ Page({
         })
         return
       }
+      wx.showToast({
+        icon: "loading",
+        title: "正在加载...",
+        duration: 2000000,
+      })
+      console.log('用户点击AI评估一下')
       wx.request({
         method: 'POST',
         url: getApp().globalData.baseUrl + "tools/school_api.ashx", //仅为示例，并非真实的接口地址
@@ -860,6 +863,8 @@ Page({
           'content-type': 'application/x-www-form-urlencoded' // 默认值
         },
         success: function (res) {
+          wx.hideToast()
+          console.log(res)
           that.setData({
             wait: 'block'
           })
@@ -908,6 +913,9 @@ Page({
             })
           }, 1500)
           
+        },
+        fail: function(res) {
+          console.log(res)
         }
       })
     }
