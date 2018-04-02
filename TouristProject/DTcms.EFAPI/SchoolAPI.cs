@@ -52,7 +52,7 @@ namespace DTcms.EFAPI
                                  zhouwaiMoney = tt.总体花费_州外,
                                  weizhi = univer.DistrictName
                              };
-                var list = query2.Take(30).ToList();
+                var list = query2.Take(50).ToList();
                 var ret = new
                 {
                     schoolList = list,
@@ -84,13 +84,13 @@ namespace DTcms.EFAPI
                                  univer.CountryName,
                                  univer.DistrictName,
                                  Picture = univer.Picture.Replace("www.", ""),
-                                 US_NEWS_Rank = tt.US_NEWS_排名,
+                                 US_NEWS_Rank = tt.QS_排名,
                                  zhouwaiMoney = tt.总体花费_州外,
                                  weizhi = tt.地理位置
                              };
                 return Obj2Json(new
                 {
-                    schoolList = query1.Take(1000).ToList(),
+                    schoolList = query1.Take(100).ToList(),
                     result = 1
                 });
             }
@@ -316,8 +316,7 @@ namespace DTcms.EFAPI
                             on univer.University_ID.ToString() equals enroll.University_ID
                             into temp
                             from tt in temp.DefaultIfEmpty()
-                            orderby tt.录取难度
-                            orderby tt.录取率
+                            orderby tt.录取难度 descending
                             select new
                             {
                                 univer.University_ID

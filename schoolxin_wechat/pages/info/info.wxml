@@ -31,10 +31,10 @@
           <view class="rank-name">ARWU 排名</view>
         </view>
       </view>
-      <view class="info-title">
-        <image src="/images/icon_info_xuexiao.png"></image>
-        <text>校园</text>
-      </view>
+
+      <view class="tui-menu-list {{isShowFrom1 ? 'tui-shangjiantou' : 'tui-xiajiantou'}}">
+      <view class="info-title"  ><image src="/images/icon_info_xuexiao.png"></image>
+        <text>校园</text></view>
       <view class="info-value-title"><text>公立/私立</text></view>
       <view class="info-value"><text>{{Type}}</text></view>
       <view class="info-value-title"><text>校园位置</text></view>
@@ -43,6 +43,11 @@
       <view class="info-value"><text>{{fanzuilv}}</text></view>
       <view class="info-value-title"><text>地理位置</text></view>
       <view class="info-value"><text>{{diliweizhi}}</text></view>
+      </view>
+
+
+
+
       <view class="info-title">
         <image src="/images/icon_info_org.png"></image>
         <text>学生组成</text>
