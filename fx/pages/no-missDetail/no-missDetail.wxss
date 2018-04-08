@@ -29,17 +29,27 @@
   display: block;
 }
 
-.text .time {
-  font-size: 18px;
-  color: #929292;
-  margin-bottom: 30px;
-}
+
 
 .text .title {
   font-weight: 166;
   font-size: 22px;
-  padding-bottom: 18px;
+  padding-bottom: 15px;
 }
+
+.text .type {
+  font-size: 14px;
+  color: #929292;
+  margin-bottom: 30px;
+}
+
+.text .time {
+  font-size: 14px;
+  color: #929292;
+  margin-bottom: 15px;
+}
+
+
 
 .text .detail {
   text-align: justify;
@@ -47,6 +57,7 @@
   font-size: 18px;
   font-weight: 100;
 }
+
 
 .wrap image {
   width: 100%;

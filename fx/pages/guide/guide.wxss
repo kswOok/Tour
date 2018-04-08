@@ -1,18 +1,20 @@
 .lists {
-  width: 750rpx;
+  width: 720rpx;
 }
 
 .singleList {
   position: relative;
-  margin-bottom: 25rpx;
-  width: 750rpx;
+  margin-bottom: 15rpx;
+  width: 100%;
   height: 300rpx;
 }
 
 .singleList .listImage {
-  width: 750rpx;
+  width: 100%;
   height: 300rpx;
   position: absolute;
+  border-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
 }
 
 .singleList .listText {

@@ -37,8 +37,8 @@
 }
 
 .td image {
-  width: 200rpx;
-  height: 200rpx;
+  width: 100%;
+  height: 100%;
 }
 
 .intro {
@@ -83,26 +83,8 @@
   margin-bottom: 20rpx;
 }
 
-.foot-img {
-  width: 100%;
-  height: auto;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 16rpx;
-}
 
-.foot-img image {
-  width: 100%;
-  height: 300rpx;
-}
 
-.foot-img .intro {
-  height: 80rpx;
-  line-height: 80rpx;
-  text-align: center;
-  border-radius: 0;
-}
 
 .index-swiper {
   width: 630rpx;
@@ -150,4 +132,47 @@
   font-size: 30rpx;
   margin-left: 35rpx;
   margin-top: 20rpx;
+}
+
+.foot-img {
+  width: 700rpx;
+  height: auto;
+  position: relative;
+  margin-bottom: 15rpx;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.foot-img .singleList {
+  position: relative;
+  margin-bottom: 15rpx;
+  width: 100%;
+  height: 300rpx;
+}
+
+.foot-img .singleList .listImage {
+  width: 100%;
+  height: 300rpx;
+  position: absolute;
+  border-radius: 10rpx;
+}
+
+.singleList .listText {
+  width: 100%;
+  color: #ececec;
+  font-size: 30rpx;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  line-height: 50rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  height: 50rpx;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+  background: -o-linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
 }
