@@ -6,8 +6,9 @@
     "\\fx\\pages\\guide",
     "\\fx\\pages\\HolidayCalendarDetail",
     "\\TouristProject",
-    "\\TouristProject\\DTcms.School"
+    "\\TouristProject\\DTcms.EFAPI",
+    "\\TouristProject\\DTcms.Web\\tools"
   ],
-  "SelectedNode": "\\fx",
+  "SelectedNode": "\\TouristProject\\DTcms.EFAPI\\SchoolAPI.cs",
   "PreviewInSolutionExplorer": false
 }

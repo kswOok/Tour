@@ -90,3 +90,23 @@
 }
 
 
+.wxParse-img {
+    max-width: 100%!important;
+}
+
+.wxParse-span {
+    line-height: 1.3;
+}
+
+.wxParse-p image {
+    max-width: 100%!important;
+}
+
+.wxParse-strong,.wxParse-s {
+    display: inline-block;
+    width: 100%;
+}
+
+.wxParse-h1,.wxParse-h2,.wxParse-h3,.wxParse-h4,.wxParse-h5,.wxParse-h6,.wxParse-b,.wxParse-strong {
+    text-align: center;
+}
