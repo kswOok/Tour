@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index2/index2",
+    "pages/logs/logs",
+    "pages/guide/guide",
+    "pages/favour/favour",
+    "pages/qa/qa",
+    "pages/my/my",
+    "pages/index/index",
+    "pages/no-miss/no-miss",
+    "pages/HolidayCalendar/HolidayCalendar",
+    "pages/local-food/local-food",
+    "pages/strategy-new/strategy-new",
+    "pages/subway/subway",
+    "pages/HolidayCalendarDetail/HolidayCalendarDetail",
+    "pages/no-missDetail/no-missDetail",
+    "pages/local-foodDetail/local-foodDetail",
+    "pages/guideDetail/guideDetail",
+    "pages/brandDetail/brandDetail",
+    "pages/strategy-new-detail/strategy-new-detail",
+    "pages/my2/my2"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index2/index2",
+        "text": "当季推荐",
+        "iconPath": "images/home-g.png",
+        "selectedIconPath": "images/home-b.png"
+      },
+      {
+        "pagePath": "pages/favour/favour",
+        "text": "精选商家",
+        "iconPath": "images/zhinan-g.png",
+        "selectedIconPath": "images/zhinan-b.png"
+      },
+      {
+        "pagePath": "pages/my2/my2",
+        "text": "我的",
+        "iconPath": "images/mine-g.png",
+        "selectedIconPath": "images/mine-b.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "体验罗托鲁瓦",
+    "navigationBarTextStyle": "black"
+  }
+}

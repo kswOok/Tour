@@ -1,0 +1,32 @@
+<view class="fixed-block" style="bottom:54px;">
+  <view class="relative-block">
+    <scroll-view scroll-y style="height:100%;">
+      <view class="form-block">
+        <image class="user-photo" src="{{photo}}"></image>
+        <view class="user-name">{{nickName}}</view>
+      </view>
+      <view class="form-input-block">
+        <view class="form-input-item">
+          <view class="form-input-name">姓名</view>
+          <input class="form-input-value" type="text" bindblur='updateName' value='{{nickName}}'  style="text-align:right;color:#999999;"></input>
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">性别</view>
+          <view class="form-input-value">{{sex}}</view>
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">年龄</view>
+          <input class="form-input-value" type="number" bindblur='updateAge'  value='{{age}}' style="text-align:right;color:#999999;"></input>
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">电话</view>
+          <input class="form-input-value" type="number" bindblur='updateMobile' value='{{mobile}}' style="text-align:right;color:#999999;"></input>
+        </view>
+        <view class="form-input-item">
+          <view class="form-input-name">爱好</view>
+          <input class="form-input-value" type="text" bindblur='updateAihao'  value='{{aihao}}' style="text-align:right;color:#999999;"></input>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

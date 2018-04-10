@@ -1,0 +1,114 @@
+/* pages/HolidayCalendar/HolidayCalendar.wxss */
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.loading {
+  width: 67px;
+  height: 73px;
+  position: fixed;
+  top: 412px;
+  left: 326px;
+}
+
+.log-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.log-item {
+  margin: 9px;
+}
+
+.holidayList {
+  width: 100%;
+}
+
+.holidayList .blueDisc {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 40px;
+  left: -7px;
+}
+
+.holidayDate {
+  width: 28.5%;
+  padding-right: 33px;
+  height: 90px;
+  line-height: 90px;
+  text-align: right;
+  box-sizing: border-box;
+  font-size: 16px;
+  float: left;
+}
+
+.gay-border {
+  border-right: 2px solid #e3e3e3;
+  color: #7b7b7b;
+}
+
+.black-border {
+  border-right: 2px solid #000;
+  color: rgb(0, 0, 0);
+}
+
+.holidayIntroduce {
+  float: left;
+  padding-left: 23px;
+  position: relative;
+  width: 61.3%;
+}
+
+.holidayIntroduce .name {
+  display: block;
+  font-size: 16px;
+  margin-top: 21px;
+}
+
+.name.gay-color {
+  color: #7b7b7b;
+}
+
+.name.block-color {
+  color: rgb(0, 0, 0);
+}
+
+.holidayIntroduce .signification {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.gray-line {
+  width: 1px;
+  height: 100px;
+  background: #e3e3e3;
+  position: absolute;
+  top: -69px;
+  left: -1px;
+}
+
+.signification.gay-color {
+  color: #7b7b7b;
+}
+
+.signification.block-color {
+  color: #7b7b7b;
+}
+
+.whilt-line {
+  width: 5px;
+  height: 76px;
+  background: #fff;
+  position: absolute;
+  top: -9px;
+  left: 0px;
+}

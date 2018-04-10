@@ -1,0 +1,15 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="container">
+  <view class="text">
+    <text class="title">{{title}}</text>
+    <text class="type">类别：{{time}}</text>
+    <text class="time">{{time}}</text>
+    
+    <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+    
+  </view>
+
+  <view class="collect">
+    <image bindtap="turn" class="collect-img" src="{{couponImg.couponFalse}}"></image>
+  </view>
+</view>
