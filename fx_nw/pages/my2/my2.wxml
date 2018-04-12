@@ -5,15 +5,16 @@
   </view>
   
   <text class="title">我的优惠劵</text>
-  <block wx:for-items="{{couponList}}" wx:key="">
-    <view class='index-swiper'>
-      <view class='coupon' bindtap='onOpenCard' data-id='{{item.card_id}}' data-code='{{item.card_code}}'>
-        <image src="{{item.logo_url}}" class="index-img" mode='scaleToFill'/>
-        <view class='info' style="background-color:#{{item.color}};">
-          <text class='card_title'>{{item.card_title}}</text>
-          <text class='sub_title'>{{item.sub_title}}</text>
+  <view class='coupon-list'>
+    <block wx:for-items="{{list}}" wx:key="">
+      <view class='coupon-item' bindtap='onOpenCard' data-id='{{item.card_id}}' data-code='{{item.card_code}}'>
+        <image class="coupon-logo" src="{{item.logo_url}}"></image>
+        <view class="coupon-content">
+            <text class="card_title">{{item.card_title}}</text>
+            <text class="sub_title">{{item.sub_title}}</text>
         </view>
+        <view class='coupon-color' style="background-color:#{{item.color}};"></view>
       </view>
-    </view>
-  </block>
+    </block>
+  </view>
 </view>

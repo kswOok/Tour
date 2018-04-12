@@ -50,7 +50,7 @@ Page({
           console.log(res.data.errmsg);
         } else {
           that.setData({
-            couponList: res.data.couponList
+            list: res.data.couponList
           })
         }
         /**/

@@ -118,7 +118,7 @@ namespace DTcms.EFAPI
             }
         }
 
-        public static string coupon_query_user(string unionid)
+        public static string coupon_query_user(string unionid) 
         {
             string sign_key = "8c49bf5ca8da4ac5ad3d637f882d4ea5";
             string signString = "merchant_id=826779031&nonce_str=abcde&service=create_query_coupon_page_user&unionid=" + unionid;
