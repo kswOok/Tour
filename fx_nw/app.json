@@ -1,12 +1,12 @@
 {
   "pages": [
-    "pages/index2/index2",
+    "pages/index/index",
     "pages/logs/logs",
     "pages/guide/guide",
     "pages/favour/favour",
     "pages/qa/qa",
     "pages/my/my",
-    "pages/index/index",
+    "pages/index2/index2",
     "pages/no-miss/no-miss",
     "pages/HolidayCalendar/HolidayCalendar",
     "pages/local-food/local-food",

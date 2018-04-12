@@ -1,13 +1,15 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view id="content">
+  <view class="bscroll"></view>
+  <view class="big_title">
+    <text class="big_text">体验罗托鲁瓦</text>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="jieshao">
+    <text class="jieshao_text">罗托鲁瓦，一个感受沸腾泥浆，喷涌间歇泉和地热温泉以及毛利文化的旅游胜地。即刻了解罗托鲁瓦旅游信息，亲眼目睹塑造了新西兰的大地之力。</text>
+  </view>
+  <view class="start_location" bindtap='toindex2'>
+    <image src='../../images/start.png'></image>
+  </view>
+  <view class="footer">
+    <image src='../../images/dis.png'></image>
   </view>
 </view>

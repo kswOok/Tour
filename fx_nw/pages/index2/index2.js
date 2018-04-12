@@ -169,7 +169,7 @@ Page({
       title: "正在加载...",
       duration: 2000000,
     })
-    wx.request({
+    /*wx.request({
       method: 'POST',
       url: getApp().globalData.apiUrl,
       data: {
@@ -184,6 +184,23 @@ Page({
         }
         that.setData({
           list: res.data.data,
+        })
+      }
+    })*/
+
+    wx.request({
+      method: 'POST',
+      url: getApp().globalData.apiUrl,
+      data: {
+        action: 'coupon_query_coupon',
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        wx.hideToast();
+        that.setData({
+          list: res.data.couponList
         })
       }
     })
@@ -266,5 +283,45 @@ Page({
       fail: function (t) { } 
     } 
   },
-  
+  onAddCard: function (res) {
+
+    wx.showToast({
+      icon: "loading",
+      title: "正在加载...",
+      duration: 2000000,
+    })
+
+    wx.request({
+      method: 'POST',
+      url: getApp().globalData.apiUrl, //仅为示例，并非真实的接口地址
+      data: {
+        action: 'getAppCard',
+        card_id: res.currentTarget.dataset.id
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        wx.hideToast();
+        wx.addCard({
+          cardList: [
+            {
+              cardId: res.data.card_id,
+              cardExt: '{"timestamp":"' + res.data.timestamp + '","signature":"' + res.data.signature + '"}'
+            }
+          ],
+          success: res => {
+            console.log(res) // 卡券添加结果
+            wx.showToast({
+              title: '领取成功',
+            })
+          },
+          fail: res => {
+            console.log(res) // 卡券添加结果
+          }
+        })
+      },
+
+    })
+  },
 })

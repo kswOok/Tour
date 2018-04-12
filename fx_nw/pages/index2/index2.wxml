@@ -14,15 +14,17 @@
   </view>
 
   <text class="title">当季推荐</text>
-  <view style="margin-top:30rpx;"/>
-  <view class='item-top5'>
+  <view style="margin-top:0rpx;"/>
+  <view class='coupon-list'>
     <block wx:for-items="{{list}}" wx:key="">
-      <navigator class="lists" url="/pages/no-missDetail/no-missDetail?id={{item.id}}">
-        <view class="singleList">
-          <image class="listImage" src="https://guomengtech.com{{item.img_url}}"></image>
-          <text class="listText">{{item.title}}</text>
+      <view class="coupon-item" bindtap='onAddCard' data-id='{{item.card_id}}'>
+        <image class="coupon-logo" src="{{item.logo_url}}"></image>
+        <view class="coupon-content">
+            <text class="card_title">{{item.card_title}}</text>
+            <text class="sub_title">{{item.sub_title}}</text>
         </view>
-      </navigator>
+        <view class='coupon-color' style="background-color:#{{item.color}};"></view>
+      </view>
     </block>
   </view>
   <view style="margin-top:30rpx;"/>
