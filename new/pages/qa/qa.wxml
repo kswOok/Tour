@@ -1,0 +1,115 @@
+<!--pages/qa/qa.wxml-->
+<view class="fixed-block">
+  <view class="relative-block">
+    <scroll-view scroll-y style="height:100%;">
+
+     <view class="info-title">
+        <text>罗托鲁瓦有哪些免费活动?</text>
+      </view>
+      <view class="info-value"><text>红木森林 (Redwood Forest)、库伊劳公园 (Kuirau Park)、政府花园 (Government Gardens)、湖泊、山地自行车道、森林步道以及农贸集市。
+</text></view>
+
+      <view class="info-title">
+        <text>哪里可以自由露营?</text>
+      </view>
+      <view class="info-value"><text>在市区和湖畔均没有自由露营地。但众多的假日公园 (Holiday Parks) 均提供全面服务。
+</text></view>
+
+            <view class="info-title">
+        <text>在哪可以看到间歇泉?</text>
+      </view>
+      <view class="info-value"><text>蒂普亚 (Te Puia)、法卡雷瓦雷瓦 (Whakarewarewa) 以及怀奥塔普 (Wai-O-Tapu)。
+</text></view>
+
+            <view class="info-title">
+        <text>有什么适合小孩的活动?</text>
+      </view>
+      <view class="info-value"><text>罗托鲁瓦博物馆 (Rotorua Museum)、天堂谷清泉野生动物公园 (Paradise Valley Springs Wildlife Park)、彩虹泉公园 (Rainbow Springs)、爱歌顿农场 (Agrodome)、天空缆车 (Skyline)、黄鸭水陆观光 (Duck Tours) 以及波利尼西亚国际温泉浴场 (Polynesian Spa)。</text></view>
+
+      <view class="info-title">
+        <text>哪家餐厅售卖毛利杭吉大餐 (HANGI)?</text>
+      </view>
+      <view class="info-value"><text>没有。但在夜晚有毛利杭吉大餐及音乐会体验。</text></view>
+
+            <view class="info-title">
+        <text>哪个温泉可以游泳?</text>
+      </view>
+      <view class="info-value"><text>波利尼西亚国际温泉浴场 (Polynesian Spa)、伊丽莎白女皇温泉水疗中心 (QE Spa)、怀基蒂山谷地热池 (Waikite Valley Thermal Pools)、地狱之门 (Hells Gate)、马努皮鲁阿温泉 (Manupiria Hot Springs) 以及蓝色浴场 (The Blue Baths) 均由专业团队管理。但需缴纳费用方可入场。此外，煤油溪 (Kerosene Creek)、屠夫池 (Butchers Pool)、热水沙滩 (Hot Water Beach) 以及冷热溪 (Hot & Cold) 是免费开放的，但无人管理。
+</text></view>
+
+
+            <view class="info-title">
+        <text>有什么活动推荐吗?</text>
+      </view>
+      <view class="info-value"><text>罗托鲁瓦闻名于世的是毛利文化、地热奇观、山地自行车、众多湖泊河流以及各种趣味活动。
+</text></view>
+
+
+            <view class="info-title">
+        <text>哪里可以看到KIWI?</text>
+      </view>
+      <view class="info-value"><text>Kiwi people (新西兰人) 随处可见。可以前往蒂普亚 (Te Puia) 和彩虹泉公园 (Rainbow Springs) 观赏Kiwi bird (奇异鸟)。</text></view>
+
+
+            <view class="info-title">
+        <text>哪里可以看到哈卡战舞?</text>
+      </view>
+      <view class="info-value"><text>白天可以前往蒂普亚 (Te Puia) 和法卡雷瓦雷瓦 (Whakarewarewa) 进行观赏；夜间可以前往米泰 (Mitai)、塔马基 (Tamaki)、波胡图 (Pohutu)、玛塔里基 (Matariki)、苏迪玛 (Sudima)、千禧 (Millennium) 进行观赏。
+</text></view>
+
+      <view class="info-title">
+        <text>如何徒步登上塔拉威拉山?</text>
+      </view>
+      <view class="info-value"><text>不能徒步上山。只能乘坐直升机飞至山顶。</text></view>
+
+      <view class="info-title">
+        <text>哪里可以买到正宗的毛利雕刻?</text>
+      </view>
+      <view class="info-value"><text>蒂普亚 (Te Puia) 、罗托鲁瓦博物馆 (Rotorua Museum)、法卡雷瓦雷瓦 (Whakarewarewa)、各纪念品店以及奥希奈姆图村庄 (Ohinemutu Village)。</text></view>      
+      
+  
+      <view class="info-title">
+        <text>哪里可以看到湖泊？</text>
+      </view>
+      <view class="info-value"><text>从市区前往罗托鲁瓦湖 (Lake Rotorua) 仅需5分钟步行，前往其他17座湖泊需要约20分钟车程。
+</text></view>
+
+      <view class="info-title">
+        <text>为什么罗托鲁瓦有异味?</text>
+      </view>
+      <view class="info-value"><text>这是由地下的地热活动形成的气味。
+</text></view>
+
+
+            <view class="info-title">
+        <text>驾车去哪里可以俯瞰罗托鲁瓦风光?</text>
+      </view>
+      <view class="info-value"><text>可以沿着高山路 (Mountain Rd) 驾车登顶侬格塔哈山 (Mt Ngongotaha)；也可以乘坐天空缆车 (Skyline) 饱览无限好风光。</text></view>
+
+            <view class="info-title">
+        <text>罗托鲁瓦安全吗？</text>
+      </view>
+      <view class="info-value"><text>新西兰是全球最安全的国家之一，适合旅行。罗托鲁瓦的犯罪率较低，只需保持基本的防范意识即可。
+</text></view>
+
+
+      <view class="info-title">
+        <text>如何了解各项服务和活动处于什么样的水准?</text>
+      </view>
+      <view class="info-value"><text>只要见到Qualmark® 优质标志，你就可以放心。这是优质服务的保证。住宿分为5个等级：1至5由低到高。
+
+活动及交通需要达到各自领域的安全标准方可获此标志。</text></view>
+      <view class="info-title">
+        <text>在新西兰驾车，应该在道路的哪一侧？</text>
+      </view>
+      <view class="info-value"><text>左侧。所以如果你来自美国、欧洲或亚洲，需要稍作调整；而来自英国和澳洲则不必担心。
+</text></view>
+      <view class="info-title">
+        <text>在湖里和河里游泳安全吗?</text>
+      </view>
+      <view class="info-value"><text>罗托鲁瓦的18座湖泊以及3条主要河流都是水上活动的乐园。
+不过，部分区域仍然存在某些危险性 (如河流的激流段) ，而部分湖泊对毛利人而言是神圣 (毛利语：Tapu) 的象征。如果你不确定能不能游泳，那就看看本地人是如何做的，只要入乡随俗即可。有关天然温泉的温馨提示：请勿将头部浸入水中。
+</text></view>
+    </scroll-view>
+  </view>
+</view>

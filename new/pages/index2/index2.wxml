@@ -1,0 +1,151 @@
+<scroll-view class="container">
+  
+  
+  <view class="index-header">
+    <swiper indicator-dots="{{indicatorDots}}" class="index-swiper"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for-items="{{imgUrls}}" wx:key="">
+        <swiper-item>
+          <image src="{{item}}" class="index-img"/>
+        </swiper-item>
+      </block>
+    </swiper>
+   
+  </view>
+
+    <view class="section icons">
+      <swiper-item>
+        <view class="icon" wx:for="{{icons}}" wx:key="id" data-id="{{item.id}}" bindtap="toNearby">
+          <image src="{{item.img}}"></image>
+          <text>{{item.name}}</text>
+        </view>
+      </swiper-item>
+    </view>
+
+
+  <text class="title">当季推荐</text>
+  <view style="margin-top:30rpx;"/>
+  <view class="shop">
+      <view class="shop list">
+        <block>
+          <navigator url="../detail/detail" hover-class="navigator-hover">
+            <image src="../../images/img_store.jpg" class="pic"></image>
+            <view class="brand_item">
+              <view class="right_cont">
+                    <view class="li_title">
+                      <text class="title1">HUHU Cafe餐厅</text>
+                      <image src="../../images/rz.png" class="rzpic"></image>
+                    </view>
+                    <text class="comment">
+                      <text class="star">
+                        <text class="star_span"></text>
+                      </text>
+                    </text>
+                    <view class="discount">
+                      <text class="dlt">8.8</text>
+                      <text class="drt">折</text>
+                    </view>
+                    <view class="other">
+                      <text class="olt">最火人气餐厅</text>
+                      <text class="ort">南城区|{{'<'}}100m</text>
+                    </view>
+                    <view class="price">
+                    <view class="price1">
+                              <text class="coupon1">满</text>
+                              <text class="dispan">满100减10,满200减20</text>
+                            </view>
+                            <view class="price2">
+                              <text class="coupon2">券</text>
+                              <text class="dispan">100元代金券</text>
+                            </view>
+                    </view>
+              </view>
+            </view>
+          </navigator>
+        </block>
+      </view>
+    </view>
+
+     <view class="shop">
+      <view class="shop list">
+        <block>
+          <navigator url="../detail/detail" hover-class="navigator-hover">
+            <image src="../../images/img_store.jpg" class="pic"></image>
+            <view class="brand_item">
+              <view class="right_cont">
+                    <view class="li_title">
+                      <text class="title1">HUHU Cafe餐厅</text>
+                      <image src="../../images/rz.png" class="rzpic"></image>
+                    </view>
+                    <text class="comment">
+                      <text class="star">
+                        <text class="star_span"></text>
+                      </text>
+                    </text>
+                    <view class="discount">
+                      <text class="dlt">8.8</text>
+                      <text class="drt">折</text>
+                    </view>
+                    <view class="other">
+                      <text class="olt">最火人气餐厅</text>
+                      <text class="ort">南城区|{{'<'}}100m</text>
+                    </view>
+                    <view class="price">
+                    <view class="price1">
+                              <text class="coupon1">满</text>
+                              <text class="dispan">满100减10,满200减20</text>
+                            </view>
+                            <view class="price2">
+                              <text class="coupon2">券</text>
+                              <text class="dispan">100元代金券</text>
+                            </view>
+                    </view>
+              </view>
+            </view>
+          </navigator>
+        </block>
+      </view>
+    </view>
+
+     <view class="shop">
+      <view class="shop list">
+        <block>
+          <navigator url="../detail/detail" hover-class="navigator-hover">
+            <image src="../../images/img_store.jpg" class="pic"></image>
+            <view class="brand_item">
+              <view class="right_cont">
+                    <view class="li_title">
+                      <text class="title1">HUHU Cafe餐厅</text>
+                      <image src="../../images/rz.png" class="rzpic"></image>
+                    </view>
+                    <text class="comment">
+                      <text class="star">
+                        <text class="star_span"></text>
+                      </text>
+                    </text>
+                    <view class="discount">
+                      <text class="dlt">8.8</text>
+                      <text class="drt">折</text>
+                    </view>
+                    <view class="other">
+                      <text class="olt">最火人气餐厅</text>
+                      <text class="ort">南城区|{{'<'}}100m</text>
+                    </view>
+                    <view class="price">
+                    <view class="price1">
+                              <text class="coupon1">满</text>
+                              <text class="dispan">满100减10,满200减20</text>
+                            </view>
+                            <view class="price2">
+                              <text class="coupon2">券</text>
+                              <text class="dispan">100元代金券</text>
+                            </view>
+                    </view>
+              </view>
+            </view>
+          </navigator>
+        </block>
+      </view>
+    </view>
+  <view style="margin-top:30rpx;"/>
+</scroll-view>
