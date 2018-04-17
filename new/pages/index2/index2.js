@@ -55,14 +55,8 @@ Page({
         img: '../../images/icon_5.png',
         name: '购物',
       },
-
       {
         id: 3,
-        img: '../../images/icon_7.png',
-        name: '酒店',
-      },
-      {
-        id: 4,
         img: '../../images/icon_8.png',
         name: '景点',
       }
@@ -77,7 +71,21 @@ Page({
     showLayout: 0, 
     showLayCon: 0,
     transformLeft: 0, 
-    indexImg: "http://p.qpic.cn/automall_pic/0/20180208201640_72095/640" 
+    indexImg: "http://p.qpic.cn/automall_pic/0/20180208201640_72095/640" ,
+    list: [
+      {
+        id: 1,
+        logo_url: '../../images/hot.png',
+        card_title: '地狱之门地热公园',
+        sub_title: '罗托鲁瓦最活跃的地热保护区'
+      },
+      {
+        id: 2,
+        logo_url: '../../images/hot.png',
+        card_title: '地狱之门地热公园',
+        sub_title: '罗托鲁瓦最活跃的地热保护区'
+      }
+    ]
   }, 
   onLoad: function(options) {
     var that = this;
@@ -187,12 +195,12 @@ Page({
 
     var that = this
 
-    wx.showToast({
+    /*wx.showToast({
       icon: "loading",
       title: "正在加载...",
       duration: 2000000,
-    })
-    wx.request({
+    })*/
+    /*wx.request({
       method: 'POST',
       url: getApp().globalData.apiUrl,
       data: {
@@ -209,7 +217,24 @@ Page({
           list: res.data.data,
         })
       }
-    })
+    })*/
+
+    /*wx.request({
+      method: 'POST',
+      url: getApp().globalData.apiUrl,
+      data: {
+        action: 'coupon_query_coupon',
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        wx.hideToast();
+        that.setData({
+          list: res.data.couponList
+        })
+      }
+    })*/
 
     /*wx.request({
       method: 'POST',
@@ -289,5 +314,9 @@ Page({
       fail: function (t) { } 
     } 
   },
-  
+  showDetail: function(t) {
+    wx.navigateTo({
+      url: '/pages/detail/detail',
+    })
+  }
 })

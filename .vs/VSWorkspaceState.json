@@ -1,14 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\fx",
     "\\fx\\pages",
     "\\fx\\pages\\guide",
     "\\fx\\pages\\HolidayCalendarDetail",
-    "\\TouristProject",
-    "\\TouristProject\\DTcms.EFAPI",
-    "\\TouristProject\\DTcms.Web\\tools"
+    "\\TouristProject\\DTcms.EFAPI"
   ],
-  "SelectedNode": "\\TouristProject\\DTcms.EFAPI\\SchoolAPI.cs",
   "PreviewInSolutionExplorer": false
 }

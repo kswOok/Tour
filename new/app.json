@@ -1,6 +1,8 @@
 {
   "pages": [
+    
     "pages/index/index",
+    "pages/detail/detail",
     "pages/index2/index2",
     "pages/logs/logs",
     "pages/guide/guide",
@@ -18,6 +20,7 @@
     "pages/brandDetail/brandDetail",
     "pages/strategy-new-detail/strategy-new-detail",
     "pages/my2/my2"
+    
   ],
   "tabBar": {
     "list": [
@@ -26,18 +29,6 @@
         "text": "首页",
         "iconPath": "images/home-g.png",
         "selectedIconPath": "images/home-b.png"
-      },
-      {
-        "pagePath": "pages/guide/guide",
-        "text": "指南",
-        "iconPath": "images/zhinan-g.png",
-        "selectedIconPath": "images/zhinan-b.png"
-      },
-      {
-        "pagePath": "pages/qa/qa",
-        "text": "问答",
-        "iconPath": "images/answer-g.png",
-        "selectedIconPath": "images/answer-b.png"
       },
       {
         "pagePath": "pages/my2/my2",

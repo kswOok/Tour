@@ -1,0 +1,55 @@
+<view id="middle_wrap">
+    <view class="index-detail">
+        <view class="detailtopheader">
+            <text class="h2">{{attractiondetail.ChieneseName}}</text>
+            <text class="addressWrap">{{attractiondetail.ChieneseAddress}}</text>
+            <text class="catWrap">·{{attractiondetail.categoryChinese}}·</text>
+            <view class="detail-top">
+                <image class="detail-banner" mode="aspectFill" src="{{attractiondetail.Image}}" wx:if="{{attractiondetail.Image!=null||attractiondetail.Image!=undefined}}"></image>
+            </view>
+            <view class="smalliconswrap">
+                <view class="smallicons">
+                    <image class='image-icon' src="/images/bookmark.png"></image>
+                    <text>推荐游玩时长</text>
+                    <text class="dwidth">{{attractiondetail.ChieneseVisitDuration}} </text>
+                    <image class='tishi' src='/images/weixin.png'></image>
+                    <image class='tishi' src='/images/zhifubao.png'></image>
+                    <image class='yinlian' src='/images/yinlian.png'></image>
+                    <image class='tishi' src='/images/wifi.png'></image>
+                    <image class='zhong' src='/images/zhong.png'></image>
+                </view>
+                <view class="smallicons">
+                    <image class='image-icon' src="/images/timer.png"></image>
+                    <text class="timertext">{{attractiondetail.ChieneseVisitTimings}}</text>
+                </view>
+                
+            </view>
+        </view>
+        <view class="detailtopheader">
+            <view class="detaininner">
+                <text class="detailsub">关于 {{attractiondetail.ChieneseName}}</text>
+                <text class="desc_text" wx:if="{{shortchinese==true}}">{{attractiondetail.descriptionshortchinese}}</text>
+                <text class="desc_text" wx:if="{{shortchinese==false}}">{{attractiondetail.ChieneseDescription}}</text>
+                <view>
+                    <text data-mode bindtap="showmore" class="desc_text_toggle" data-language="chinese" wx:if="{{descriptionshortchinese!=''&&shortchinese==true}}">更多</text>
+                    <text data-mode bindtap="showless" class="desc_text_toggle" data-language="chinese" wx:if="{{descriptionshortchinese!=''&&shortchinese==false}}">收起</text>
+                </view>
+            </view>
+        </view>
+        <view class="detailtopheader">
+            <view class="detaininner">
+                <text class="detailsub">About {{attractiondetail.Name}}</text>
+                <text class="desc_text" wx:if="{{shortenglish==true}}">{{attractiondetail.descriptionshortenglish}}</text>
+                <text class="desc_text" wx:if="{{shortenglish==false}}">{{attractiondetail.Description}}</text>
+                <view>
+                    <text data-mode bindtap="showmore" class="desc_text_toggle" data-language="english" wx:if="{{descriptionshortenglish!=''&&shortenglish==true}}">More</text>
+                    <text data-mode bindtap="showless" class="desc_text_toggle" data-language="english" wx:if="{{descriptionshortenglish!=''&&shortenglish==false}}">Collapse</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="topnav_lon bottomnav">
+        <text>太远啦，无法计算距离～</text>
+        <image bindtouchend="navigateToMap" class="loc-indicatior" data-Latitude="{{attractiondetail.Latitude}}" data-Longitude="{{attractiondetail.Longitude}}" data-locationName="{{attractiondetail.ChieneseName}}" src="/images/navigation.png"></image>
+    </view>
+</view>
