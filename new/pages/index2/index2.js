@@ -46,18 +46,18 @@ Page({
     icons: [
       {
         id: 1,
-        img: '../../images/icon_1.png',
+        
         name: '美食',
       },
 
       {
         id: 2,
-        img: '../../images/icon_5.png',
+        
         name: '购物',
       },
       {
         id: 3,
-        img: '../../images/icon_8.png',
+         
         name: '景点',
       }
     ],
@@ -77,13 +77,18 @@ Page({
         id: 1,
         logo_url: '../../images/hot.png',
         card_title: '地狱之门地热公园',
-        sub_title: '罗托鲁瓦最活跃的地热保护区'
+        sub_title: '罗托鲁瓦最活跃的地热保护区',
+        youhui:'门票9.6折优惠',
+        juli:'3.5km'
+        
       },
       {
         id: 2,
-        logo_url: '../../images/hot.png',
-        card_title: '地狱之门地热公园',
-        sub_title: '罗托鲁瓦最活跃的地热保护区'
+        logo_url: '../../images/coffee.jpg',
+        card_title: 'Capers Epicurean咖啡简餐厅',
+        sub_title: '当地最有名气的咖啡简餐厅',
+        youhui: '8折优惠券',
+        juli: '6.5km'
       }
     ]
   }, 

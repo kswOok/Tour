@@ -38,7 +38,7 @@
         </view>
         <view class="detailtopheader">
             <view class="detaininner">
-                <text class="detailsub">About {{attractiondetail.Name}}</text>
+                <text class="detailsub">{{attractiondetail.ChieneseName}}攻略</text>
                 <text class="desc_text" wx:if="{{shortenglish==true}}">{{attractiondetail.descriptionshortenglish}}</text>
                 <text class="desc_text" wx:if="{{shortenglish==false}}">{{attractiondetail.Description}}</text>
                 <view>

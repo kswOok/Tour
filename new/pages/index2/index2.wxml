@@ -15,7 +15,7 @@
 
     <view class="icons">
         <view class="icon" wx:for="{{icons}}" wx:key="id" data-id="{{item.id}}" bindtap="toNearby">
-          <image src="{{item.img}}"></image>
+          
           <text>{{item.name}}</text>
         </view>
     </view>
@@ -32,11 +32,10 @@
                 <text class="card_title">{{item.card_title}}</text>
                 <text class="sub_title">{{item.sub_title}}</text>
             </view>
-            <text class="distance">4.6km</text>
+            <text class="distance">{{item.juli}}</text>
           </view>
           <view class="coupon-item-bottom">
-            <text>【优惠】门票9.6折优惠</text>
-            <text>【攻略】新西兰地狱之门</text>
+            <text>【优惠】{{item.youhui}}</text>
             <text>【服务】中文服务、微信支付、免费Wi-Fi、免费停车</text>
             <view class='vmore'>
               <text class='more'>MORE</text>
