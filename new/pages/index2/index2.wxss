@@ -53,6 +53,7 @@ page{
   width: 33%;
   text-align: center;
   margin: 30rpx 0;
+  background-color: lightskyblue;
 }
 
 .icons .icon image {
@@ -62,8 +63,8 @@ page{
 }
 
 .icons .icon text {
-  color: #000;
-  font-size: 27rpx;
+  color: white;
+  font-size: 45rpx;
   line-height: 2;
 }
 
