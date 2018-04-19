@@ -1,3 +1,4 @@
+<import src="/dist/tab/index.wxml" />
 <scroll-view class="container">
   
   
@@ -12,11 +13,19 @@
     </swiper>
    
   </view>
-
+<view class="tab-menu" style='display:none'>
+  <template is="zan-tab" data="{{ ...sort_method, componentId: 'sort_method' }}">
+  </template>
+</view>
     <view class="icons">
-        <view class="icon" wx:for="{{icons}}" wx:key="id" data-id="{{item.id}}" bindtap="toNearby">
-          
-          <text>{{item.name}}</text>
+        <view class="icon" id="meishi" bindtap="onBtnMeishi">
+          <text>美食</text>
+        </view>
+        <view class="icon" id="gouwu" bindtap="onBtnGouwu">
+          <text>购物</text>
+        </view>
+        <view class="icon" id="jingdian" bindtap="onBtnJingdian">
+          <text>景点</text>
         </view>
     </view>
 
@@ -27,10 +36,10 @@
     <view wx:for-items="{{list}}" wx:key="" bindtap='showDetail'>
         <view class="coupon-item"  >
           <view class="coupon-item-top">
-            <image class="coupon-logo" src="{{item.logo_url}}"></image>
+            <image class="coupon-logo" src="https://guomengtech.com/{{item.img_url}}"></image>
             <view class="coupon-content">
-                <text class="card_title">{{item.card_title}}</text>
-                <text class="sub_title">{{item.sub_title}}</text>
+                <text class="card_title">{{item.title}}</text>
+                <text class="sub_title">{{item.title}}</text>
             </view>
             <text class="distance">{{item.juli}}</text>
           </view>

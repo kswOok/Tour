@@ -1,3 +1,4 @@
+const { Tab, extend } = require('../../dist/index');
 var t;
 //require("../../utils/util.js"), 
 getApp(), 
@@ -43,28 +44,10 @@ Page({
       '../../images/aa1.jpg',
       '../../images/ltlw2.jpg'
     ],
-    icons: [
-      {
-        id: 1,
-        
-        name: '美食',
-      },
-
-      {
-        id: 2,
-        
-        name: '购物',
-      },
-      {
-        id: 3,
-         
-        name: '景点',
-      }
-    ],
     indicatorDots: false,
     autoplay: true,
     interval: 5000,
-    duration: 2000,
+    duration: 1000,
     nation: "", 
     jwd: "", 
     com: "", 
@@ -75,18 +58,18 @@ Page({
     list: [
       {
         id: 1,
-        logo_url: '../../images/hot.png',
-        card_title: '地狱之门地热公园',
-        sub_title: '罗托鲁瓦最活跃的地热保护区',
+        img_url: '../../images/hot.png',
+        title: '地狱之门地热公园',
+        title: '罗托鲁瓦最活跃的地热保护区',
         youhui:'门票9.6折优惠',
         juli:'3.5km'
         
       },
       {
         id: 2,
-        logo_url: '../../images/coffee.jpg',
-        card_title: 'Capers Epicurean咖啡简餐厅',
-        sub_title: '当地最有名气的咖啡简餐厅',
+        img_url: '../../images/coffee.jpg',
+        title: 'Capers Epicurean咖啡简餐厅',
+        title: '当地最有名气的咖啡简餐厅',
         youhui: '8折优惠券',
         juli: '6.5km'
       }
@@ -198,7 +181,22 @@ Page({
       }
     })*/
 
-    var that = this
+    var that = this;
+    this.setData({
+      sort_method: {
+        list: [{
+          id: 'meishi',
+          title: '美食'
+        }, {
+          id: 'gouwu',
+          title: '购物'
+        }, {
+          id: 'jingdian',
+          title: '景点'
+        }],
+        selectedId: ''
+      }
+    })
 
     /*wx.showToast({
       icon: "loading",
@@ -323,5 +321,172 @@ Page({
     wx.navigateTo({
       url: '/pages/detail/detail',
     })
+  },
+  onBtnMeishi: function() {
+    var that = this
+    wx.showToast({
+      icon: "loading",
+      title: "正在加载...",
+      duration: 2000000,
+    })
+    wx.request({
+      method: 'POST',
+      url: getApp().globalData.apiUrl,
+      data: {
+        action: 'get_channel_article_food'
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        if (res.data.result == 1) {
+          wx.hideToast()
+        }
+        console.log(res.data.data)
+        that.setData({
+          list: res.data.data,
+        })
+      }
+    })
+  },
+  onBtnGouwu: function () {
+    var that = this
+    wx.showToast({
+      icon: "loading",
+      title: "正在加载...",
+      duration: 2000000,
+    })
+    wx.request({
+      method: 'POST',
+      url: getApp().globalData.apiUrl,
+      data: {
+        action: 'get_channel_article_goods'
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        if (res.data.result == 1) {
+          wx.hideToast()
+        }
+        console.log(res.data.data)
+        that.setData({
+          list: res.data.data,
+        })
+      }
+    })
+  },
+  onBtnJingdian: function () {
+    var that = this
+    wx.showToast({
+      icon: "loading",
+      title: "正在加载...",
+      duration: 2000000,
+    })
+    wx.request({
+      method: 'POST',
+      url: getApp().globalData.apiUrl,
+      data: {
+        action: 'get_channel_article_guidance'
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        if (res.data.result == 1) {
+          wx.hideToast()
+        }
+        console.log(res.data.data)
+        that.setData({
+          list: res.data.data,
+        })
+      }
+    })
+  },
+  _handleZanTabChange(e) {
+    //var componentId = e.componentId;
+    var id = e.currentTarget.dataset.itemId;
+    if(id === "meishi") {
+      var that = this
+      wx.showToast({
+        icon: "loading",
+        title: "正在加载...",
+        duration: 2000000,
+      })
+      wx.request({
+        method: 'POST',
+        url: getApp().globalData.apiUrl,
+        data: {
+          action: 'get_channel_article_food'
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencoded' // 默认值
+        },
+        success: function (res) {
+          if (res.data.result == 1) {
+            wx.hideToast()
+          }
+          console.log(res.data.data)
+          that.setData({
+            list: res.data.data,
+          })
+        }
+      })
+    }
+    if (id === "gouwu") {
+      var that = this
+      wx.showToast({
+        icon: "loading",
+        title: "正在加载...",
+        duration: 2000000,
+      })
+      wx.request({
+        method: 'POST',
+        url: getApp().globalData.apiUrl,
+        data: {
+          action: 'get_channel_article_goods'
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencoded' // 默认值
+        },
+        success: function (res) {
+          if (res.data.result == 1) {
+            wx.hideToast()
+          }
+          console.log(res.data.data)
+          that.setData({
+            list: res.data.data,
+          })
+        }
+      })
+    }
+    if (id === "jingdian") {
+      var that = this
+      wx.showToast({
+        icon: "loading",
+        title: "正在加载...",
+        duration: 2000000,
+      })
+      wx.request({
+        method: 'POST',
+        url: getApp().globalData.apiUrl,
+        data: {
+          action: 'get_channel_article_guidance'
+        },
+        header: {
+          'content-type': 'application/x-www-form-urlencoded' // 默认值
+        },
+        success: function (res) {
+          if (res.data.result == 1) {
+            wx.hideToast()
+          }
+          console.log(res.data.data)
+          that.setData({
+            list: res.data.data,
+          })
+        }
+      })
+    }
+    
   }
 })

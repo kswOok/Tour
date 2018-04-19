@@ -1,5 +1,5 @@
 page{ 
-  background: #fafafa;
+  background: #fdfdfd;
 }
 
 .container {
@@ -40,9 +40,9 @@ page{
 }
 
 .icons {
-  height: 170rpx;
-  padding: 20rpx 10rpx;
-
+  height: 160rpx;
+  padding: 0 10rpx;
+  
 }
 
 .icons .icon {
@@ -50,10 +50,24 @@ page{
   display: -webkit-flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 33%;
+  width: 27%;
   text-align: center;
-  margin: 30rpx 0;
+  margin: 30rpx 20rpx;
   background-color: lightskyblue;
+  border-radius: 50rpx;
+  box-shadow: 0 10rpx 30rpx 0 rgba(185, 208, 221, 0.55);
+}
+
+#meishi {
+  background-color: #e66;
+}
+
+#gouwu {
+  background-color: #66e;
+}
+
+#jingdian {
+  background-color: #aa6;
 }
 
 .icons .icon image {
@@ -64,7 +78,7 @@ page{
 
 .icons .icon text {
   color: white;
-  font-size: 45rpx;
+  font-size: 30rpx;
   line-height: 2;
 }
 
@@ -82,7 +96,7 @@ page{
 }
 
 .distance {
-  font-size: 28rpx;
+  font-size: 25rpx;
   color: #999;
   right: 10rpx;
   margin-top: 90rpx;
@@ -103,7 +117,7 @@ page{
 .more {
   position:absolute;
   right: 30rpx;
-  font-size: 26rpx;
+  font-size: 24rpx;
   color: #999;
 }
 
@@ -138,11 +152,33 @@ page{
 
 .card_title {
   margin-top: 25rpx;
-  font-size: 36rpx;
+  font-size: 30rpx;
 }
 
 .sub_title {
-  font-size: 28rpx;
+  font-size: 25rpx;
   margin-top: 5rpx;
   color: #666;
+}
+
+.tab-menu {
+  margin-top: 5px;
+  width: 100%;
+}
+.tab-menu .zan-tab__title {
+  border-bottom: 0px !important;
+  font-size: 11px !important;
+}
+.tab-menu .zan-tab__bd {
+  border-top: 20rpx solid #e5e5e5 !important;
+  border-bottom: 0 !important;
+  background-color: rgb(249, 249, 249);
+}
+
+.container .zan-tab__item {
+  min-width: 40px !important;
+}
+.container .zan-tab__title {
+  font-size: 11px !important;
+  height: 42px !important;
 }

@@ -98,14 +98,43 @@
   flex-direction: column;
 }
 
+.coupon-item {
+  background: #fff;
+  display: flex;
+  border-radius: 8rpx;
+  margin: 30rpx;
+  box-shadow: 0 10rpx 30rpx 0 rgba(185, 208, 221, 0.55);
+}
+
+.coupon-logo {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 30rpx;
+  border-radius: 50%;
+  box-shadow: 0 4rpx 12rpx 0 rgba(155, 171, 197, 0.58);
+}
+
+.coupon-color {
+  width: 10rpx;
+  height: 158rpx;
+  position: absolute;
+  right: 30rpx;
+  border-top-right-radius: 7rpx;
+  border-bottom-right-radius: 7rpx;
+}
+
+.coupon-content {
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+
 .card_title {
-  font-size: 35rpx;
-  margin-left: 35rpx;
-  margin-top: 30rpx;
+  margin-top: 20rpx;
+  font-size: 36rpx;
 }
 
 .sub_title {
-  font-size: 30rpx;
-  margin-left: 35rpx;
-  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #666;
 }
