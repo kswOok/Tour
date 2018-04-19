@@ -13,7 +13,6 @@
                     <text>推荐游玩时长</text>
                     <text class="dwidth">{{attractiondetail.ChieneseVisitDuration}} </text>
                     <image class='tishi' src='/images/weixin.png'></image>
-                    <image class='tishi' src='/images/zhifubao.png'></image>
                     <image class='yinlian' src='/images/yinlian.png'></image>
                     <image class='tishi' src='/images/wifi.png'></image>
                     <image class='zhong' src='/images/zhong.png'></image>

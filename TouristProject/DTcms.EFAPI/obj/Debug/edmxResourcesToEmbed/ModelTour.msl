@@ -4,6 +4,9 @@
     <EntitySetMapping Name="dt_channel_article_news">
       <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_news">
         <MappingFragment StoreEntitySet="dt_channel_article_news">
+          <ScalarProperty Name="youhuiquan" ColumnName="youhuiquan" />
+          <ScalarProperty Name="fuwu" ColumnName="fuwu" />
+          <ScalarProperty Name="youhui" ColumnName="youhui" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="site_id" ColumnName="site_id" />
           <ScalarProperty Name="channel_id" ColumnName="channel_id" />
@@ -39,6 +42,9 @@
     <EntitySetMapping Name="dt_channel_article_food">
       <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_food">
         <MappingFragment StoreEntitySet="dt_channel_article_food">
+          <ScalarProperty Name="youhuiquan" ColumnName="youhuiquan" />
+          <ScalarProperty Name="fuwu" ColumnName="fuwu" />
+          <ScalarProperty Name="youhui" ColumnName="youhui" />
           <ScalarProperty Name="author" ColumnName="author" />
           <ScalarProperty Name="source" ColumnName="source" />
           <ScalarProperty Name="update_time" ColumnName="update_time" />
@@ -74,6 +80,8 @@
     <EntitySetMapping Name="dt_channel_article_guidance">
       <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_guidance">
         <MappingFragment StoreEntitySet="dt_channel_article_guidance">
+          <ScalarProperty Name="youhuiquan" ColumnName="youhuiquan" />
+          <ScalarProperty Name="youhui" ColumnName="youhui" />
           <ScalarProperty Name="author" ColumnName="author" />
           <ScalarProperty Name="source" ColumnName="source" />
           <ScalarProperty Name="update_time" ColumnName="update_time" />
@@ -168,6 +176,9 @@
     <EntitySetMapping Name="dt_channel_article_goods">
       <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_goods">
         <MappingFragment StoreEntitySet="dt_channel_article_goods">
+          <ScalarProperty Name="youhuiquan" ColumnName="youhuiquan" />
+          <ScalarProperty Name="fuwu" ColumnName="fuwu" />
+          <ScalarProperty Name="youhui" ColumnName="youhui" />
           <ScalarProperty Name="source" ColumnName="source" />
           <ScalarProperty Name="market_price" ColumnName="market_price" />
           <ScalarProperty Name="goods_no" ColumnName="goods_no" />

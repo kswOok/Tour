@@ -1386,8 +1386,8 @@
     <Content Include="guomeng-tech\i\examples\Thumbs.db" />
     <Content Include="guomeng-tech\i\Thumbs.db" />
     <None Include="packages.config" />
-    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="tools\tour_api.ashx" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

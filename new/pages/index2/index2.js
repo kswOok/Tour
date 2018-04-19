@@ -41,8 +41,8 @@ Page({
 
   data: { 
     imgUrls: [
-      '../../images/aa1.jpg',
-      '../../images/ltlw2.jpg'
+      '../../images/aa3.png',
+      '../../images/aa2.png'
     ],
     indicatorDots: false,
     autoplay: true,
@@ -471,7 +471,7 @@ Page({
         method: 'POST',
         url: getApp().globalData.apiUrl,
         data: {
-          action: 'get_channel_article_guidance'
+          action: 'get_channel_article_news'
         },
         header: {
           'content-type': 'application/x-www-form-urlencoded' // 默认值

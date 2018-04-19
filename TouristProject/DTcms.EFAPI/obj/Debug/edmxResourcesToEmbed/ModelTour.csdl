@@ -33,6 +33,9 @@
     <Property Name="update_time" Type="DateTime" Precision="3" />
     <Property Name="source" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="youhui" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="fuwu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="youhuiquan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityContainer Name="TouristDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="dt_channel_article_news" EntityType="Self.dt_channel_article_news" />
@@ -76,6 +79,9 @@
     <Property Name="update_time" Type="DateTime" Precision="3" />
     <Property Name="source" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="youhui" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="fuwu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="youhuiquan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="dt_channel_article_guidance">
     <Key>
@@ -110,6 +116,8 @@
     <Property Name="update_time" Type="DateTime" Precision="3" />
     <Property Name="source" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="youhui" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="youhuiquan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="dt_users">
     <Key>
@@ -203,6 +211,9 @@
     <Property Name="goods_no" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="market_price" Type="Decimal" Precision="9" Scale="2" />
     <Property Name="source" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="youhui" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="fuwu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="youhuiquan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="dt_wx_token">
     <Key>

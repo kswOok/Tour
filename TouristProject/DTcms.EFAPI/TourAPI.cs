@@ -31,7 +31,11 @@ namespace DTcms.EFAPI
                             {
                                 t.id,
                                 t.title,
-                                t.img_url
+                                t.img_url,
+                                t.fuwu,
+                                t.youhui,
+                                t.youhuiquan,
+                                t.zhaiyao
                             }).Take(count).ToList(),
                     result = 1
                 });
@@ -51,7 +55,10 @@ namespace DTcms.EFAPI
                                t.img_url,
                                t.zhaiyao,
                                t.content,
-                               t.update_time
+                               t.update_time,
+                               t.youhui,
+                               t.youhuiquan,
+                               t.fuwu
                            }).FirstOrDefault();
                 return Obj2Json(new
                 {
@@ -62,6 +69,9 @@ namespace DTcms.EFAPI
                         obj.img_url,
                         obj.zhaiyao,
                         obj.update_time,
+                        obj.youhui,
+                        obj.youhuiquan,
+                        obj.fuwu,
                         content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload")
                     },
                     result = 1
@@ -80,7 +90,11 @@ namespace DTcms.EFAPI
                             {
                                 t.id,
                                 t.title,
-                                t.img_url
+                                t.img_url,
+                                t.zhaiyao,
+                                t.fuwu,
+                                t.youhui,
+                                t.youhuiquan
                             }).ToList(),
                     result = 1
                 });
@@ -100,7 +114,10 @@ namespace DTcms.EFAPI
                                t.img_url,
                                t.zhaiyao,
                                t.content,
-                               t.update_time
+                               t.update_time,
+                               t.youhui,
+                               t.youhuiquan,
+                               t.fuwu
                            }).FirstOrDefault();
                 return Obj2Json(new
                 {
@@ -111,6 +128,9 @@ namespace DTcms.EFAPI
                         obj.img_url,
                         obj.zhaiyao,
                         obj.update_time,
+                        obj.youhui,
+                        obj.youhuiquan,
+                        obj.fuwu,
                         content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload")
                     },
                     result = 1
@@ -375,7 +395,11 @@ namespace DTcms.EFAPI
                             {
                                 t.id,
                                 t.title,
-                                t.img_url
+                                t.img_url,
+                                t.fuwu,
+                                t.youhui,
+                                t.youhuiquan,
+                                t.zhaiyao
                             }).ToList(),
                     result = 1
                 });
@@ -396,6 +420,7 @@ namespace DTcms.EFAPI
                                 t.title,
                                 t.img_url,
                                 t.content
+                           
                             }).FirstOrDefault(),
                     result = 1
                 }).Replace("/upload/", "https://guomengtech.com/upload/");
@@ -506,7 +531,11 @@ namespace DTcms.EFAPI
                                t.img_url,
                                t.zhaiyao,
                                t.content,
-                               t.update_time
+                               t.update_time,
+                               t.youhui,
+                               t.youhuiquan,
+                               t.fuwu
+                               
                            }).FirstOrDefault();
                 return Obj2Json(new
                 {
@@ -517,6 +546,9 @@ namespace DTcms.EFAPI
                         obj.img_url,
                         obj.zhaiyao,
                         obj.update_time,
+                        obj.youhui,
+                        obj.youhuiquan,
+                        obj.fuwu,
                         content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload")
                     },
                     result = 1

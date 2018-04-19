@@ -29,3 +29,5 @@ C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\obj\Rele
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.EFAPI.dll
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.EFAPI.pdb
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.EFAPI.dll.config
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\log4net.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\log4net.xml

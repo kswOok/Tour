@@ -30,7 +30,7 @@
     </view>
 
 
-  <text class="title">当季推荐</text>
+  <text class="title">精选推荐</text>
   <view style="margin-top:30rpx;"/>
   <view class='coupon-list'>
     <view wx:for-items="{{list}}" wx:key="" bindtap='showDetail'>
@@ -39,13 +39,13 @@
             <image class="coupon-logo" src="https://guomengtech.com/{{item.img_url}}"></image>
             <view class="coupon-content">
                 <text class="card_title">{{item.title}}</text>
-                <text class="sub_title">{{item.title}}</text>
+                <text class="sub_title">{{item.zhaiyao}}</text>
             </view>
             <text class="distance">{{item.juli}}</text>
           </view>
           <view class="coupon-item-bottom">
             <text>【优惠】{{item.youhui}}</text>
-            <text>【服务】中文服务、微信支付、免费Wi-Fi、免费停车</text>
+            <text>【服务】{{item.fuwu}}</text>
             <view class='vmore'>
               <text class='more'>MORE</text>
             </view>

@@ -335,46 +335,43 @@
       <publishTime>03/19/2018 19:52:44</publishTime>
     </File>
     <File Include="bin/DTcms.API.dll">
-      <publishTime>03/31/2018 13:11:11</publishTime>
+      <publishTime>04/19/2018 23:27:24</publishTime>
     </File>
     <File Include="bin/DTcms.BLL.dll">
-      <publishTime>03/31/2018 13:11:11</publishTime>
+      <publishTime>04/19/2018 23:27:23</publishTime>
     </File>
     <File Include="bin/DTcms.Common.dll">
-      <publishTime>03/31/2018 13:11:07</publishTime>
+      <publishTime>04/19/2018 23:27:19</publishTime>
     </File>
     <File Include="bin/DTcms.DAL.dll">
-      <publishTime>03/31/2018 13:11:10</publishTime>
+      <publishTime>04/19/2018 23:27:22</publishTime>
     </File>
     <File Include="bin/DTcms.DBUtility.dll">
-      <publishTime>03/31/2018 13:11:09</publishTime>
+      <publishTime>04/19/2018 23:27:20</publishTime>
     </File>
     <File Include="bin/DTcms.EFAPI.dll">
-      <publishTime>04/01/2018 23:42:48</publishTime>
+      <publishTime>04/19/2018 23:27:20</publishTime>
     </File>
     <File Include="bin/DTcms.EFAPI.dll.config">
-      <publishTime>03/19/2018 19:52:30</publishTime>
+      <publishTime>04/02/2018 19:00:36</publishTime>
     </File>
     <File Include="bin/DTcms.Model.dll">
-      <publishTime>03/31/2018 13:11:09</publishTime>
-    </File>
-    <File Include="bin/DTcms.School.dll">
-      <publishTime>03/13/2018 21:28:17</publishTime>
-    </File>
-    <File Include="bin/DTcms.School.dll.config">
-      <publishTime>03/13/2018 20:44:35</publishTime>
+      <publishTime>04/19/2018 23:27:20</publishTime>
     </File>
     <File Include="bin/DTcms.Web.dll">
-      <publishTime>04/01/2018 23:42:50</publishTime>
+      <publishTime>04/19/2018 23:27:27</publishTime>
     </File>
     <File Include="bin/DTcms.Web.UI.dll">
-      <publishTime>03/31/2018 13:11:12</publishTime>
+      <publishTime>04/19/2018 23:27:25</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/19/2018 19:52:57</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
       <publishTime>03/19/2018 19:52:56</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>04/02/2018 19:00:40</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>03/19/2018 19:52:58</publishTime>
@@ -1202,10 +1199,10 @@
       <publishTime>03/19/2018 19:52:45</publishTime>
     </File>
     <File Include="editor/ueditor.parse.js">
-      <publishTime>03/26/2017 14:44:45</publishTime>
+      <publishTime>03/19/2018 19:52:45</publishTime>
     </File>
     <File Include="editor/ueditor.parse.min.js">
-      <publishTime>03/26/2017 14:44:45</publishTime>
+      <publishTime>03/19/2018 19:52:45</publishTime>
     </File>
     <File Include="guomeng-tech/.project">
       <publishTime>03/18/2016 11:41:32</publishTime>
@@ -2132,7 +2129,7 @@
       <publishTime>03/19/2018 19:52:55</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/31/2018 13:11:18</publishTime>
+      <publishTime>04/19/2018 23:27:33</publishTime>
     </File>
     <File Include="xmlconfig/order.config">
       <publishTime>03/19/2018 19:52:55</publishTime>

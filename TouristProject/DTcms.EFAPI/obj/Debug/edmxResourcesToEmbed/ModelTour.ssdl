@@ -54,6 +54,9 @@
     <Property Name="update_time" Type="datetime" />
     <Property Name="source" Type="nvarchar" MaxLength="50" />
     <Property Name="author" Type="nvarchar" MaxLength="50" />
+    <Property Name="youhui" Type="nvarchar" MaxLength="40" />
+    <Property Name="fuwu" Type="nvarchar" MaxLength="200" />
+    <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="dt_channel_article_goods">
     <Key>
@@ -90,6 +93,9 @@
     <Property Name="goods_no" Type="nvarchar" MaxLength="100" />
     <Property Name="market_price" Type="decimal" Precision="9" Scale="2" />
     <Property Name="source" Type="nvarchar" MaxLength="50" />
+    <Property Name="youhui" Type="nvarchar" MaxLength="40" />
+    <Property Name="fuwu" Type="nvarchar" MaxLength="200" />
+    <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="dt_channel_article_guidance">
     <Key>
@@ -124,6 +130,8 @@
     <Property Name="update_time" Type="datetime" />
     <Property Name="source" Type="nvarchar" MaxLength="50" />
     <Property Name="author" Type="nvarchar" MaxLength="50" />
+    <Property Name="youhui" Type="nvarchar" MaxLength="40" />
+    <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="dt_channel_article_news">
     <Key>
@@ -158,6 +166,9 @@
     <Property Name="update_time" Type="datetime" />
     <Property Name="source" Type="nvarchar" MaxLength="50" />
     <Property Name="author" Type="nvarchar" MaxLength="50" />
+    <Property Name="youhui" Type="nvarchar" MaxLength="40" />
+    <Property Name="fuwu" Type="nvarchar" MaxLength="200" />
+    <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="dt_users">
     <Key>

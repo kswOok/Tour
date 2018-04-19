@@ -2,3 +2,4 @@ C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Common\bin\R
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Common\bin\Release\DTcms.Common.pdb
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Common\obj\Release\DTcms.Common.dll
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Common\obj\Release\DTcms.Common.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Common\obj\Release\DTcms.Common.csprojResolveAssemblyReference.cache

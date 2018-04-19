@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTcms.DBUtility", "DTcms.DB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTcms.API", "DTcms.API\DTcms.API.csproj", "{D9EE530C-FFD2-45DA-B4AF-2CA4586EF67F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTcms.EFAPI", "DTcms.School\DTcms.EFAPI.csproj", "{F485F66D-AE20-42D6-8B0A-3B1FC39B6F5D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTcms.EFAPI", "DTcms.EFAPI\DTcms.EFAPI.csproj", "{F485F66D-AE20-42D6-8B0A-3B1FC39B6F5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

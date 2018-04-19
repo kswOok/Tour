@@ -43,5 +43,8 @@ namespace DTcms.EFAPI
         public Nullable<System.DateTime> update_time { get; set; }
         public string source { get; set; }
         public string author { get; set; }
+        public string youhui { get; set; }
+        public string fuwu { get; set; }
+        public string youhuiquan { get; set; }
     }
 }

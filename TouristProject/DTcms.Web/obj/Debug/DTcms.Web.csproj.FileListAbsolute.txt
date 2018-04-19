@@ -163,3 +163,5 @@ C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\obj\Debu
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\obj\Debug\DTcms.Web.pdb
 C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\log4net.dll
 C:\VS2017Proj\Tour\TouristProject\DTcms.Web\bin\log4net.xml
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\log4net.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\log4net.xml

@@ -59,6 +59,9 @@
           <Property Name="update_time" Type="datetime" />
           <Property Name="source" Type="nvarchar" MaxLength="50" />
           <Property Name="author" Type="nvarchar" MaxLength="50" />
+          <Property Name="youhui" Type="nvarchar" MaxLength="40" />
+          <Property Name="fuwu" Type="nvarchar" MaxLength="200" />
+          <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="dt_channel_article_goods">
           <Key>
@@ -95,6 +98,9 @@
           <Property Name="goods_no" Type="nvarchar" MaxLength="100" />
           <Property Name="market_price" Type="decimal" Precision="9" Scale="2" />
           <Property Name="source" Type="nvarchar" MaxLength="50" />
+          <Property Name="youhui" Type="nvarchar" MaxLength="40" />
+          <Property Name="fuwu" Type="nvarchar" MaxLength="200" />
+          <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="dt_channel_article_guidance">
           <Key>
@@ -129,6 +135,8 @@
           <Property Name="update_time" Type="datetime" />
           <Property Name="source" Type="nvarchar" MaxLength="50" />
           <Property Name="author" Type="nvarchar" MaxLength="50" />
+          <Property Name="youhui" Type="nvarchar" MaxLength="40" />
+          <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="dt_channel_article_news">
           <Key>
@@ -163,6 +171,9 @@
           <Property Name="update_time" Type="datetime" />
           <Property Name="source" Type="nvarchar" MaxLength="50" />
           <Property Name="author" Type="nvarchar" MaxLength="50" />
+          <Property Name="youhui" Type="nvarchar" MaxLength="40" />
+          <Property Name="fuwu" Type="nvarchar" MaxLength="200" />
+          <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="dt_users">
           <Key>
@@ -256,6 +267,9 @@
           <Property Name="update_time" Type="DateTime" Precision="3" />
           <Property Name="source" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="youhui" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="fuwu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="youhuiquan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="TouristDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="dt_channel_article_news" EntityType="Self.dt_channel_article_news" />
@@ -299,6 +313,9 @@
           <Property Name="update_time" Type="DateTime" Precision="3" />
           <Property Name="source" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="youhui" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="fuwu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="youhuiquan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="dt_channel_article_guidance">
           <Key>
@@ -333,6 +350,8 @@
           <Property Name="update_time" Type="DateTime" Precision="3" />
           <Property Name="source" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="youhui" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="youhuiquan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="dt_users">
           <Key>
@@ -426,6 +445,9 @@
           <Property Name="goods_no" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="market_price" Type="Decimal" Precision="9" Scale="2" />
           <Property Name="source" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="youhui" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="fuwu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="youhuiquan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="dt_wx_token">
           <Key>
@@ -446,6 +468,9 @@
           <EntitySetMapping Name="dt_channel_article_news">
             <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_news">
               <MappingFragment StoreEntitySet="dt_channel_article_news">
+                <ScalarProperty Name="youhuiquan" ColumnName="youhuiquan" />
+                <ScalarProperty Name="fuwu" ColumnName="fuwu" />
+                <ScalarProperty Name="youhui" ColumnName="youhui" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="site_id" ColumnName="site_id" />
                 <ScalarProperty Name="channel_id" ColumnName="channel_id" />
@@ -481,6 +506,9 @@
           <EntitySetMapping Name="dt_channel_article_food">
             <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_food">
               <MappingFragment StoreEntitySet="dt_channel_article_food">
+                <ScalarProperty Name="youhuiquan" ColumnName="youhuiquan" />
+                <ScalarProperty Name="fuwu" ColumnName="fuwu" />
+                <ScalarProperty Name="youhui" ColumnName="youhui" />
                 <ScalarProperty Name="author" ColumnName="author" />
                 <ScalarProperty Name="source" ColumnName="source" />
                 <ScalarProperty Name="update_time" ColumnName="update_time" />
@@ -516,6 +544,8 @@
           <EntitySetMapping Name="dt_channel_article_guidance">
             <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_guidance">
               <MappingFragment StoreEntitySet="dt_channel_article_guidance">
+                <ScalarProperty Name="youhuiquan" ColumnName="youhuiquan" />
+                <ScalarProperty Name="youhui" ColumnName="youhui" />
                 <ScalarProperty Name="author" ColumnName="author" />
                 <ScalarProperty Name="source" ColumnName="source" />
                 <ScalarProperty Name="update_time" ColumnName="update_time" />
@@ -610,6 +640,9 @@
           <EntitySetMapping Name="dt_channel_article_goods">
             <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_goods">
               <MappingFragment StoreEntitySet="dt_channel_article_goods">
+                <ScalarProperty Name="youhuiquan" ColumnName="youhuiquan" />
+                <ScalarProperty Name="fuwu" ColumnName="fuwu" />
+                <ScalarProperty Name="youhui" ColumnName="youhui" />
                 <ScalarProperty Name="source" ColumnName="source" />
                 <ScalarProperty Name="market_price" ColumnName="market_price" />
                 <ScalarProperty Name="goods_no" ColumnName="goods_no" />
