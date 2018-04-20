@@ -43,7 +43,6 @@ Page({
         if (res.data.result == 1) {
           wx.hideToast()
         }
-        console.log(res.data.data)
         that.setData({
           list: res.data.data,
         })
@@ -84,7 +83,6 @@ Page({
             if (res.data.result == 1) {
               wx.hideToast()
             }
-            console.log(res.data.data)
             that.setData({
               list: res.data.data,
             })
@@ -110,7 +108,6 @@ Page({
             if (res.data.result == 1) {
               wx.hideToast()
             }
-            console.log(res.data.data)
             that.setData({
               list: res.data.data,
             })

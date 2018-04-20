@@ -148,7 +148,26 @@ Page({
         if (res.data.result == 1) {
           wx.hideToast()
         }
-        console.log(res.data.data)
+        var poi_id = res.data.data.youhuiquan;
+        console.log(poi_id)
+        poi_id = "";//配置好后注释掉
+        wx.request({
+          method: 'POST',
+          url: getApp().globalData.apiUrl,
+          data: {
+            action: 'coupon_query_coupon',
+            poi_id: poi_id
+          },
+          header: {
+            'content-type': 'application/x-www-form-urlencoded' // 默认值
+          },
+          success: function (res) {
+            wx.hideToast();
+            that.setData({
+              list: res.data.couponList
+            })
+          }
+        })
         var content = res.data.data.content;
         WxParse.wxParse('content', 'html', content, that, 5);
         that.setData({
@@ -162,22 +181,7 @@ Page({
         })
       }
     });
-    wx.request({
-      method: 'POST',
-      url: getApp().globalData.apiUrl,
-      data: {
-        action: 'coupon_query_coupon',
-      },
-      header: {
-        'content-type': 'application/x-www-form-urlencoded' // 默认值
-      },
-      success: function (res) {
-        wx.hideToast();
-        that.setData({
-          list: res.data.couponList
-        })
-      }
-    })
+    
   },
   bindChange: function (e) {
 
