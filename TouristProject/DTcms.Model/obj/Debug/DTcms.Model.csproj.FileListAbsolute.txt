@@ -49,3 +49,12 @@ C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Model\bin\De
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Model\obj\Debug\DTcms.Model.csprojResolveAssemblyReference.cache
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Model\obj\Debug\DTcms.Model.dll
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Model\obj\Debug\DTcms.Model.pdb
+C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.Model\bin\Debug\DTcms.Model.dll
+C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.Model\bin\Debug\DTcms.Model.pdb
+C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.Model\bin\Debug\DTcms.Common.dll
+C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.Model\bin\Debug\DTcms.Common.pdb
+C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.Model\obj\Debug\DTcms.Model.csprojResolveAssemblyReference.cache
+C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.Model\obj\Debug\DTcms.Model.csproj.CoreCompileInputs.cache
+C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.Model\obj\Debug\DTcms.Model.csproj.CopyComplete
+C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.Model\obj\Debug\DTcms.Model.dll
+C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.Model\obj\Debug\DTcms.Model.pdb

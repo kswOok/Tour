@@ -257,7 +257,7 @@ namespace DTcms.EFAPI
 
         public static string getAppCard(string card_id)
         {
-            string api_ticket = getKiwifastApiTicket();// getApiTicket();
+            string api_ticket = getKiwifastApiTicket2();// getApiTicket();
             DateTime dt_start = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
             int timestamp = (int)(DateTime.Now - dt_start).TotalSeconds;
             List<string> lst = new List<string>();
@@ -285,6 +285,34 @@ namespace DTcms.EFAPI
                 signature,
                 cardExt = "{\"code\":\"\", \"openid\":\"\", \"timestamp\": \"" + timestamp.ToString() + "\", \"signature\": \"" + signature + "\"}"
             });
+        }
+
+        private static string getKiwifastApiTicket2()
+        {
+            string sign_key = "8c49bf5ca8da4ac5ad3d637f882d4ea5";
+            string signString = "merchant_id=826779031&nonce_str=abcde&service=get_ticket&ticket_type=WX_CARD";
+            using (MD5 md5 = MD5.Create())
+            {
+                string signature = GetMd5Hash(md5, signString + sign_key);
+                string postData = signString + "&signature=" + signature + "&sign_type=MD5";
+                var request = (HttpWebRequest)WebRequest.Create("https://coupon.kiwifast.com/interface");
+                request.Method = "POST";
+                request.ContentType = "application/x-www-form-urlencoded";
+                byte[] data = Encoding.UTF8.GetBytes(postData);
+                request.ContentLength = data.Length;
+                using (Stream reqStream = request.GetRequestStream())
+                {
+                    reqStream.Write(data, 0, data.Length);
+                    reqStream.Close();
+                }
+                var response = (HttpWebResponse)request.GetResponse();
+                using (var sr = new StreamReader(response.GetResponseStream()))
+                {
+                    string responseString = sr.ReadToEnd();
+                    var temp = JsonConvert.DeserializeObject<dynamic>(responseString);
+                    return temp.data.ticket;
+                }
+            }
         }
 
         private static string getKiwifastApiTicket()
