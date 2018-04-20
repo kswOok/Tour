@@ -1,0 +1,52 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<scroll-view id="middle_wrap">
+    <view class="index-detail">
+        <view class="detailtopheader">
+            <text class="h2">{{attractiondetail.ChieneseName}}</text>
+            <text class="addressWrap" style="display:none">{{attractiondetail.ChieneseAddress}}</text>
+            <text class="catWrap" id="category">·{{category}}·</text>
+            <view class="detail-top">
+                <image class="detail-banner" mode="aspectFill" src="{{attractiondetail.Image}}" wx:if="{{attractiondetail.Image!=null||attractiondetail.Image!=undefined}}"></image>
+            </view>
+            <view class="smalliconswrap">
+                <view class="smallicons">
+                    <image class='image-icon' src="/images/bookmark.png"></image>
+                    <text>推荐游玩时长</text>
+                    <text class="dwidth">{{attractiondetail.ChieneseVisitDuration}} </text>
+                    <image class='tishi' src='/images/weixin.png'></image>
+                    <image class='yinlian' src='/images/yinlian.png'></image>
+                    <image class='tishi' src='/images/wifi.png'></image>
+                    <image class='zhong' src='/images/zhong.png'></image>
+                </view>
+                <view class="smallicons">
+                    <image class='image-icon' src="/images/timer.png"></image>
+                    <text class="timertext">{{attractiondetail.ChieneseVisitTimings}}</text>
+                </view>
+                
+            </view>
+        </view>
+        <view class="swiper-tab">
+          <view class="swiper-tab-list {{currentTab==0 ? 'on0' : ''}}" data-current="0" bindtap="swichNav">介绍</view>
+          <view class="swiper-tab-list {{currentTab==1 ? 'on1' : ''}}" data-current="1" bindtap="swichNav">优惠</view>
+        </view>
+        <view class='content'>
+          <view class="jieshao" style="display:{{currentTab==0 ? 'block' : 'none'}}">
+            <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+          </view>
+          <view class="youhui" style="display:{{currentTab==1 ? 'block' : 'none'}}">
+            <view class='coupon-list'>
+              <block wx:for-items="{{list}}" wx:key="">
+                <view class="coupon-item" bindtap='onAddCard' data-id='{{item.card_id}}'>
+                  <image class="coupon-logo" src="{{item.logo_url}}"></image>
+                  <view class="coupon-content">
+                      <text class="card_title">{{item.card_title}}</text>
+                      <text class="sub_title">{{item.sub_title}}</text>
+                  </view>
+                  <view class='coupon-color' style="background-color:#{{item.color}};"></view>
+                </view>
+              </block>
+            </view>
+          </view>
+        </view>
+    </view>
+</scroll-view>

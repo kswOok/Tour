@@ -33,12 +33,33 @@ Page({
     shortenglish: true,
   },
 
+
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    if(options.type == 0) {
+      this.setData({
+        category: '景点'
+      })
+      this.showDetail("get_channel_article_news_detail", options.id);
+    }
+    if (options.type == 1) {
+      this.setData({
+        category: '美食'
+      })
+      this.showDetail("get_channel_article_food_detail", options.id);
+    }
+    if (options.type == 2) {
+      this.setData({
+        category: '购物'
+      })
+      this.showDetail("get_channel_article_goods_detail", options.id);
+    }
   },
+
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -100,6 +121,40 @@ Page({
       shortenglish: true
     }) : this.setData({
       shortchinese: true
+    });
+  },
+
+  showDetail: function (api, id) {
+    var that = this;
+    wx.showToast({
+      icon: "loading",
+      title: "正在加载...",
+      duration: 2000000,
+    })
+    wx.request({
+      method: 'POST',
+      url: getApp().globalData.apiUrl,
+      data: {
+        action: api,
+        id: id
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        if (res.data.result == 1) {
+          wx.hideToast()
+        }
+        console.log(res.data.data)
+        that.setData({
+          //list: res.data.data,
+          attractiondetail: {
+            ChieneseName: res.data.data.title,
+            Image: "http://guomengtech.com/" + res.data.data.img_url,
+            ChieneseVisitDuration: "1小时",
+          }
+        })
+      }
     });
   },
 })

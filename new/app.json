@@ -1,31 +1,26 @@
 {
   "pages": [
-    
     "pages/index/index",
+    "pages/index4/index4",
     "pages/detail/detail",
     "pages/index2/index2",
     "pages/logs/logs",
-    "pages/guide/guide",
     "pages/qa/qa",
-    "pages/my/my",
     "pages/no-miss/no-miss",
-    "pages/HolidayCalendar/HolidayCalendar",
     "pages/local-food/local-food",
     "pages/strategy-new/strategy-new",
     "pages/subway/subway",
-    "pages/HolidayCalendarDetail/HolidayCalendarDetail",
     "pages/no-missDetail/no-missDetail",
     "pages/local-foodDetail/local-foodDetail",
-    "pages/guideDetail/guideDetail",
     "pages/brandDetail/brandDetail",
     "pages/strategy-new-detail/strategy-new-detail",
-    "pages/my2/my2"
-    
+    "pages/my2/my2",
+    "pages/detail2/detail2"
   ],
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/index2/index2",
+        "pagePath": "pages/index4/index4",
         "text": "首页",
         "iconPath": "images/home-g.png",
         "selectedIconPath": "images/home-b.png"

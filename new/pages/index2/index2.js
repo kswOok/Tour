@@ -78,6 +78,31 @@ Page({
   onLoad: function(options) {
     var that = this;
 
+    wx.showToast({
+      icon: "loading",
+      title: "正在加载...",
+      duration: 2000000,
+    })
+    wx.request({
+      method: 'POST',
+      url: getApp().globalData.apiUrl,
+      data: {
+        action: 'get_channel_article_news_top5'
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        if (res.data.result == 1) {
+          wx.hideToast()
+        }
+        console.log(res.data.data)
+        that.setData({
+          //list: res.data.data,
+        })
+      }
+    });
+
     if (wx.getStorageSync('unionId') == null || wx.getStorageSync('unionId') == '') { //没有unionId就登录
       wx.login({
         success: res => {

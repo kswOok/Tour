@@ -1,0 +1,43 @@
+<scroll-view class="container">
+
+
+  <view class="index-header">
+    <swiper indicator-dots="{{indicatorDots}}" class="index-swiper" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for-items="{{imgUrls}}" wx:key="">
+        <swiper-item>
+          <image src="{{item}}" class="index-img" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on0' : ''}}" data-current="0" bindtap="swichNav">景点</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on1' : ''}}" data-current="1" bindtap="swichNav">美食</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on2' : ''}}" data-current="2" bindtap="swichNav">购物</view>
+  </view>
+  <view class='coupon-list'>
+    <view wx:for-items="{{list}}" wx:key="" bindtap='showDetail' data-id="{{item.id}}">
+        <view class="coupon-item"  >
+          <view class="coupon-item-top">
+            <image class="coupon-logo" src="https://guomengtech.com/{{item.img_url}}"></image>
+            <view class="coupon-content">
+                <text class="card_title">{{item.title}}</text>
+                <text class="sub_title">{{item.zhaiyao}}</text>
+            </view>
+            <text class="distance">{{item.juli}}</text>
+          </view>
+          <view class="coupon-item-bottom">
+            <text>【优惠】{{item.youhui}}</text>
+            <text>【服务】{{item.fuwu}}</text>
+            <view class='vmore'>
+              <text class='more'>MORE</text>
+            </view>
+          </view>
+        </view>
+    </view>
+  </view>
+  
+
+
+</scroll-view>

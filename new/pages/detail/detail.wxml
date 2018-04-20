@@ -2,8 +2,8 @@
     <view class="index-detail">
         <view class="detailtopheader">
             <text class="h2">{{attractiondetail.ChieneseName}}</text>
-            <text class="addressWrap">{{attractiondetail.ChieneseAddress}}</text>
-            <text class="catWrap">·{{attractiondetail.categoryChinese}}·</text>
+            <text class="addressWrap" style="display:none">{{attractiondetail.ChieneseAddress}}</text>
+            <text class="catWrap" id="category">·{{category}}·</text>
             <view class="detail-top">
                 <image class="detail-banner" mode="aspectFill" src="{{attractiondetail.Image}}" wx:if="{{attractiondetail.Image!=null||attractiondetail.Image!=undefined}}"></image>
             </view>
@@ -41,8 +41,8 @@
                 <text class="desc_text" wx:if="{{shortenglish==true}}">{{attractiondetail.descriptionshortenglish}}</text>
                 <text class="desc_text" wx:if="{{shortenglish==false}}">{{attractiondetail.Description}}</text>
                 <view>
-                    <text data-mode bindtap="showmore" class="desc_text_toggle" data-language="english" wx:if="{{descriptionshortenglish!=''&&shortenglish==true}}">More</text>
-                    <text data-mode bindtap="showless" class="desc_text_toggle" data-language="english" wx:if="{{descriptionshortenglish!=''&&shortenglish==false}}">Collapse</text>
+                    <text data-mode bindtap="showmore" class="desc_text_toggle" data-language="english" wx:if="{{descriptionshortenglish!=''&&shortenglish==true}}">更多</text>
+                    <text data-mode bindtap="showless" class="desc_text_toggle" data-language="english" wx:if="{{descriptionshortenglish!=''&&shortenglish==false}}">收起</text>
                 </view>
             </view>
         </view>
