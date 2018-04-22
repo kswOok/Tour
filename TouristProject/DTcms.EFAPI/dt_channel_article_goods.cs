@@ -48,5 +48,7 @@ namespace DTcms.EFAPI
         public string youhui { get; set; }
         public string fuwu { get; set; }
         public string youhuiquan { get; set; }
+        public string haoshi { get; set; }
+        public string calendar { get; set; }
     }
 }

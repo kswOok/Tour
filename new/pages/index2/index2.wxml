@@ -44,6 +44,7 @@
             <text class="distance">{{item.juli}}</text>
           </view>
           <view class="coupon-item-bottom">
+          
             <text>【优惠】{{item.youhui}}</text>
             <text>【服务】{{item.fuwu}}</text>
             <view class='vmore'>

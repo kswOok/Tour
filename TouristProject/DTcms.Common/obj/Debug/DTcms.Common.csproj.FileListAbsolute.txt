@@ -28,10 +28,6 @@ C:\VS2017Proj\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.csprojReso
 C:\VS2017Proj\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.csproj.CoreCompileInputs.cache
 C:\VS2017Proj\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.dll
 C:\VS2017Proj\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.pdb
-C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Common\bin\Debug\DTcms.Common.dll
-C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Common\bin\Debug\DTcms.Common.pdb
-C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.dll
-C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.pdb
 C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.Common\bin\Debug\DTcms.Common.dll
 C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.Common\bin\Debug\DTcms.Common.pdb
 C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.csprojResolveAssemblyReference.cache

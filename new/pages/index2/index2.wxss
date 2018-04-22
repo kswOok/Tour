@@ -59,15 +59,15 @@ page{
 }
 
 #meishi {
-  background-color: #e66;
+  background-color: #1296db;
 }
 
 #gouwu {
-  background-color: #66e;
+  background-color: #1296db;
 }
 
 #jingdian {
-  background-color: #aa6;
+  background-color: #1296db;
 }
 
 .icons .icon image {
@@ -107,6 +107,11 @@ page{
   display: flex;
   flex-direction: column;
   padding: 10rpx 0;
+}
+
+.coupon-detail {
+  position:absolute;
+  left: 20rpx; 
 }
 
 .vmore {

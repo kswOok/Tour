@@ -700,14 +700,14 @@ image.loc-indicatior {
     color: #333;  
 }  
 .on0 { 
-  color: #aa6;  
-  border-bottom: 5rpx solid #aa6;
+  color: #1296db;  
+  border-bottom: 5rpx solid #1296db;
   
 }
 
 .on1 { 
-  color: #e66;  
-  border-bottom: 5rpx solid #e66;
+  color: #1296db;  
+  border-bottom: 5rpx solid #1296db;
 }
 
 .content {

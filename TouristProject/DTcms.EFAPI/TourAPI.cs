@@ -26,7 +26,7 @@ namespace DTcms.EFAPI
             {
                 return Obj2Json(new
                 {
-                    data = (from t in db.dt_channel_article_news
+                    data = (from t in db.dt_channel_article_news orderby t.sort_id
                             select new
                             {
                                 t.id,
@@ -35,8 +35,14 @@ namespace DTcms.EFAPI
                                 t.fuwu,
                                 t.youhui,
                                 t.youhuiquan,
-                                t.zhaiyao
-                            }).Take(count).ToList(),
+                                t.zhaiyao,
+                                t.calendar,
+                                t.is_hot,
+                                t.haoshi,
+                                t.source,
+                                t.sub_title
+
+                            }).Take(count).ToList() ,
                     result = 1
                 });
             }
@@ -46,7 +52,7 @@ namespace DTcms.EFAPI
         {
             using (var db = new TouristDBEntities())
             {
-                var obj = (from t in db.dt_channel_article_news
+                var obj = (from t in db.dt_channel_article_news orderby t.sort_id
                            where t.id == id
                            select new
                            {
@@ -58,7 +64,12 @@ namespace DTcms.EFAPI
                                t.update_time,
                                t.youhui,
                                t.youhuiquan,
-                               t.fuwu
+                               t.fuwu,
+                               t.calendar,
+                               t.is_hot,
+                               t.haoshi,
+                               t.sub_title,
+                               t.source
                            }).FirstOrDefault();
                 return Obj2Json(new
                 {
@@ -72,6 +83,11 @@ namespace DTcms.EFAPI
                         obj.youhui,
                         obj.youhuiquan,
                         obj.fuwu,
+                        obj.calendar,
+                        obj.haoshi,
+                        obj.is_hot,
+                        obj.sub_title,
+                        obj.source,
                         content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload")
                     },
                     result = 1
@@ -85,7 +101,7 @@ namespace DTcms.EFAPI
             {
                 return Obj2Json(new
                 {
-                    data = (from t in db.dt_channel_article_goods
+                    data = (from t in db.dt_channel_article_goods orderby t.sort_id
                             select new
                             {
                                 t.id,
@@ -94,7 +110,12 @@ namespace DTcms.EFAPI
                                 t.zhaiyao,
                                 t.fuwu,
                                 t.youhui,
-                                t.youhuiquan
+                                t.youhuiquan,
+                                t.calendar,
+                                t.is_hot,
+                                t.haoshi,
+                                t.sub_title,
+                                t.source
                             }).ToList(),
                     result = 1
                 });
@@ -105,7 +126,7 @@ namespace DTcms.EFAPI
         {
             using (var db = new TouristDBEntities())
             {
-                var obj = (from t in db.dt_channel_article_goods
+                var obj = (from t in db.dt_channel_article_goods orderby t.sort_id
                            where t.id == id
                            select new
                            {
@@ -117,7 +138,12 @@ namespace DTcms.EFAPI
                                t.update_time,
                                t.youhui,
                                t.youhuiquan,
-                               t.fuwu
+                               t.fuwu,
+                               t.calendar,
+                               t.is_hot,
+                               t.haoshi,
+                               t.sub_title,
+                               t.source
                            }).FirstOrDefault();
                 return Obj2Json(new
                 {
@@ -131,6 +157,11 @@ namespace DTcms.EFAPI
                         obj.youhui,
                         obj.youhuiquan,
                         obj.fuwu,
+                        obj.calendar,
+                        obj.is_hot,
+                        obj.haoshi,
+                        obj.sub_title,
+                        obj.source,
                         content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload")
                     },
                     result = 1
@@ -418,7 +449,7 @@ namespace DTcms.EFAPI
             {
                 return Obj2Json(new
                 {
-                    data = (from t in db.dt_channel_article_food
+                    data = (from t in db.dt_channel_article_food orderby t.sort_id
                             select new
                             {
                                 t.id,
@@ -427,7 +458,12 @@ namespace DTcms.EFAPI
                                 t.fuwu,
                                 t.youhui,
                                 t.youhuiquan,
-                                t.zhaiyao
+                                t.zhaiyao,
+                                t.calendar,
+                                t.is_hot,
+                                t.haoshi,
+                                t.sub_title,
+                                t.source
                             }).ToList(),
                     result = 1
                 });
@@ -550,7 +586,7 @@ namespace DTcms.EFAPI
         {
             using (var db = new TouristDBEntities())
             {
-                var obj = (from t in db.dt_channel_article_food
+                var obj = (from t in db.dt_channel_article_food orderby t.sort_id
                            where t.id == id
                            select new
                            {
@@ -562,8 +598,13 @@ namespace DTcms.EFAPI
                                t.update_time,
                                t.youhui,
                                t.youhuiquan,
-                               t.fuwu
-                               
+                               t.fuwu,
+                               t.calendar,
+                               t.is_hot,
+                               t.haoshi,
+                               t.sub_title,
+                               t.source
+
                            }).FirstOrDefault();
                 return Obj2Json(new
                 {
@@ -577,6 +618,11 @@ namespace DTcms.EFAPI
                         obj.youhui,
                         obj.youhuiquan,
                         obj.fuwu,
+                        obj.calendar,
+                        obj.is_hot,
+                        obj.haoshi,
+                        obj.sub_title,
+                        obj.source,
                         content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload")
                     },
                     result = 1

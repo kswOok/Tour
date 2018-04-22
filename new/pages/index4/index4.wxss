@@ -44,19 +44,19 @@ page {
     color: #333;  
 }  
 .on0 { 
-  color: #aa6;  
-  border-bottom: 5rpx solid #aa6;
+  color: #1296db;  
+  border-bottom: 5rpx solid #1296db;
   
 }
 
 .on1 { 
-  color: #e66;  
-  border-bottom: 5rpx solid #e66;
+  color: #1296db;  
+  border-bottom: 5rpx solid #1296db;
 }
 
 .on2 { 
-  color: #66e;  
-  border-bottom: 5rpx solid #66e;
+  color: #1296db;  
+  border-bottom: 5rpx solid #1296db;
 }  
   
 .swiper-box{ 
@@ -99,6 +99,9 @@ page {
   padding: 10rpx 0;
 }
 
+
+
+
 .vmore {
   height: 30rpx;
   padding-bottom: 15rpx;
@@ -113,8 +116,25 @@ page {
 
 .coupon-item-bottom text {
   font-size: 26rpx;
-  margin: 10rpx 20rpx;
+  margin-top: 10rpx;
+  margin-left: 60rpx;
 }
+
+.coupon-item-bottom .coupon_time{
+  position: absolute;
+  height: 30rpx;
+  width: 30rpx;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+}
+.coupon-item-bottom .coupon_payment{
+  position: absolute;
+  height: 30rpx;
+  width: 30rpx;
+  margin-top: 60rpx;
+  margin-left: 20rpx;
+}
+
 
 .coupon-logo {
   width: 100rpx;
@@ -151,3 +171,5 @@ page {
   margin-bottom: 20rpx;
   color: #666;
 }
+
+ 

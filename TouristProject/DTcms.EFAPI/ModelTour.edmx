@@ -62,6 +62,9 @@
           <Property Name="youhui" Type="nvarchar" MaxLength="40" />
           <Property Name="fuwu" Type="nvarchar" MaxLength="200" />
           <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
+          <Property Name="haoshi" Type="nvarchar" MaxLength="100" />
+          <Property Name="calendar" Type="nvarchar" MaxLength="100" />
+          <Property Name="sub_title" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="dt_channel_article_goods">
           <Key>
@@ -101,6 +104,8 @@
           <Property Name="youhui" Type="nvarchar" MaxLength="40" />
           <Property Name="fuwu" Type="nvarchar" MaxLength="200" />
           <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
+          <Property Name="haoshi" Type="nvarchar" MaxLength="100" />
+          <Property Name="calendar" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="dt_channel_article_guidance">
           <Key>
@@ -174,6 +179,9 @@
           <Property Name="youhui" Type="nvarchar" MaxLength="40" />
           <Property Name="fuwu" Type="nvarchar" MaxLength="200" />
           <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
+          <Property Name="haoshi" Type="nvarchar" MaxLength="100" />
+          <Property Name="calendar" Type="nvarchar" MaxLength="100" />
+          <Property Name="sub_title" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="dt_users">
           <Key>
@@ -270,6 +278,9 @@
           <Property Name="youhui" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="fuwu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="youhuiquan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="haoshi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="calendar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="sub_title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="TouristDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="dt_channel_article_news" EntityType="Self.dt_channel_article_news" />
@@ -316,6 +327,9 @@
           <Property Name="youhui" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="fuwu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="youhuiquan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="haoshi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="calendar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="sub_title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="dt_channel_article_guidance">
           <Key>
@@ -448,6 +462,8 @@
           <Property Name="youhui" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="fuwu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="youhuiquan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="haoshi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="calendar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="dt_wx_token">
           <Key>
@@ -468,6 +484,9 @@
           <EntitySetMapping Name="dt_channel_article_news">
             <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_news">
               <MappingFragment StoreEntitySet="dt_channel_article_news">
+                <ScalarProperty Name="sub_title" ColumnName="sub_title" />
+                <ScalarProperty Name="calendar" ColumnName="calendar" />
+                <ScalarProperty Name="haoshi" ColumnName="haoshi" />
                 <ScalarProperty Name="youhuiquan" ColumnName="youhuiquan" />
                 <ScalarProperty Name="fuwu" ColumnName="fuwu" />
                 <ScalarProperty Name="youhui" ColumnName="youhui" />
@@ -506,6 +525,9 @@
           <EntitySetMapping Name="dt_channel_article_food">
             <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_food">
               <MappingFragment StoreEntitySet="dt_channel_article_food">
+                <ScalarProperty Name="sub_title" ColumnName="sub_title" />
+                <ScalarProperty Name="calendar" ColumnName="calendar" />
+                <ScalarProperty Name="haoshi" ColumnName="haoshi" />
                 <ScalarProperty Name="youhuiquan" ColumnName="youhuiquan" />
                 <ScalarProperty Name="fuwu" ColumnName="fuwu" />
                 <ScalarProperty Name="youhui" ColumnName="youhui" />
@@ -640,6 +662,8 @@
           <EntitySetMapping Name="dt_channel_article_goods">
             <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_goods">
               <MappingFragment StoreEntitySet="dt_channel_article_goods">
+                <ScalarProperty Name="calendar" ColumnName="calendar" />
+                <ScalarProperty Name="haoshi" ColumnName="haoshi" />
                 <ScalarProperty Name="youhuiquan" ColumnName="youhuiquan" />
                 <ScalarProperty Name="fuwu" ColumnName="fuwu" />
                 <ScalarProperty Name="youhui" ColumnName="youhui" />

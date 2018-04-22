@@ -4,6 +4,9 @@
     <EntitySetMapping Name="dt_channel_article_news">
       <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_news">
         <MappingFragment StoreEntitySet="dt_channel_article_news">
+          <ScalarProperty Name="sub_title" ColumnName="sub_title" />
+          <ScalarProperty Name="calendar" ColumnName="calendar" />
+          <ScalarProperty Name="haoshi" ColumnName="haoshi" />
           <ScalarProperty Name="youhuiquan" ColumnName="youhuiquan" />
           <ScalarProperty Name="fuwu" ColumnName="fuwu" />
           <ScalarProperty Name="youhui" ColumnName="youhui" />
@@ -42,6 +45,9 @@
     <EntitySetMapping Name="dt_channel_article_food">
       <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_food">
         <MappingFragment StoreEntitySet="dt_channel_article_food">
+          <ScalarProperty Name="sub_title" ColumnName="sub_title" />
+          <ScalarProperty Name="calendar" ColumnName="calendar" />
+          <ScalarProperty Name="haoshi" ColumnName="haoshi" />
           <ScalarProperty Name="youhuiquan" ColumnName="youhuiquan" />
           <ScalarProperty Name="fuwu" ColumnName="fuwu" />
           <ScalarProperty Name="youhui" ColumnName="youhui" />
@@ -176,6 +182,8 @@
     <EntitySetMapping Name="dt_channel_article_goods">
       <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_goods">
         <MappingFragment StoreEntitySet="dt_channel_article_goods">
+          <ScalarProperty Name="calendar" ColumnName="calendar" />
+          <ScalarProperty Name="haoshi" ColumnName="haoshi" />
           <ScalarProperty Name="youhuiquan" ColumnName="youhuiquan" />
           <ScalarProperty Name="fuwu" ColumnName="fuwu" />
           <ScalarProperty Name="youhui" ColumnName="youhui" />

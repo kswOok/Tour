@@ -57,6 +57,9 @@
     <Property Name="youhui" Type="nvarchar" MaxLength="40" />
     <Property Name="fuwu" Type="nvarchar" MaxLength="200" />
     <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
+    <Property Name="haoshi" Type="nvarchar" MaxLength="100" />
+    <Property Name="calendar" Type="nvarchar" MaxLength="100" />
+    <Property Name="sub_title" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <EntityType Name="dt_channel_article_goods">
     <Key>
@@ -96,6 +99,8 @@
     <Property Name="youhui" Type="nvarchar" MaxLength="40" />
     <Property Name="fuwu" Type="nvarchar" MaxLength="200" />
     <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
+    <Property Name="haoshi" Type="nvarchar" MaxLength="100" />
+    <Property Name="calendar" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="dt_channel_article_guidance">
     <Key>
@@ -169,6 +174,9 @@
     <Property Name="youhui" Type="nvarchar" MaxLength="40" />
     <Property Name="fuwu" Type="nvarchar" MaxLength="200" />
     <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
+    <Property Name="haoshi" Type="nvarchar" MaxLength="100" />
+    <Property Name="calendar" Type="nvarchar" MaxLength="100" />
+    <Property Name="sub_title" Type="nvarchar" MaxLength="255" />
   </EntityType>
   <EntityType Name="dt_users">
     <Key>

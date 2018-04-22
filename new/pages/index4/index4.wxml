@@ -28,8 +28,10 @@
             <text class="distance">{{item.juli}}</text>
           </view>
           <view class="coupon-item-bottom">
-            <text>【优惠】{{item.youhui}}</text>
-            <text>【服务】{{item.fuwu}}</text>
+            <image class='coupon_time' src='../../images/time.png'></image>
+            <text> {{item.haoshi}}</text>
+            <image class='coupon_payment' src='../../images/payment.png'></image>
+            <text>{{item.fuwu}}</text>
             <view class='vmore'>
               <text class='more'>MORE</text>
             </view>
