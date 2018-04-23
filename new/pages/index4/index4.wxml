@@ -31,11 +31,11 @@
           <view class="coupon-item-bottom">
             <image class='coupon_time' src='../../images/time.png'></image>
             <text> {{item.haoshi}}</text>
+            <image class='coupon_calendar' src='../../images/calendar.png'></image>
+            <text> {{item.calendar}}</text>
             <image class='coupon_payment' src='../../images/payment.png'></image>
             <text>{{item.fuwu}}</text>
-            <view class='vmore'>
-              <text class='more'>MORE</text>
-            </view>
+            
           </view>
         </view>
     </view>
