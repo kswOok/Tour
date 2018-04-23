@@ -102,17 +102,7 @@ page {
 
 
 
-.vmore {
-  height: 30rpx;
-  padding-bottom: 15rpx;
-}
-
-.more {
-  position:absolute;
-  right: 30rpx;
-  font-size: 24rpx;
-  color: #999;
-}
+ 
 
 .coupon-item-bottom text {
   font-size: 26rpx;
@@ -127,13 +117,21 @@ page {
   margin-top: 14rpx;
   margin-left: 20rpx;
 }
-.coupon-item-bottom .coupon_payment{
+.coupon-item-bottom .coupon_calendar{
   position: absolute;
   height: 30rpx;
   width: 30rpx;
   margin-top: 56rpx;
   margin-left: 20rpx;
 }
+.coupon-item-bottom .coupon_payment{
+  position: absolute;
+  height: 30rpx;
+  width: 30rpx;
+  margin-top: 100rpx;
+  margin-left: 20rpx;
+}
+
 
 
 .coupon-logo {
