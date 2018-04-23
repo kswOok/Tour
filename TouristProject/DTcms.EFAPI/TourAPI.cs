@@ -176,7 +176,7 @@ namespace DTcms.EFAPI
                         obj.sub_title,
                         obj.source,
                         content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload"),
-                        images
+                        images 
                     },
                     result = 1
                 });
