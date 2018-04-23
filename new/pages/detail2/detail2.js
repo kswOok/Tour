@@ -181,6 +181,7 @@ Page({
             calendar: res.data.data.calendar,
             sub_title: res.data.data.sub_title,
             images: res.data.data.images,
+            address: res.data.data.source,
           }
         })
       }

@@ -129,6 +129,18 @@ input {
     vertical-align: top;
 }
 
+.address {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.address text{
+  font-size: 26rpx;
+  margin-left: 30rpx;
+  width:600rpx;
+}
+
 .description_bottom {
     background: #3e3e3e;
     width: calc(100% - 60rpx);
@@ -721,11 +733,40 @@ image.loc-indicatior {
 }
 
 .coupon-item {
-  background: #fff;
+  height:150rpx;
   display: flex;
   border-radius: 8rpx;
   margin: 30rpx;
   box-shadow: 0 10rpx 30rpx 0 rgba(185, 208, 221, 0.55);
+}
+
+.juan-back {
+  position: absolute;
+  width: 150rpx;
+  height:150rpx;
+}
+
+.card_title {
+  position: absolute;
+  line-height: 150rpx;
+  height: 150rpx;
+  font-size: 34rpx;
+  margin-left: 40rpx;
+}
+
+.mianfei {
+  line-height: 150rpx;
+  height: 150rpx;
+  font-size: 34rpx;
+  margin-left: 45rpx;
+  color: #e8524f;
+}
+
+.xuxian {
+  border-left:4rpx dashed #eee; 
+  height:150rpx;
+  width:10rpx;
+  margin-left: 400rpx;
 }
 
 .coupon-logo {
@@ -751,10 +792,7 @@ image.loc-indicatior {
   flex-direction: column;
 }
 
-.card_title {
-  margin-top: 20rpx;
-  font-size: 36rpx;
-}
+
 
 .sub_title {
   font-size: 28rpx;

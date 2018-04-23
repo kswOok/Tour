@@ -4,6 +4,13 @@
         <view class="detailtopheader">
             <text class="h2">{{attractiondetail.ChieneseName}}</text>
             <text class="addressWrap">{{attractiondetail.sub_title}}</text>
+            <view style="width:710rpx;height:3rpx;background-color:#999;margin-top:10rpx;margin-left:20rpx;"/>
+            <view class="address">
+              <text>{{attractiondetail.address}}</text>
+              <image  src="../../images/address.png" style="width:35rpx;height:35rpx;" />
+              <view style="height:35rpx;width:4rpx;margin-left:10rpx;background-color:#999;"/>
+              <image  src="../../images/phone.png" style="width:35rpx;height:35rpx;margin-left:10rpx;" />
+            </view>
             <text class="catWrap" id="category">·{{category}}·</text>
             <view class="detail-top">
               <swiper indicator-dots="false" class="index-swiper" autoplay="true" interval="5000" duration="1000">
@@ -39,12 +46,10 @@
             <view class='coupon-list'>
               <block wx:for-items="{{list}}" wx:key="">
                 <view class="coupon-item" bindtap='onAddCard' data-id='{{item.card_id}}'>
-                  <image class="coupon-logo" src="{{item.logo_url}}"></image>
-                  <view class="coupon-content">
-                      <text class="card_title">{{item.card_title}}</text>
-                      <text class="sub_title">{{item.sub_title}}</text>
-                  </view>
-                  <view class='coupon-color' style="background-color:#{{item.color}};"></view>
+                  <image class="juan-back" src="../../images/juan-back.png"></image>
+                  <text class="card_title">{{item.card_title}}</text>
+                  <view class="xuxian"/>
+                  <text class="mianfei">免费领取</text>
                 </view>
               </block>
             </view>
