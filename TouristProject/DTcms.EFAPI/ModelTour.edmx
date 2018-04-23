@@ -5,6 +5,18 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="TouristDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="dt_article_albums">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="channel_id" Type="int" />
+          <Property Name="article_id" Type="int" />
+          <Property Name="thumb_path" Type="nvarchar" MaxLength="255" />
+          <Property Name="original_path" Type="nvarchar" MaxLength="255" />
+          <Property Name="remark" Type="nvarchar" MaxLength="500" />
+          <Property Name="add_time" Type="datetime" />
+        </EntityType>
         <EntityType Name="dt_article_category">
           <Key>
             <PropertyRef Name="id" />
@@ -230,6 +242,7 @@
           <Property Name="refresh_time" Type="datetime" />
         </EntityType>
         <EntityContainer Name="TouristDBModelStoreContainer">
+          <EntitySet Name="dt_article_albums" EntityType="Self.dt_article_albums" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="dt_article_category" EntityType="Self.dt_article_category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="dt_channel_article_food" EntityType="Self.dt_channel_article_food" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="dt_channel_article_goods" EntityType="Self.dt_channel_article_goods" Schema="dbo" store:Type="Tables" />
@@ -290,6 +303,7 @@
           <EntitySet Name="dt_article_category" EntityType="TouristDBModel.dt_article_category" />
           <EntitySet Name="dt_channel_article_goods" EntityType="TouristDBModel.dt_channel_article_goods" />
           <EntitySet Name="dt_wx_token" EntityType="TouristDBModel.dt_wx_token" />
+          <EntitySet Name="dt_article_albums" EntityType="TouristDBModel.dt_article_albums" />
         </EntityContainer>
         <EntityType Name="dt_channel_article_food">
           <Key>
@@ -474,6 +488,18 @@
           <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="value" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="refresh_time" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="dt_article_albums">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="channel_id" Type="Int32" />
+          <Property Name="article_id" Type="Int32" />
+          <Property Name="thumb_path" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="original_path" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="add_time" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -708,6 +734,19 @@
                 <ScalarProperty Name="value" ColumnName="value" />
                 <ScalarProperty Name="type" ColumnName="type" />
                 <ScalarProperty Name="appid" ColumnName="appid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dt_article_albums">
+            <EntityTypeMapping TypeName="TouristDBModel.dt_article_albums">
+              <MappingFragment StoreEntitySet="dt_article_albums">
+                <ScalarProperty Name="add_time" ColumnName="add_time" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="original_path" ColumnName="original_path" />
+                <ScalarProperty Name="thumb_path" ColumnName="thumb_path" />
+                <ScalarProperty Name="article_id" ColumnName="article_id" />
+                <ScalarProperty Name="channel_id" ColumnName="channel_id" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

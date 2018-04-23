@@ -114,12 +114,17 @@ input {
 }
 
 .detail-top {
-    width: 100%;
+    width: 750rpx;
     top: 15px;
 }
 
-image.detail-banner {
-    width: 100%;
+.detail-top swiper {
+  width: 750rpx;
+    height: 460rpx;
+}
+
+.detail-top image {
+    width: 750rpx;
     height: 460rpx;
     vertical-align: top;
 }
@@ -754,4 +759,39 @@ image.loc-indicatior {
 .sub_title {
   font-size: 28rpx;
   color: #666;
+}
+
+.coupon-item-bottom text {
+  font-size: 26rpx;
+  margin-top: 10rpx;
+  margin-left: 60rpx;
+}
+
+.coupon-item-bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx 0;
+}
+
+.coupon-item-bottom .coupon_time{
+  position: absolute;
+  height: 30rpx;
+  width: 30rpx;
+  margin-top: 14rpx;
+  margin-left: 20rpx;
+}
+.coupon-item-bottom .coupon_payment{
+  position: absolute;
+  height: 30rpx;
+  width: 30rpx;
+  margin-top: 100rpx;
+  margin-left: 20rpx;
+}
+
+.coupon-item-bottom .coupon_calendar{
+  position: absolute;
+  height: 30rpx;
+  width: 30rpx;
+  margin-top: 58rpx;
+  margin-left: 20rpx;
 }

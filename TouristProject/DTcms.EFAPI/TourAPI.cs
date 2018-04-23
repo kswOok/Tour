@@ -71,6 +71,12 @@ namespace DTcms.EFAPI
                                t.sub_title,
                                t.source
                            }).FirstOrDefault();
+                var images = (from t in db.dt_article_albums
+                            where t.article_id == id
+                            select new
+                            {
+                                img_url = t.original_path.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload")
+                            }).ToList();
                 return Obj2Json(new
                 {
                     data = new
@@ -88,7 +94,8 @@ namespace DTcms.EFAPI
                         obj.is_hot,
                         obj.sub_title,
                         obj.source,
-                        content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload")
+                        content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload"),
+                        images
                     },
                     result = 1
                 });

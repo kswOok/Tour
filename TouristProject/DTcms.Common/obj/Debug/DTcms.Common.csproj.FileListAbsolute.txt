@@ -34,3 +34,9 @@ C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Comm
 C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.csproj.CoreCompileInputs.cache
 C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.dll
 C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.pdb
+D:\PROJ\Git\Tour\TouristProject\DTcms.Common\bin\Debug\DTcms.Common.dll
+D:\PROJ\Git\Tour\TouristProject\DTcms.Common\bin\Debug\DTcms.Common.pdb
+D:\PROJ\Git\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.csprojResolveAssemblyReference.cache
+D:\PROJ\Git\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.csproj.CoreCompileInputs.cache
+D:\PROJ\Git\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.dll
+D:\PROJ\Git\Tour\TouristProject\DTcms.Common\obj\Debug\DTcms.Common.pdb

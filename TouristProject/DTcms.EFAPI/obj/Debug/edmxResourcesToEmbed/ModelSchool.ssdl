@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AIUniversityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Country_ID" />
+    </Key>
+    <Property Name="Country_ID" Type="int" Nullable="false" />
+    <Property Name="Country_Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Country_Code" Type="nvarchar" MaxLength="20" />
+    <Property Name="Region_Code" Type="nvarchar" MaxLength="20" />
+    <Property Name="Region_Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Update_Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MajorGroup">
+    <Key>
+      <PropertyRef Name="MajorGroup_ID" />
+    </Key>
+    <Property Name="MajorGroup_ID" Type="int" Nullable="false" />
+    <Property Name="MajorGroup_Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Disable" Type="int" />
+  </EntityType>
+  <EntityType Name="Period">
+    <Key>
+      <PropertyRef Name="Period_ID" />
+    </Key>
+    <Property Name="Period_ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Period_Time" Type="nvarchar" MaxLength="50" />
+    <Property Name="Disable" Type="int" />
+  </EntityType>
+  <EntityType Name="University">
+    <Key>
+      <PropertyRef Name="University_ID" />
+    </Key>
+    <Property Name="University_ID" Type="int" Nullable="false" />
+    <Property Name="University_Code" Type="nvarchar" MaxLength="100" />
+    <Property Name="Country_ID" Type="int" />
+    <Property Name="UniversityName_CN" Type="nvarchar" MaxLength="100" />
+    <Property Name="UniversityName_EN" Type="nvarchar" MaxLength="100" />
+    <Property Name="Rank_World" Type="int" />
+    <Property Name="Rank_Country" Type="int" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="200" />
+    <Property Name="DistrictName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Tuition" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Website" Type="nvarchar" MaxLength="300" />
+    <Property Name="FoundationDate" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="600" />
+    <Property Name="Picture" Type="nvarchar" MaxLength="256" />
+    <Property Name="City" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="University_Enroll_Status">
+    <Key>
+      <PropertyRef Name="University_ID" />
+    </Key>
+    <Property Name="University_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="院校简介" Type="nvarchar(max)" />
+    <Property Name="公立/私立" Type="nvarchar" MaxLength="50" />
+    <Property Name="校园位置" Type="nvarchar" MaxLength="30" />
+    <Property Name="犯罪率(犯罪数量/学生数量）" Type="nvarchar" MaxLength="50" />
+    <Property Name="地理位置" Type="nvarchar(max)" />
+    <Property Name="校园" Type="nvarchar(max)" />
+    <Property Name="宿舍" Type="nvarchar(max)" />
+    <Property Name="US_NEWS_排名" Type="int" />
+    <Property Name="TIMES_排名" Type="int" />
+    <Property Name="QS_排名" Type="int" />
+    <Property Name="ARWU_排名" Type="int" />
+    <Property Name="录取难度" Type="int" />
+    <Property Name="录取率" Type="float" />
+    <Property Name="录取数量" Type="int" />
+    <Property Name="录取后入学比例" Type="float" />
+    <Property Name="申请者高中成绩前50%比例" Type="float" />
+    <Property Name="申请者高中成绩前10%比例" Type="float" />
+    <Property Name="SAT语言_GAO" Type="float" />
+    <Property Name="SAT语言_DI" Type="float" />
+    <Property Name="SAT数学_GAO" Type="float" />
+    <Property Name="SAT数学_DI" Type="float" />
+    <Property Name="SAT写作_GAO" Type="float" />
+    <Property Name="SAT写作_DI" Type="float" />
+    <Property Name="ACT综合_GAO" Type="float" />
+    <Property Name="ACT综合_DI" Type="float" />
+    <Property Name="州外学生比例" Type="float" />
+    <Property Name="本科生数量" Type="int" />
+    <Property Name="研究生数量" Type="int" />
+    <Property Name="学生组织数量" Type="int" />
+    <Property Name="兄弟会数量" Type="int" />
+    <Property Name="姐妹会数量" Type="int" />
+    <Property Name="学术族裔分布_白" Type="float" />
+    <Property Name="学术族裔分布_亚洲" Type="float" />
+    <Property Name="学术族裔分布_黑" Type="float" />
+    <Property Name="学杂费(州内)" Type="float" />
+    <Property Name="总体花费(州内)" Type="float" />
+    <Property Name="学杂费(州外)" Type="float" />
+    <Property Name="总体花费(州外" Type="float" />
+    <Property Name="事实" Type="nvarchar(max)" />
+    <Property Name="知名校友" Type="nvarchar(max)" />
+    <Property Name="体育" Type="nvarchar(max)" />
+    <Property Name="图片" Type="nvarchar" MaxLength="256" />
+    <Property Name="update_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="University_Master_CN">
+    <Key>
+      <PropertyRef Name="University_ID" />
+    </Key>
+    <Property Name="University_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="University_Code" Type="nvarchar" MaxLength="100" />
+    <Property Name="UniversityName_CN" Type="nvarchar" MaxLength="100" />
+    <Property Name="UniversityName_EN" Type="nvarchar" MaxLength="100" />
+    <Property Name="Country" Type="nvarchar" MaxLength="200" />
+    <Property Name="CityName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Picture" Type="nvarchar" MaxLength="200" />
+    <Property Name="InsertDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="512" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="10" />
+    <Property Name="Age" Type="nvarchar" MaxLength="200" />
+    <Property Name="OpenID" Type="nvarchar" MaxLength="100" />
+    <Property Name="WechatID" Type="nvarchar" MaxLength="50" />
+    <Property Name="WechatName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Zuoyouming" Type="nvarchar" MaxLength="500" />
+    <Property Name="Picture" Type="nvarchar" MaxLength="200" />
+    <Property Name="Region" Type="nvarchar" MaxLength="200" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="MiddleSchool" Type="nvarchar" MaxLength="200" />
+    <Property Name="University_Bechelar" Type="nvarchar" MaxLength="200" />
+    <Property Name="University_Master" Type="nvarchar" MaxLength="200" />
+    <Property Name="University_Doctor" Type="nvarchar" MaxLength="200" />
+    <Property Name="Majoy_Bechelar" Type="nvarchar" MaxLength="100" />
+    <Property Name="Major_Master" Type="nvarchar" MaxLength="100" />
+    <Property Name="GPA" Type="nvarchar" MaxLength="50" />
+    <Property Name="GRE" Type="nvarchar" MaxLength="50" />
+    <Property Name="GMAT" Type="nvarchar" MaxLength="50" />
+    <Property Name="TOFEL" Type="nvarchar" MaxLength="50" />
+    <Property Name="SAT1" Type="nvarchar" MaxLength="50" />
+    <Property Name="IELTS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="Xueli" Type="nvarchar" MaxLength="50" />
+    <Property Name="Zhuanye" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="User_Bachelor_Log">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="User_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Target_Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="GPA_Four" Type="float" />
+    <Property Name="GPA_Hundred" Type="float" />
+    <Property Name="TOEFL" Type="float" />
+    <Property Name="IELTS" Type="float" />
+    <Property Name="SAT" Type="float" />
+    <Property Name="ACT" Type="float" />
+    <Property Name="Target_JoinTime" Type="nvarchar" MaxLength="80" />
+    <Property Name="Prefed_SchoolType" Type="nvarchar" MaxLength="80" />
+    <Property Name="MiddleSchool_Type" Type="nvarchar" MaxLength="80" />
+    <Property Name="MiddleSchool_GradeLevel" Type="nvarchar" MaxLength="80" />
+    <Property Name="Recommendation" Type="nvarchar" MaxLength="80" />
+    <Property Name="Award" Type="nvarchar" MaxLength="80" />
+    <Property Name="Summer_Program" Type="nvarchar" MaxLength="80" />
+    <Property Name="Volunteer_Experience" Type="nvarchar" MaxLength="80" />
+    <Property Name="Insert_Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="User_Master_Log">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="32" Nullable="false" />
+    <Property Name="User_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Target_Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="Current_University" Type="nvarchar" MaxLength="50" />
+    <Property Name="Current_Major" Type="nvarchar" MaxLength="50" />
+    <Property Name="Target_Major" Type="nvarchar" MaxLength="50" />
+    <Property Name="GPA_Four" Type="float" />
+    <Property Name="GPA_Hundred" Type="float" />
+    <Property Name="TOEFL" Type="float" />
+    <Property Name="IELTS" Type="float" />
+    <Property Name="GRE_Score" Type="float" />
+    <Property Name="CMAT_Score" Type="float" />
+    <Property Name="Target_JoinTime" Type="nvarchar" MaxLength="80" />
+    <Property Name="Research_Experience" Type="nvarchar" MaxLength="80" />
+    <Property Name="Paper_Publish" Type="nvarchar" MaxLength="80" />
+    <Property Name="Recommendation" Type="nvarchar" MaxLength="80" />
+    <Property Name="Abroad_Experience" Type="nvarchar" MaxLength="80" />
+    <Property Name="Working_Experience" Type="nvarchar" MaxLength="80" />
+    <Property Name="Insert_Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="User_Result_Log">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserLog_ID" Type="nvarchar" MaxLength="50" />
+    <Property Name="University_Sprint" Type="nvarchar" MaxLength="200" />
+    <Property Name="University_Sprint1" Type="nvarchar" MaxLength="200" />
+    <Property Name="University_Challenge" Type="nvarchar" MaxLength="200" />
+    <Property Name="University_Challenge1" Type="nvarchar" MaxLength="200" />
+    <Property Name="University_Conservative" Type="nvarchar" MaxLength="200" />
+    <Property Name="University_Conservative1" Type="nvarchar" MaxLength="200" />
+    <Property Name="Insert_Date" Type="datetime" />
+    <Property Name="University_ResultId" Type="nvarchar" MaxLength="50" />
+    <Property Name="type" Type="int" />
+    <Property Name="sort" Type="int" />
+  </EntityType>
+  <EntityContainer Name="AIUniversityModelStoreContainer">
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MajorGroup" EntityType="Self.MajorGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Period" EntityType="Self.Period" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="University" EntityType="Self.University" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="University_Enroll_Status" EntityType="Self.University_Enroll_Status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="University_Master_CN" EntityType="Self.University_Master_CN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Bachelor_Log" EntityType="Self.User_Bachelor_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Master_Log" EntityType="Self.User_Master_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Result_Log" EntityType="Self.User_Result_Log" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

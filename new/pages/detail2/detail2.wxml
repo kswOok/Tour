@@ -3,24 +3,26 @@
     <view class="index-detail">
         <view class="detailtopheader">
             <text class="h2">{{attractiondetail.ChieneseName}}</text>
-            <text class="addressWrap" style="display:none">{{attractiondetail.ChieneseAddress}}</text>
+            <text class="addressWrap">{{attractiondetail.sub_title}}</text>
             <text class="catWrap" id="category">·{{category}}·</text>
             <view class="detail-top">
-                <image class="detail-banner" mode="aspectFill" src="{{attractiondetail.Image}}" wx:if="{{attractiondetail.Image!=null||attractiondetail.Image!=undefined}}"></image>
+              <swiper indicator-dots="false" class="index-swiper" autoplay="true" interval="5000" duration="1000">
+                <block wx:for-items="{{attractiondetail.images}}" wx:key="">
+                  <swiper-item>
+                    <image  src="https://guomengtech.com{{item.img_url}}" class="index-img" />
+                  </swiper-item>
+                </block>
+              </swiper>
             </view>
+            
             <view class="smalliconswrap">
-                <view class="smallicons">
-                    <image class='image-icon' src="/images/bookmark.png"></image>
-                    <text>推荐游玩时长</text>
-                    <text class="dwidth">{{attractiondetail.ChieneseVisitDuration}} </text>
-                    <image class='tishi' src='/images/weixin.png'></image>
-                    <image class='yinlian' src='/images/yinlian.png'></image>
-                    <image class='tishi' src='/images/wifi.png'></image>
-                    <image class='zhong' src='/images/zhong.png'></image>
-                </view>
-                <view class="smallicons">
-                    <image class='image-icon' src="/images/timer.png"></image>
-                    <text class="timertext">{{attractiondetail.ChieneseVisitTimings}}</text>
+                <view class="coupon-item-bottom">
+                  <image class='coupon_time' src='../../images/time.png'></image>
+                  <text> {{attractiondetail.haoshi}}</text>
+                  <image class='coupon_calendar' src='../../images/calendar.png'></image>
+                  <text> {{attractiondetail.calendar}}</text>
+                  <image class='coupon_payment' src='../../images/payment.png'></image>
+                  <text>{{attractiondetail.fuwu}}</text>
                 </view>
                 
             </view>

@@ -170,13 +170,17 @@ Page({
         })
         var content = res.data.data.content;
         WxParse.wxParse('content', 'html', content, that, 5);
+        console.log(res.data.data.images)
         that.setData({
           //list: res.data.data,
           attractiondetail: {
             ChieneseName: res.data.data.title,
             Image: "http://guomengtech.com/" + res.data.data.img_url,
-            ChieneseVisitDuration: "1小时",
-            ChieneseVisitTimings: "星期日 - 星期四 上午10点 – 晚上8点 星期五- 星期六 上午9点- 晚上9点",
+            haoshi: res.data.data.haoshi,
+            fuwu: res.data.data.fuwu,
+            calendar: res.data.data.calendar,
+            sub_title: res.data.data.sub_title,
+            images: res.data.data.images,
           }
         })
       }

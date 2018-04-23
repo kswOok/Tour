@@ -79,3 +79,16 @@ C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.DAL\obj\Debug\DTcms.DAL.csp
 C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.DAL\obj\Debug\DTcms.DAL.csproj.CopyComplete
 C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.DAL\obj\Debug\DTcms.DAL.dll
 C:\Users\john\Source\Repos\Tour\TouristProject\DTcms.DAL\obj\Debug\DTcms.DAL.pdb
+D:\PROJ\Git\Tour\TouristProject\DTcms.DAL\bin\Debug\DTcms.DAL.dll
+D:\PROJ\Git\Tour\TouristProject\DTcms.DAL\bin\Debug\DTcms.DAL.pdb
+D:\PROJ\Git\Tour\TouristProject\DTcms.DAL\bin\Debug\DTcms.Common.dll
+D:\PROJ\Git\Tour\TouristProject\DTcms.DAL\bin\Debug\DTcms.DBUtility.dll
+D:\PROJ\Git\Tour\TouristProject\DTcms.DAL\bin\Debug\DTcms.Model.dll
+D:\PROJ\Git\Tour\TouristProject\DTcms.DAL\bin\Debug\DTcms.Common.pdb
+D:\PROJ\Git\Tour\TouristProject\DTcms.DAL\bin\Debug\DTcms.DBUtility.pdb
+D:\PROJ\Git\Tour\TouristProject\DTcms.DAL\bin\Debug\DTcms.Model.pdb
+D:\PROJ\Git\Tour\TouristProject\DTcms.DAL\obj\Debug\DTcms.DAL.csprojResolveAssemblyReference.cache
+D:\PROJ\Git\Tour\TouristProject\DTcms.DAL\obj\Debug\DTcms.DAL.csproj.CoreCompileInputs.cache
+D:\PROJ\Git\Tour\TouristProject\DTcms.DAL\obj\Debug\DTcms.DAL.csproj.CopyComplete
+D:\PROJ\Git\Tour\TouristProject\DTcms.DAL\obj\Debug\DTcms.DAL.dll
+D:\PROJ\Git\Tour\TouristProject\DTcms.DAL\obj\Debug\DTcms.DAL.pdb

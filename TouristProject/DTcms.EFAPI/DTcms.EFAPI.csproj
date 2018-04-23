@@ -58,6 +58,9 @@
     <Compile Include="Country.cs">
       <DependentUpon>ModelSchool.tt</DependentUpon>
     </Compile>
+    <Compile Include="dt_article_albums.cs">
+      <DependentUpon>ModelTour.tt</DependentUpon>
+    </Compile>
     <Compile Include="dt_article_category.cs">
       <DependentUpon>ModelTour.tt</DependentUpon>
     </Compile>

@@ -26,6 +26,7 @@
                 <text class="sub_title">{{item.zhaiyao}}</text>
             </view>
             <text class="distance">{{item.juli}}</text>
+            <image class="img_hot" wx:if="{{item.is_hot == 1}}" src="../../images/hot.png"> </image>
           </view>
           <view class="coupon-item-bottom">
             <image class='coupon_time' src='../../images/time.png'></image>

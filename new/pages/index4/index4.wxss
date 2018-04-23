@@ -124,14 +124,14 @@ page {
   position: absolute;
   height: 30rpx;
   width: 30rpx;
-  margin-top: 10rpx;
+  margin-top: 14rpx;
   margin-left: 20rpx;
 }
 .coupon-item-bottom .coupon_payment{
   position: absolute;
   height: 30rpx;
   width: 30rpx;
-  margin-top: 60rpx;
+  margin-top: 56rpx;
   margin-left: 20rpx;
 }
 
@@ -172,4 +172,12 @@ page {
   color: #666;
 }
 
+.img_hot {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 0;
+  margin-right: 30rpx;
+  border-top-right-radius: 7rpx;
+}
  
