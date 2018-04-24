@@ -130,7 +130,7 @@ input {
 }
 
 .address {
-  margin-top: 20rpx;
+  margin-top: 10rpx;
   display: flex;
   flex-direction: row;
 }
@@ -479,7 +479,7 @@ button::after {
 
 .addressWrap {
     display: inline-block;
-    font-size: 26rpx;
+    font-size: 33rpx;
     color: #252525;
     vertical-align: middle;
     width: 88%;
@@ -799,37 +799,51 @@ image.loc-indicatior {
   color: #666;
 }
 
-.coupon-item-bottom text {
-  font-size: 26rpx;
-  margin-top: 10rpx;
-  margin-left: 60rpx;
-}
-
+ 
 .coupon-item-bottom {
   display: flex;
   flex-direction: column;
   padding: 10rpx 0;
 }
 
-.coupon-item-bottom .coupon_time{
-  position: absolute;
-  height: 30rpx;
-  width: 30rpx;
-  margin-top: 14rpx;
-  margin-left: 20rpx;
-}
-.coupon-item-bottom .coupon_payment{
-  position: absolute;
-  height: 30rpx;
-  width: 30rpx;
-  margin-top: 100rpx;
-  margin-left: 20rpx;
+.coupon-item-bottom text {
+  font-size: 26rpx;
+  margin-left: 5rpx;
 }
 
-.coupon-item-bottom .coupon_calendar{
-  position: absolute;
+.coupon-item-bottom .coupon-item-bottom1 {
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  width: 100%; 
+}
+
+.coupon-item-bottom1 .img1{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+.coupon-item-bottom .coupon-item-bottom2 {
+ 
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  width: 100%;
+}
+.coupon-item-bottom2 .img2{
   height: 30rpx;
   width: 30rpx;
-  margin-top: 58rpx;
-  margin-left: 20rpx;
+  vertical-align: middle;
 }
+
+.coupon-item-bottom .coupon-item-bottom3 {
+
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  width: 100%;
+  
+}
+.coupon-item-bottom3 .img3{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+

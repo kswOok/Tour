@@ -4,7 +4,7 @@
         <view class="detailtopheader">
             <text class="h2">{{attractiondetail.ChieneseName}}</text>
             <text class="addressWrap">{{attractiondetail.sub_title}}</text>
-            <view style="width:710rpx;height:3rpx;background-color:#999;margin-top:10rpx;margin-left:20rpx;"/>
+           
             <view class="address">
               <text>{{attractiondetail.address}}</text>
               <image  src="../../images/address.png" style="width:35rpx;height:35rpx;" />
@@ -24,12 +24,22 @@
             
             <view class="smalliconswrap">
                 <view class="coupon-item-bottom">
-                  <image class='coupon_time' src='../../images/time.png'></image>
-                  <text> {{attractiondetail.haoshi}}</text>
-                  <image class='coupon_calendar' src='../../images/calendar.png'></image>
-                  <text> {{attractiondetail.calendar}}</text>
-                  <image class='coupon_payment' src='../../images/payment.png'></image>
-                  <text>{{attractiondetail.fuwu}}</text>
+       
+
+                              <view class="coupon-item-bottom1">
+                                <image class="img1" src='../../images/time.png'></image>
+                                <text> {{attractiondetail.haoshi}}</text>
+                              </view>
+
+                              <view class="coupon-item-bottom2">
+                                <image  class="img2" src='../../images/calendar.png'></image>
+                                <text> {{attractiondetail.calendar}}</text>
+                              </view>
+
+                              <view class="coupon-item-bottom3">
+                                <image  class="img3" src='../../images/payment.png'></image>
+                                <text>{{attractiondetail.fuwu}}</text>
+                              </view>
                 </view>
                 
             </view>

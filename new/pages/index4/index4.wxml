@@ -29,13 +29,22 @@
             <image class="img_hot" wx:if="{{item.is_hot == 1}}" src="../../images/hot.png"> </image>
           </view>
           <view class="coupon-item-bottom">
-            <image class='coupon_time' src='../../images/time.png'></image>
-            <text> {{item.haoshi}}</text>
-            <image class='coupon_calendar' src='../../images/calendar.png'></image>
-            <text> {{item.calendar}}</text>
-            <image class='coupon_payment' src='../../images/payment.png'></image>
-            <text>{{item.fuwu}}</text>
-            
+
+            <view class="coupon-item-bottom1">
+              <image class="img1" src='../../images/time.png'></image>
+              <text> {{item.haoshi}}</text>
+            </view>
+
+            <view class="coupon-item-bottom2">
+              <image  class="img2" src='../../images/calendar.png'></image>
+              <text> {{item.calendar}}</text>
+            </view>
+
+            <view class="coupon-item-bottom3">
+              <image  class="img3" src='../../images/payment.png'></image>
+              <text>{{item.fuwu}}</text>
+            </view>
+
           </view>
         </view>
     </view>

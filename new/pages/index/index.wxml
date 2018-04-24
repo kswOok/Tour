@@ -10,6 +10,16 @@
     <image src='../../images/start.png'></image>
   </view>
   <view class="footer">
+    
+     
     <image src='../../images/dis.png'></image>
   </view>
+
+
+    <view class="footer2">
+    
+    <image src='../../images/logo2.png'></image>
+     
+  </view>
+  
 </view>

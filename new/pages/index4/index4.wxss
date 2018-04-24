@@ -84,56 +84,6 @@ page {
 .coupon-item-top {
   display: flex;
 }
-
-.distance {
-  font-size: 25rpx;
-  color: #999;
-  right: 10rpx;
-  margin-top: 90rpx;
-}
-
-.coupon-item-bottom {
-  box-shadow: 0 10rpx 30rpx 5rpx rgba(185,208,221,0.55);
-  display: flex;
-  flex-direction: column;
-  padding: 10rpx 0;
-}
-
-
-
-
- 
-
-.coupon-item-bottom text {
-  font-size: 26rpx;
-  margin-top: 10rpx;
-  margin-left: 60rpx;
-}
-
-.coupon-item-bottom .coupon_time{
-  position: absolute;
-  height: 30rpx;
-  width: 30rpx;
-  margin-top: 14rpx;
-  margin-left: 20rpx;
-}
-.coupon-item-bottom .coupon_calendar{
-  position: absolute;
-  height: 30rpx;
-  width: 30rpx;
-  margin-top: 56rpx;
-  margin-left: 20rpx;
-}
-.coupon-item-bottom .coupon_payment{
-  position: absolute;
-  height: 30rpx;
-  width: 30rpx;
-  margin-top: 100rpx;
-  margin-left: 20rpx;
-}
-
-
-
 .coupon-logo {
   width: 100rpx;
   height: 100rpx;
@@ -141,7 +91,6 @@ page {
   border-radius: 50%;
   box-shadow: 0 4rpx 12rpx 0 rgba(155, 171, 197, 0.58);
 }
-
 .coupon-color {
   width: 10rpx;
   margin-bottom: 60rpx;
@@ -150,26 +99,22 @@ page {
   border-top-right-radius: 7rpx;
   border-bottom-right-radius: 7rpx;
 }
-
 .coupon-content {
   margin-top: 10rpx;
   display: flex;
   flex-direction: column;
   width: 62%;
 }
-
 .card_title {
   margin-top: 25rpx;
   font-size: 30rpx;
 }
-
 .sub_title {
   font-size: 25rpx;
   margin-top: 5rpx;
   margin-bottom: 20rpx;
   color: #666;
 }
-
 .img_hot {
   width: 80rpx;
   height: 80rpx;
@@ -179,3 +124,64 @@ page {
   border-top-right-radius: 7rpx;
 }
  
+.distance {
+  font-size: 25rpx;
+  color: #999;
+  right: 10rpx;
+  margin-top: 90rpx;
+}
+
+
+
+.coupon-item-bottom {
+  box-shadow: 0 10rpx 30rpx 5rpx rgba(185,208,221,0.55);
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx 0;
+}
+
+.coupon-item-bottom text {
+  font-size: 26rpx;
+  margin-left: 5rpx;
+}
+
+.coupon-item-bottom .coupon-item-bottom1 {
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  width: 100%; 
+}
+
+.coupon-item-bottom1 .img1{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+.coupon-item-bottom .coupon-item-bottom2 {
+ 
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  width: 100%;
+}
+.coupon-item-bottom2 .img2{
+  height: 30rpx;
+  width: 30rpx;
+  vertical-align: middle;
+}
+
+.coupon-item-bottom .coupon-item-bottom3 {
+
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  width: 100%;
+  
+}
+.coupon-item-bottom3 .img3{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+
+
+ 
+ 
+

@@ -95,15 +95,30 @@ page {
 
 .footer {
   position: absolute;
-  top: 90%;
+  top: 86%;
   width: 100%;
   left: 0;
   text-align: center;
 }
 
 .footer image {
-    width: 291rpx;
-    height: 77rpx;
+    width: 280rpx;
+    height: 70rpx;
+    vertical-align: top;
+    text-align: center;
+}
+
+.footer2 {
+  position: absolute;
+  top: 93%;
+  width: 100%;
+  left: 0;
+  text-align: center;
+}
+
+.footer2 image {
+  width: 240rpx;
+    height: 45rpx;
     vertical-align: top;
     text-align: center;
 }
