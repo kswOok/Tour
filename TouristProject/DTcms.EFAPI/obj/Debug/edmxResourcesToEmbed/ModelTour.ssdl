@@ -72,6 +72,7 @@
     <Property Name="haoshi" Type="nvarchar" MaxLength="100" />
     <Property Name="calendar" Type="nvarchar" MaxLength="100" />
     <Property Name="sub_title" Type="nvarchar" MaxLength="255" />
+    <Property Name="phone_number" Type="nvarchar" MaxLength="25" />
   </EntityType>
   <EntityType Name="dt_channel_article_goods">
     <Key>
@@ -113,6 +114,7 @@
     <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
     <Property Name="haoshi" Type="nvarchar" MaxLength="100" />
     <Property Name="calendar" Type="nvarchar" MaxLength="100" />
+    <Property Name="phone_number" Type="nvarchar" MaxLength="25" />
   </EntityType>
   <EntityType Name="dt_channel_article_guidance">
     <Key>
@@ -189,6 +191,7 @@
     <Property Name="haoshi" Type="nvarchar" MaxLength="100" />
     <Property Name="calendar" Type="nvarchar" MaxLength="100" />
     <Property Name="sub_title" Type="nvarchar" MaxLength="255" />
+    <Property Name="phone_number" Type="nvarchar" MaxLength="25" />
   </EntityType>
   <EntityType Name="dt_users">
     <Key>

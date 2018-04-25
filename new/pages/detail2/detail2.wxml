@@ -9,7 +9,7 @@
               <text>{{attractiondetail.address}}</text>
               <image  src="../../images/address.png" style="width:35rpx;height:35rpx;" />
               <view style="height:35rpx;width:4rpx;margin-left:10rpx;background-color:#999;"/>
-              <image  src="../../images/phone.png" style="width:35rpx;height:35rpx;margin-left:10rpx;" />
+              <image   type="primary" bindtap="phonecallevent"  src="../../images/phone.png" style="width:35rpx;height:35rpx;margin-left:10rpx;" > </image> 
             </view>
             <text class="catWrap" id="category">·{{category}}·</text>
             <view class="detail-top">

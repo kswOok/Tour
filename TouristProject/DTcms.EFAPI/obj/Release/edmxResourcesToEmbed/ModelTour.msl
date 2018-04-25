@@ -4,6 +4,7 @@
     <EntitySetMapping Name="dt_channel_article_news">
       <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_news">
         <MappingFragment StoreEntitySet="dt_channel_article_news">
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
           <ScalarProperty Name="sub_title" ColumnName="sub_title" />
           <ScalarProperty Name="calendar" ColumnName="calendar" />
           <ScalarProperty Name="haoshi" ColumnName="haoshi" />
@@ -45,6 +46,7 @@
     <EntitySetMapping Name="dt_channel_article_food">
       <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_food">
         <MappingFragment StoreEntitySet="dt_channel_article_food">
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
           <ScalarProperty Name="sub_title" ColumnName="sub_title" />
           <ScalarProperty Name="calendar" ColumnName="calendar" />
           <ScalarProperty Name="haoshi" ColumnName="haoshi" />
@@ -182,6 +184,7 @@
     <EntitySetMapping Name="dt_channel_article_goods">
       <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_goods">
         <MappingFragment StoreEntitySet="dt_channel_article_goods">
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
           <ScalarProperty Name="calendar" ColumnName="calendar" />
           <ScalarProperty Name="haoshi" ColumnName="haoshi" />
           <ScalarProperty Name="youhuiquan" ColumnName="youhuiquan" />
@@ -228,6 +231,19 @@
           <ScalarProperty Name="value" ColumnName="value" />
           <ScalarProperty Name="type" ColumnName="type" />
           <ScalarProperty Name="appid" ColumnName="appid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dt_article_albums">
+      <EntityTypeMapping TypeName="TouristDBModel.dt_article_albums">
+        <MappingFragment StoreEntitySet="dt_article_albums">
+          <ScalarProperty Name="add_time" ColumnName="add_time" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="original_path" ColumnName="original_path" />
+          <ScalarProperty Name="thumb_path" ColumnName="thumb_path" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+          <ScalarProperty Name="channel_id" ColumnName="channel_id" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>

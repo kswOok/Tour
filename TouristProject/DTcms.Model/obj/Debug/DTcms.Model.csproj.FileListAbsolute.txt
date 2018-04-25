@@ -60,3 +60,10 @@ D:\PROJ\Git\Tour\TouristProject\DTcms.Model\obj\Debug\DTcms.Model.csproj.CoreCom
 D:\PROJ\Git\Tour\TouristProject\DTcms.Model\obj\Debug\DTcms.Model.csproj.CopyComplete
 D:\PROJ\Git\Tour\TouristProject\DTcms.Model\obj\Debug\DTcms.Model.dll
 D:\PROJ\Git\Tour\TouristProject\DTcms.Model\obj\Debug\DTcms.Model.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Model\bin\Debug\DTcms.Model.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Model\bin\Debug\DTcms.Model.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Model\bin\Debug\DTcms.Common.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Model\bin\Debug\DTcms.Common.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Model\obj\Debug\DTcms.Model.csprojResolveAssemblyReference.cache
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Model\obj\Debug\DTcms.Model.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Model\obj\Debug\DTcms.Model.pdb

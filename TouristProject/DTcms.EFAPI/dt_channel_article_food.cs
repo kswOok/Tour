@@ -49,5 +49,6 @@ namespace DTcms.EFAPI
         public string haoshi { get; set; }
         public string calendar { get; set; }
         public string sub_title { get; set; }
+        public string phone_number { get; set; }
     }
 }

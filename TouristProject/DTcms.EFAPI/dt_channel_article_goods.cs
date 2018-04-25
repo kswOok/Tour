@@ -50,5 +50,6 @@ namespace DTcms.EFAPI
         public string youhuiquan { get; set; }
         public string haoshi { get; set; }
         public string calendar { get; set; }
+        public string phone_number { get; set; }
     }
 }

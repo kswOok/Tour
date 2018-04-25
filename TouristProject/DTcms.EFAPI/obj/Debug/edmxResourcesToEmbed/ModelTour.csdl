@@ -39,6 +39,7 @@
     <Property Name="haoshi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="calendar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="sub_title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="phone_number" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityContainer Name="TouristDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="dt_channel_article_news" EntityType="Self.dt_channel_article_news" />
@@ -89,6 +90,7 @@
     <Property Name="haoshi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="calendar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="sub_title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="phone_number" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="dt_channel_article_guidance">
     <Key>
@@ -223,6 +225,7 @@
     <Property Name="youhuiquan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="haoshi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="calendar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="phone_number" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="dt_wx_token">
     <Key>

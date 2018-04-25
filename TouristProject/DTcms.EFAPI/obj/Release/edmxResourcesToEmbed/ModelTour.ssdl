@@ -1,5 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="TouristDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="dt_article_albums">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="channel_id" Type="int" />
+    <Property Name="article_id" Type="int" />
+    <Property Name="thumb_path" Type="nvarchar" MaxLength="255" />
+    <Property Name="original_path" Type="nvarchar" MaxLength="255" />
+    <Property Name="remark" Type="nvarchar" MaxLength="500" />
+    <Property Name="add_time" Type="datetime" />
+  </EntityType>
   <EntityType Name="dt_article_category">
     <Key>
       <PropertyRef Name="id" />
@@ -60,6 +72,7 @@
     <Property Name="haoshi" Type="nvarchar" MaxLength="100" />
     <Property Name="calendar" Type="nvarchar" MaxLength="100" />
     <Property Name="sub_title" Type="nvarchar" MaxLength="255" />
+    <Property Name="phone_number" Type="nvarchar" MaxLength="25" />
   </EntityType>
   <EntityType Name="dt_channel_article_goods">
     <Key>
@@ -101,6 +114,7 @@
     <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
     <Property Name="haoshi" Type="nvarchar" MaxLength="100" />
     <Property Name="calendar" Type="nvarchar" MaxLength="100" />
+    <Property Name="phone_number" Type="nvarchar" MaxLength="25" />
   </EntityType>
   <EntityType Name="dt_channel_article_guidance">
     <Key>
@@ -177,6 +191,7 @@
     <Property Name="haoshi" Type="nvarchar" MaxLength="100" />
     <Property Name="calendar" Type="nvarchar" MaxLength="100" />
     <Property Name="sub_title" Type="nvarchar" MaxLength="255" />
+    <Property Name="phone_number" Type="nvarchar" MaxLength="25" />
   </EntityType>
   <EntityType Name="dt_users">
     <Key>
@@ -225,6 +240,7 @@
     <Property Name="refresh_time" Type="datetime" />
   </EntityType>
   <EntityContainer Name="TouristDBModelStoreContainer">
+    <EntitySet Name="dt_article_albums" EntityType="Self.dt_article_albums" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="dt_article_category" EntityType="Self.dt_article_category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="dt_channel_article_food" EntityType="Self.dt_channel_article_food" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="dt_channel_article_goods" EntityType="Self.dt_channel_article_goods" Schema="dbo" store:Type="Tables" />

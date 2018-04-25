@@ -77,6 +77,7 @@
           <Property Name="haoshi" Type="nvarchar" MaxLength="100" />
           <Property Name="calendar" Type="nvarchar" MaxLength="100" />
           <Property Name="sub_title" Type="nvarchar" MaxLength="255" />
+          <Property Name="phone_number" Type="nvarchar" MaxLength="25" />
         </EntityType>
         <EntityType Name="dt_channel_article_goods">
           <Key>
@@ -118,6 +119,7 @@
           <Property Name="youhuiquan" Type="nvarchar" MaxLength="100" />
           <Property Name="haoshi" Type="nvarchar" MaxLength="100" />
           <Property Name="calendar" Type="nvarchar" MaxLength="100" />
+          <Property Name="phone_number" Type="nvarchar" MaxLength="25" />
         </EntityType>
         <EntityType Name="dt_channel_article_guidance">
           <Key>
@@ -194,6 +196,7 @@
           <Property Name="haoshi" Type="nvarchar" MaxLength="100" />
           <Property Name="calendar" Type="nvarchar" MaxLength="100" />
           <Property Name="sub_title" Type="nvarchar" MaxLength="255" />
+          <Property Name="phone_number" Type="nvarchar" MaxLength="25" />
         </EntityType>
         <EntityType Name="dt_users">
           <Key>
@@ -294,6 +297,7 @@
           <Property Name="haoshi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="calendar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="sub_title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="phone_number" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="TouristDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="dt_channel_article_news" EntityType="Self.dt_channel_article_news" />
@@ -344,6 +348,7 @@
           <Property Name="haoshi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="calendar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="sub_title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="phone_number" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="dt_channel_article_guidance">
           <Key>
@@ -478,6 +483,7 @@
           <Property Name="youhuiquan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="haoshi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="calendar" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="phone_number" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="dt_wx_token">
           <Key>
@@ -510,6 +516,7 @@
           <EntitySetMapping Name="dt_channel_article_news">
             <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_news">
               <MappingFragment StoreEntitySet="dt_channel_article_news">
+                <ScalarProperty Name="phone_number" ColumnName="phone_number" />
                 <ScalarProperty Name="sub_title" ColumnName="sub_title" />
                 <ScalarProperty Name="calendar" ColumnName="calendar" />
                 <ScalarProperty Name="haoshi" ColumnName="haoshi" />
@@ -551,6 +558,7 @@
           <EntitySetMapping Name="dt_channel_article_food">
             <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_food">
               <MappingFragment StoreEntitySet="dt_channel_article_food">
+                <ScalarProperty Name="phone_number" ColumnName="phone_number" />
                 <ScalarProperty Name="sub_title" ColumnName="sub_title" />
                 <ScalarProperty Name="calendar" ColumnName="calendar" />
                 <ScalarProperty Name="haoshi" ColumnName="haoshi" />
@@ -688,6 +696,7 @@
           <EntitySetMapping Name="dt_channel_article_goods">
             <EntityTypeMapping TypeName="TouristDBModel.dt_channel_article_goods">
               <MappingFragment StoreEntitySet="dt_channel_article_goods">
+                <ScalarProperty Name="phone_number" ColumnName="phone_number" />
                 <ScalarProperty Name="calendar" ColumnName="calendar" />
                 <ScalarProperty Name="haoshi" ColumnName="haoshi" />
                 <ScalarProperty Name="youhuiquan" ColumnName="youhuiquan" />

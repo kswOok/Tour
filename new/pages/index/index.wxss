@@ -95,33 +95,35 @@ page {
 
 .footer {
   position: absolute;
-  top: 86%;
+  top: 90%;
   width: 100%;
   left: 0;
   text-align: center;
+  
 }
 
 .footer image {
-    width: 280rpx;
-    height: 70rpx;
+    width: 120rpx;
+    height: 30rpx;
     vertical-align: top;
     text-align: center;
 }
-
-.footer2 {
-  position: absolute;
-  top: 93%;
-  width: 100%;
-  left: 0;
-  text-align: center;
-}
-
-.footer2 image {
-  width: 240rpx;
-    height: 45rpx;
+.footer .img1 {
+    width: 120rpx;
+    height: 30rpx;
     vertical-align: top;
     text-align: center;
+    
 }
+.footer .img2 {
+    width: 175rpx;
+    height: 35rpx;
+    vertical-align: top;
+    
+    margin-left: 25rpx;
+}
+
+ 
 
 .bscroll {
   color:#fff;

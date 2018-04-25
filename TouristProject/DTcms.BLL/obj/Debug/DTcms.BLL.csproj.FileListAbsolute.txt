@@ -108,3 +108,16 @@ D:\PROJ\Git\Tour\TouristProject\DTcms.BLL\obj\Debug\DTcms.BLL.csproj.CoreCompile
 D:\PROJ\Git\Tour\TouristProject\DTcms.BLL\obj\Debug\DTcms.BLL.csproj.CopyComplete
 D:\PROJ\Git\Tour\TouristProject\DTcms.BLL\obj\Debug\DTcms.BLL.dll
 D:\PROJ\Git\Tour\TouristProject\DTcms.BLL\obj\Debug\DTcms.BLL.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.BLL\bin\Debug\DTcms.BLL.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.BLL\bin\Debug\DTcms.BLL.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.BLL\bin\Debug\DTcms.Common.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.BLL\bin\Debug\DTcms.DAL.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.BLL\bin\Debug\DTcms.Model.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.BLL\bin\Debug\DTcms.DBUtility.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.BLL\bin\Debug\DTcms.Common.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.BLL\bin\Debug\DTcms.DAL.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.BLL\bin\Debug\DTcms.Model.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.BLL\bin\Debug\DTcms.DBUtility.pdb
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.BLL\obj\Debug\DTcms.BLL.csprojResolveAssemblyReference.cache
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.BLL\obj\Debug\DTcms.BLL.dll
+C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.BLL\obj\Debug\DTcms.BLL.pdb

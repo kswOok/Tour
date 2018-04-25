@@ -40,7 +40,8 @@ namespace DTcms.EFAPI
                                 t.is_hot,
                                 t.haoshi,
                                 t.source,
-                                t.sub_title
+                                t.sub_title,
+                                t.phone_number
 
                             }).Take(count).ToList() ,
                     result = 1
@@ -69,7 +70,8 @@ namespace DTcms.EFAPI
                                t.is_hot,
                                t.haoshi,
                                t.sub_title,
-                               t.source
+                               t.source,
+                               t.phone_number
                            }).FirstOrDefault();
                 var images = (from t in db.dt_article_albums
                             where t.article_id == id
@@ -94,6 +96,7 @@ namespace DTcms.EFAPI
                         obj.is_hot,
                         obj.sub_title,
                         obj.source,
+                        obj.phone_number,
                         content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload"),
                         images
                     },
@@ -122,7 +125,8 @@ namespace DTcms.EFAPI
                                 t.is_hot,
                                 t.haoshi,
                                 t.sub_title,
-                                t.source
+                                t.source,
+                                t.phone_number
                             }).ToList(),
                     result = 1
                 });
@@ -150,7 +154,8 @@ namespace DTcms.EFAPI
                                t.is_hot,
                                t.haoshi,
                                t.sub_title,
-                               t.source
+                               t.source,
+                               t.phone_number
                            }).FirstOrDefault();
                 var images = (from t in db.dt_article_albums
                               where t.article_id == id
@@ -175,6 +180,7 @@ namespace DTcms.EFAPI
                         obj.haoshi,
                         obj.sub_title,
                         obj.source,
+                        obj.phone_number,
                         content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload"),
                         images 
                     },
@@ -477,7 +483,8 @@ namespace DTcms.EFAPI
                                 t.is_hot,
                                 t.haoshi,
                                 t.sub_title,
-                                t.source
+                                t.source,
+                                t.phone_number
                             }).ToList(),
                     result = 1
                 });
@@ -617,8 +624,8 @@ namespace DTcms.EFAPI
                                t.is_hot,
                                t.haoshi,
                                t.sub_title,
-                               t.source
-
+                               t.source,
+                               t.phone_number
                            }).FirstOrDefault();
                 var images = (from t in db.dt_article_albums
                               where t.article_id == id
@@ -643,6 +650,7 @@ namespace DTcms.EFAPI
                         obj.haoshi,
                         obj.sub_title,
                         obj.source,
+                        obj.phone_number,
                         content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload"),
                         images
                     },
