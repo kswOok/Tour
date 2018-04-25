@@ -86,6 +86,21 @@
     <Compile Include="MajorGroup.cs">
       <DependentUpon>ModelSchool.tt</DependentUpon>
     </Compile>
+    <Compile Include="ModelOneOnOne.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelOneOnOne.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelOneOnOne.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelOneOnOne.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelOneOnOne.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelOneOnOne.edmx</DependentUpon>
+    </Compile>
     <Compile Include="ModelTour.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -101,6 +116,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelTour.edmx</DependentUpon>
     </Compile>
+    <Compile Include="OneAPI.cs" />
     <Compile Include="Period.cs">
       <DependentUpon>ModelSchool.tt</DependentUpon>
     </Compile>
@@ -121,6 +137,15 @@
       <DependentUpon>ModelSchool.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tb_role.cs">
+      <DependentUpon>ModelOneOnOne.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_student.cs">
+      <DependentUpon>ModelOneOnOne.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_user.cs">
+      <DependentUpon>ModelOneOnOne.tt</DependentUpon>
+    </Compile>
     <Compile Include="TourAPI.cs" />
     <Compile Include="University.cs">
       <DependentUpon>ModelSchool.tt</DependentUpon>
@@ -150,6 +175,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelSchool.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="ModelOneOnOne.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelOneOnOne.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelOneOnOne.edmx.diagram">
+      <DependentUpon>ModelOneOnOne.edmx</DependentUpon>
+    </None>
     <None Include="ModelSchool.edmx.diagram">
       <DependentUpon>ModelSchool.edmx</DependentUpon>
     </None>
@@ -163,6 +195,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ModelOneOnOne.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelOneOnOne.edmx</DependentUpon>
+      <LastGenOutput>ModelOneOnOne.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelOneOnOne.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelOneOnOne.edmx</DependentUpon>
+      <LastGenOutput>ModelOneOnOne.cs</LastGenOutput>
+    </Content>
     <Content Include="ModelSchool.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelSchool.Context.cs</LastGenOutput>

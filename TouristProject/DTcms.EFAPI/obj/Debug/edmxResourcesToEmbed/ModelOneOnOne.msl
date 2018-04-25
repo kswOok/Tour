@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OneOnOneDBModelStoreContainer" CdmEntityContainer="OneOnOneDBEntities">
+    <EntitySetMapping Name="tb_role">
+      <EntityTypeMapping TypeName="OneOnOneDBModel.tb_role">
+        <MappingFragment StoreEntitySet="tb_role">
+          <ScalarProperty Name="role_name" ColumnName="role_name" />
+          <ScalarProperty Name="role_desc" ColumnName="role_desc" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_student">
+      <EntityTypeMapping TypeName="OneOnOneDBModel.tb_student">
+        <MappingFragment StoreEntitySet="tb_student">
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_user">
+      <EntityTypeMapping TypeName="OneOnOneDBModel.tb_user">
+        <MappingFragment StoreEntitySet="tb_user">
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

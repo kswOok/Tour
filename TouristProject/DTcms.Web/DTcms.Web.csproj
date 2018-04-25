@@ -1306,6 +1306,9 @@
     <Compile Include="tools\download.ashx.cs">
       <DependentUpon>download.ashx</DependentUpon>
     </Compile>
+    <Compile Include="tools\one_api.ashx.cs">
+      <DependentUpon>one_api.ashx</DependentUpon>
+    </Compile>
     <Compile Include="tools\school_api.ashx.cs">
       <DependentUpon>school_api.ashx</DependentUpon>
     </Compile>
@@ -1388,6 +1391,7 @@
     <None Include="packages.config" />
     <Content Include="tools\tour_api.ashx" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="tools\one_api.ashx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
