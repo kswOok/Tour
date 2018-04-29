@@ -73,6 +73,8 @@
     <Property Name="calendar" Type="nvarchar" MaxLength="100" />
     <Property Name="sub_title" Type="nvarchar" MaxLength="255" />
     <Property Name="phone_number" Type="nvarchar" MaxLength="25" />
+    <Property Name="longitude" Type="decimal" Precision="9" Scale="5" />
+    <Property Name="latitude" Type="decimal" Precision="9" Scale="5" />
   </EntityType>
   <EntityType Name="dt_channel_article_goods">
     <Key>
@@ -115,6 +117,8 @@
     <Property Name="haoshi" Type="nvarchar" MaxLength="100" />
     <Property Name="calendar" Type="nvarchar" MaxLength="100" />
     <Property Name="phone_number" Type="nvarchar" MaxLength="25" />
+    <Property Name="longitude" Type="decimal" Precision="9" Scale="5" />
+    <Property Name="latitude" Type="decimal" Precision="9" Scale="5" />
   </EntityType>
   <EntityType Name="dt_channel_article_guidance">
     <Key>
@@ -192,6 +196,8 @@
     <Property Name="calendar" Type="nvarchar" MaxLength="100" />
     <Property Name="sub_title" Type="nvarchar" MaxLength="255" />
     <Property Name="phone_number" Type="nvarchar" MaxLength="25" />
+    <Property Name="longitude" Type="decimal" Precision="9" Scale="5" />
+    <Property Name="latitude" Type="decimal" Precision="9" Scale="5" />
   </EntityType>
   <EntityType Name="dt_users">
     <Key>

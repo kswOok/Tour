@@ -51,5 +51,7 @@ namespace DTcms.EFAPI
         public string haoshi { get; set; }
         public string calendar { get; set; }
         public string phone_number { get; set; }
+        public Nullable<decimal> longitude { get; set; }
+        public Nullable<decimal> latitude { get; set; }
     }
 }

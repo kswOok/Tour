@@ -41,7 +41,9 @@ namespace DTcms.EFAPI
                                 t.haoshi,
                                 t.source,
                                 t.sub_title,
-                                t.phone_number
+                                t.phone_number,
+                                t.longitude,
+                                t.latitude
 
                             }).Take(count).ToList() ,
                     result = 1
@@ -71,7 +73,9 @@ namespace DTcms.EFAPI
                                t.haoshi,
                                t.sub_title,
                                t.source,
-                               t.phone_number
+                               t.phone_number,
+                               t.longitude,
+                               t.latitude
                            }).FirstOrDefault();
                 var images = (from t in db.dt_article_albums
                             where t.article_id == id
@@ -97,6 +101,8 @@ namespace DTcms.EFAPI
                         obj.sub_title,
                         obj.source,
                         obj.phone_number,
+                        obj.longitude,
+                        obj.latitude,
                         content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload"),
                         images
                     },
@@ -126,7 +132,9 @@ namespace DTcms.EFAPI
                                 t.haoshi,
                                 t.sub_title,
                                 t.source,
-                                t.phone_number
+                                t.phone_number,
+                                t.longitude,
+                                t.latitude
                             }).ToList(),
                     result = 1
                 });
@@ -155,7 +163,9 @@ namespace DTcms.EFAPI
                                t.haoshi,
                                t.sub_title,
                                t.source,
-                               t.phone_number
+                               t.phone_number,
+                               t.longitude,
+                               t.latitude
                            }).FirstOrDefault();
                 var images = (from t in db.dt_article_albums
                               where t.article_id == id
@@ -181,6 +191,8 @@ namespace DTcms.EFAPI
                         obj.sub_title,
                         obj.source,
                         obj.phone_number,
+                        obj.longitude,
+                        obj.latitude,
                         content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload"),
                         images 
                     },
@@ -484,7 +496,9 @@ namespace DTcms.EFAPI
                                 t.haoshi,
                                 t.sub_title,
                                 t.source,
-                                t.phone_number
+                                t.phone_number,
+                                t.longitude,
+                                t.latitude
                             }).ToList(),
                     result = 1
                 });
@@ -625,7 +639,9 @@ namespace DTcms.EFAPI
                                t.haoshi,
                                t.sub_title,
                                t.source,
-                               t.phone_number
+                               t.phone_number,
+                               t.longitude,
+                               t.latitude
                            }).FirstOrDefault();
                 var images = (from t in db.dt_article_albums
                               where t.article_id == id
@@ -651,6 +667,8 @@ namespace DTcms.EFAPI
                         obj.sub_title,
                         obj.source,
                         obj.phone_number,
+                        obj.longitude,
+                        obj.latitude,
                         content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload"),
                         images
                     },

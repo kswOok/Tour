@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OneOnOneDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“OneOnOneDB.dbo.tb_course_status”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="tb_course_status">
+          <Key>
+            <PropertyRef Name="course_status_id" />
+          </Key>
+          <Property Name="course_status_id" Type="int" Nullable="false" />
+          <Property Name="course_status_en" Type="nvarchar" MaxLength="100" />
+          <Property Name="course_status_ch" Type="nvarchar" MaxLength="100" />
+          <Property Name="update_date" Type="datetime" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“OneOnOneDB.dbo.tb_course_type”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="tb_course_type">
+          <Key>
+            <PropertyRef Name="course_type_id" />
+          </Key>
+          <Property Name="course_type_id" Type="int" Nullable="false" />
+          <Property Name="course_type_name_en" Type="nvarchar" MaxLength="100" />
+          <Property Name="course_type_name_ch" Type="nvarchar" MaxLength="100" />
+          <Property Name="course_type_desc" Type="nvarchar" MaxLength="400" />
+          <Property Name="update_date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tb_role">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="role_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="role_desc" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_student">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_student_login">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="student_id" Type="int" Nullable="false" />
+          <Property Name="login_time" Type="datetime" Nullable="false" />
+          <Property Name="token" Type="char" MaxLength="36" Nullable="false" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“OneOnOneDB.dbo.tb_teacher_master”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="tb_teacher_master">
+          <Key>
+            <PropertyRef Name="teacher_id" />
+          </Key>
+          <Property Name="teacher_id" Type="int" Nullable="false" />
+          <Property Name="teacher_name_en" Type="nvarchar" MaxLength="100" />
+          <Property Name="teacher_name_ch" Type="nvarchar" MaxLength="100" />
+          <Property Name="teacher_country" Type="nvarchar" MaxLength="150" />
+          <Property Name="teacher_pic" Type="nvarchar" MaxLength="200" />
+          <Property Name="teacher_desc" Type="nvarchar" MaxLength="500" />
+          <Property Name="teacher_join_date" Type="date" />
+          <Property Name="teacher_status" Type="int" />
+        </EntityType>
+        <EntityType Name="tb_user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="role_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_user_login">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_id" Type="int" Nullable="false" />
+          <Property Name="login_time" Type="datetime" Nullable="false" />
+          <Property Name="token" Type="char" MaxLength="36" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="OneOnOneDBModelStoreContainer">
+          <EntitySet Name="tb_role" EntityType="Self.tb_role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_student" EntityType="Self.tb_student" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_student_login" EntityType="Self.tb_student_login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_user" EntityType="Self.tb_user" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_user_login" EntityType="Self.tb_user_login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_course_status" EntityType="Self.tb_course_status" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tb_course_status].[course_status_id] AS [course_status_id], 
+    [tb_course_status].[course_status_en] AS [course_status_en], 
+    [tb_course_status].[course_status_ch] AS [course_status_ch], 
+    [tb_course_status].[update_date] AS [update_date]
+    FROM [dbo].[tb_course_status] AS [tb_course_status]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tb_course_type" EntityType="Self.tb_course_type" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tb_course_type].[course_type_id] AS [course_type_id], 
+    [tb_course_type].[course_type_name_en] AS [course_type_name_en], 
+    [tb_course_type].[course_type_name_ch] AS [course_type_name_ch], 
+    [tb_course_type].[course_type_desc] AS [course_type_desc], 
+    [tb_course_type].[update_date] AS [update_date]
+    FROM [dbo].[tb_course_type] AS [tb_course_type]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tb_teacher_master" EntityType="Self.tb_teacher_master" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tb_teacher_master].[teacher_id] AS [teacher_id], 
+    [tb_teacher_master].[teacher_name_en] AS [teacher_name_en], 
+    [tb_teacher_master].[teacher_name_ch] AS [teacher_name_ch], 
+    [tb_teacher_master].[teacher_country] AS [teacher_country], 
+    [tb_teacher_master].[teacher_pic] AS [teacher_pic], 
+    [tb_teacher_master].[teacher_desc] AS [teacher_desc], 
+    [tb_teacher_master].[teacher_join_date] AS [teacher_join_date], 
+    [tb_teacher_master].[teacher_status] AS [teacher_status]
+    FROM [dbo].[tb_teacher_master] AS [tb_teacher_master]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OneOnOneDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="OneOnOneDBEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="tb_role" EntityType="OneOnOneDBModel.tb_role" />
+          <EntitySet Name="tb_student" EntityType="OneOnOneDBModel.tb_student" />
+          <EntitySet Name="tb_user" EntityType="OneOnOneDBModel.tb_user" />
+          <EntitySet Name="tb_student_login" EntityType="OneOnOneDBModel.tb_student_login" />
+          <EntitySet Name="tb_user_login" EntityType="OneOnOneDBModel.tb_user_login" />
+          <EntitySet Name="tb_course_status" EntityType="OneOnOneDBModel.tb_course_status" />
+          <EntitySet Name="tb_course_type" EntityType="OneOnOneDBModel.tb_course_type" />
+          <EntitySet Name="tb_teacher_master" EntityType="OneOnOneDBModel.tb_teacher_master" />
+        </EntityContainer>
+        <EntityType Name="tb_role">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="role_desc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="role_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tb_student">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tb_user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="role_id" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_student_login">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="student_id" Type="Int32" Nullable="false" />
+          <Property Name="login_time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="token" Type="String" Nullable="false" MaxLength="36" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_user_login">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="Int32" Nullable="false" />
+          <Property Name="login_time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="token" Type="String" Nullable="false" MaxLength="36" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_course_status">
+          <Key>
+            <PropertyRef Name="course_status_id" />
+          </Key>
+          <Property Name="course_status_id" Type="Int32" Nullable="false" />
+          <Property Name="course_status_en" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="course_status_ch" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="update_date" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tb_course_type">
+          <Key>
+            <PropertyRef Name="course_type_id" />
+          </Key>
+          <Property Name="course_type_id" Type="Int32" Nullable="false" />
+          <Property Name="course_type_name_en" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="course_type_name_ch" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="course_type_desc" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="update_date" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tb_teacher_master">
+          <Key>
+            <PropertyRef Name="teacher_id" />
+          </Key>
+          <Property Name="teacher_id" Type="Int32" Nullable="false" />
+          <Property Name="teacher_name_en" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="teacher_name_ch" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="teacher_country" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="teacher_pic" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="teacher_desc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="teacher_join_date" Type="DateTime" Precision="0" />
+          <Property Name="teacher_status" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OneOnOneDBModelStoreContainer" CdmEntityContainer="OneOnOneDBEntities" >
+          <EntitySetMapping Name="tb_role">
+            <EntityTypeMapping TypeName="OneOnOneDBModel.tb_role">
+              <MappingFragment StoreEntitySet="tb_role">
+                <ScalarProperty Name="role_name" ColumnName="role_name" />
+                <ScalarProperty Name="role_desc" ColumnName="role_desc" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_student">
+            <EntityTypeMapping TypeName="OneOnOneDBModel.tb_student">
+              <MappingFragment StoreEntitySet="tb_student">
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_user">
+            <EntityTypeMapping TypeName="OneOnOneDBModel.tb_user">
+              <MappingFragment StoreEntitySet="tb_user">
+                <ScalarProperty Name="role_id" ColumnName="role_id" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_student_login">
+            <EntityTypeMapping TypeName="OneOnOneDBModel.tb_student_login">
+              <MappingFragment StoreEntitySet="tb_student_login">
+                <ScalarProperty Name="token" ColumnName="token" />
+                <ScalarProperty Name="login_time" ColumnName="login_time" />
+                <ScalarProperty Name="student_id" ColumnName="student_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_user_login">
+            <EntityTypeMapping TypeName="OneOnOneDBModel.tb_user_login">
+              <MappingFragment StoreEntitySet="tb_user_login">
+                <ScalarProperty Name="token" ColumnName="token" />
+                <ScalarProperty Name="login_time" ColumnName="login_time" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_course_status">
+            <EntityTypeMapping TypeName="OneOnOneDBModel.tb_course_status">
+              <MappingFragment StoreEntitySet="tb_course_status">
+                <ScalarProperty Name="update_date" ColumnName="update_date" />
+                <ScalarProperty Name="course_status_ch" ColumnName="course_status_ch" />
+                <ScalarProperty Name="course_status_en" ColumnName="course_status_en" />
+                <ScalarProperty Name="course_status_id" ColumnName="course_status_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_course_type">
+            <EntityTypeMapping TypeName="OneOnOneDBModel.tb_course_type">
+              <MappingFragment StoreEntitySet="tb_course_type">
+                <ScalarProperty Name="update_date" ColumnName="update_date" />
+                <ScalarProperty Name="course_type_desc" ColumnName="course_type_desc" />
+                <ScalarProperty Name="course_type_name_ch" ColumnName="course_type_name_ch" />
+                <ScalarProperty Name="course_type_name_en" ColumnName="course_type_name_en" />
+                <ScalarProperty Name="course_type_id" ColumnName="course_type_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_teacher_master">
+            <EntityTypeMapping TypeName="OneOnOneDBModel.tb_teacher_master">
+              <MappingFragment StoreEntitySet="tb_teacher_master">
+                <ScalarProperty Name="teacher_status" ColumnName="teacher_status" />
+                <ScalarProperty Name="teacher_join_date" ColumnName="teacher_join_date" />
+                <ScalarProperty Name="teacher_desc" ColumnName="teacher_desc" />
+                <ScalarProperty Name="teacher_pic" ColumnName="teacher_pic" />
+                <ScalarProperty Name="teacher_country" ColumnName="teacher_country" />
+                <ScalarProperty Name="teacher_name_ch" ColumnName="teacher_name_ch" />
+                <ScalarProperty Name="teacher_name_en" ColumnName="teacher_name_en" />
+                <ScalarProperty Name="teacher_id" ColumnName="teacher_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

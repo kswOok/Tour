@@ -15,7 +15,8 @@
     "pages/brandDetail/brandDetail",
     "pages/strategy-new-detail/strategy-new-detail",
     "pages/my2/my2",
-    "pages/detail2/detail2"
+    "pages/detail2/detail2",
+    "pages/navigator/navigator"
   ],
   "tabBar": {
 
@@ -27,6 +28,12 @@
         "text": "发现",
         "iconPath": "images/home-g.png",
         "selectedIconPath": "images/home-b.png"
+      },
+      {
+        "pagePath": "pages/navigator/navigator",
+        "text": "地图",
+        "iconPath": "images/map-g.png",
+        "selectedIconPath": "images/map-b.png"
       },
       {
         "pagePath": "pages/my2/my2",
