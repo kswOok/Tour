@@ -146,7 +146,7 @@ namespace DTcms.DAL
 
                         trans.Commit();
                     }
-                    catch
+                    catch(Exception ex)
                     {
                         trans.Rollback();
                         return 0;

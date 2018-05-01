@@ -165,19 +165,6 @@
     <Content Include="admin\users\user_list.aspx" />
     <Content Include="admin\users\user_oauth.aspx" />
     <Content Include="admin\users\user_sms.aspx" />
-    <Content Include="api\oauth\index.aspx" />
-    <Content Include="api\oauth\result_json.aspx" />
-    <Content Include="api\oauth\return_url.aspx" />
-    <Content Include="api\payment\alipaypc\index.aspx" />
-    <Content Include="api\payment\alipaypc\notify_url.aspx" />
-    <Content Include="api\payment\alipaypc\return_url.aspx" />
-    <Content Include="api\payment\balance\index.aspx" />
-    <Content Include="api\payment\chinabankpc\index.aspx" />
-    <Content Include="api\payment\chinabankpc\notify_url.aspx" />
-    <Content Include="api\payment\chinabankpc\return_url.aspx" />
-    <Content Include="api\payment\tenpaypc\index.aspx" />
-    <Content Include="api\payment\tenpaypc\notify_url.aspx" />
-    <Content Include="api\payment\tenpaypc\return_url.aspx" />
     <Content Include="css\image1.gif" />
     <Content Include="css\image2.gif" />
     <Content Include="css\jcrop.gif" />
@@ -548,12 +535,6 @@
     <Content Include="guomeng-tech\service-center.html" />
     <Content Include="guomeng-tech\solutions-inform.html" />
     <Content Include="guomeng-tech\solutions.html" />
-    <Content Include="images\oauth\feixin.png" />
-    <Content Include="images\oauth\kaixin.png" />
-    <Content Include="images\oauth\qq.png" />
-    <Content Include="images\oauth\renren.png" />
-    <Content Include="images\oauth\weibo.png" />
-    <Content Include="images\oauth\weixin.png" />
     <Content Include="index.aspx" />
     <Content Include="scripts\artdialog\dialog-min.js" />
     <Content Include="scripts\artdialog\dialog-plus-min.js" />
@@ -670,74 +651,6 @@
     <Content Include="scripts\jquery\Validform_v5.3.2_min.js" />
     <Content Include="scripts\webuploader\uploader.swf" />
     <Content Include="scripts\webuploader\webuploader.min.js" />
-    <Content Include="templates\main\about.png" />
-    <Content Include="templates\main\about.xml" />
-    <Content Include="templates\main\cart.html" />
-    <Content Include="templates\main\content.html" />
-    <Content Include="templates\main\css\flexslider.css" />
-    <Content Include="templates\main\css\icon\demo.css" />
-    <Content Include="templates\main\css\icon\demo_fontclass.html" />
-    <Content Include="templates\main\css\icon\demo_symbol.html" />
-    <Content Include="templates\main\css\icon\demo_unicode.html" />
-    <Content Include="templates\main\css\icon\iconfont.css" />
-    <Content Include="templates\main\css\icon\iconfont.js" />
-    <Content Include="templates\main\css\icon\iconfont.svg" />
-    <Content Include="templates\main\css\style.css" />
-    <Content Include="templates\main\css\viewer.min.css" />
-    <Content Include="templates\main\down.html" />
-    <Content Include="templates\main\down_list.html" />
-    <Content Include="templates\main\down_show.html" />
-    <Content Include="templates\main\error.html" />
-    <Content Include="templates\main\goods.html" />
-    <Content Include="templates\main\goods_list.html" />
-    <Content Include="templates\main\goods_show.html" />
-    <Content Include="templates\main\images\avatar-bg.png" />
-    <Content Include="templates\main\images\banner_1.png" />
-    <Content Include="templates\main\images\banner_2.png" />
-    <Content Include="templates\main\images\banner_3.png" />
-    <Content Include="templates\main\images\focus_1.png" />
-    <Content Include="templates\main\images\focus_2.png" />
-    <Content Include="templates\main\images\logo.png" />
-    <Content Include="templates\main\images\slide_btns.png" />
-    <Content Include="templates\main\images\user-avatar.png" />
-    <Content Include="templates\main\index.html" />
-    <Content Include="templates\main\js\avatar.js" />
-    <Content Include="templates\main\js\cart.js" />
-    <Content Include="templates\main\js\common.js" />
-    <Content Include="templates\main\js\jqslider.js" />
-    <Content Include="templates\main\js\jquery.flexslider-min.js" />
-    <Content Include="templates\main\js\login-validate.js" />
-    <Content Include="templates\main\js\picture.js" />
-    <Content Include="templates\main\js\register-validate.js" />
-    <Content Include="templates\main\js\viewer-jquery.min.js" />
-    <Content Include="templates\main\login.html" />
-    <Content Include="templates\main\news.html" />
-    <Content Include="templates\main\news_list.html" />
-    <Content Include="templates\main\news_show.html" />
-    <Content Include="templates\main\oauth_login.html" />
-    <Content Include="templates\main\payment.html" />
-    <Content Include="templates\main\photo.html" />
-    <Content Include="templates\main\photo_list.html" />
-    <Content Include="templates\main\photo_show.html" />
-    <Content Include="templates\main\register.html" />
-    <Content Include="templates\main\repassword.html" />
-    <Content Include="templates\main\search.html" />
-    <Content Include="templates\main\shopping.html" />
-    <Content Include="templates\main\useramount.html" />
-    <Content Include="templates\main\usercenter.html" />
-    <Content Include="templates\main\usermessage.html" />
-    <Content Include="templates\main\usermessage_show.html" />
-    <Content Include="templates\main\userorder.html" />
-    <Content Include="templates\main\userorder_show.html" />
-    <Content Include="templates\main\userpoint.html" />
-    <Content Include="templates\main\video.html" />
-    <Content Include="templates\main\video_list.html" />
-    <Content Include="templates\main\video_show.html" />
-    <Content Include="templates\main\_comment_box.html" />
-    <Content Include="templates\main\_footer.html" />
-    <Content Include="templates\main\_header.html" />
-    <Content Include="templates\main\_share_js.html" />
-    <Content Include="templates\main\_ucenter_nav.html" />
     <Content Include="watermark.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -1247,58 +1160,6 @@
     <Compile Include="admin\users\user_sms.aspx.designer.cs">
       <DependentUpon>user_sms.aspx</DependentUpon>
     </Compile>
-    <Compile Include="api\oauth\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="api\oauth\result_json.aspx.cs">
-      <DependentUpon>result_json.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="api\oauth\return_url.aspx.cs">
-      <DependentUpon>return_url.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="api\payment\alipaypc\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="api\payment\alipaypc\notify_url.aspx.cs">
-      <DependentUpon>notify_url.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="api\payment\alipaypc\return_url.aspx.cs">
-      <DependentUpon>return_url.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="api\payment\balance\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="api\payment\chinabankpc\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="api\payment\chinabankpc\notify_url.aspx.cs">
-      <DependentUpon>notify_url.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="api\payment\chinabankpc\return_url.aspx.cs">
-      <DependentUpon>return_url.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="api\payment\tenpaypc\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="api\payment\tenpaypc\notify_url.aspx.cs">
-      <DependentUpon>notify_url.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="api\payment\tenpaypc\return_url.aspx.cs">
-      <DependentUpon>return_url.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tools\admin_ajax.ashx.cs">
       <DependentUpon>admin_ajax.ashx</DependentUpon>
@@ -1326,10 +1187,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DTcms.API\DTcms.API.csproj">
-      <Project>{D9EE530C-FFD2-45DA-B4AF-2CA4586EF67F}</Project>
-      <Name>DTcms.API</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DTcms.BLL\DTcms.BLL.csproj">
       <Project>{73366DEF-CD64-45BF-B887-C37EA39BE824}</Project>
       <Name>DTcms.BLL</Name>
@@ -1352,8 +1209,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="aspx\" />
-    <Folder Include="plugins\" />
+    <Folder Include="images\" />
     <Folder Include="upload\" />
   </ItemGroup>
   <ItemGroup>
@@ -1373,9 +1229,6 @@
     <Content Include="tools\submit_ajax.ashx" />
     <Content Include="tools\download.ashx" />
     <Content Include="tools\verify_code.ashx" />
-    <Content Include="templates\main\css\icon\iconfont.eot" />
-    <Content Include="templates\main\css\icon\iconfont.ttf" />
-    <Content Include="templates\main\css\icon\iconfont.woff" />
     <Content Include="tools\school_api.ashx" />
     <Content Include="guomeng-tech\.project" />
     <Content Include="guomeng-tech\fonts\fontawesome-webfont.eot" />

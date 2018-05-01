@@ -148,10 +148,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DTcms.API\DTcms.API.csproj">
-      <Project>{D9EE530C-FFD2-45DA-B4AF-2CA4586EF67F}</Project>
-      <Name>DTcms.API</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DTcms.BLL\DTcms.BLL.csproj">
       <Project>{73366DEF-CD64-45BF-B887-C37EA39BE824}</Project>
       <Name>DTcms.BLL</Name>

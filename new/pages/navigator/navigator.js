@@ -1,82 +1,182 @@
 var app = getApp()
 
-Page({
+Page(
+  {
+
   data: {
-    map_width: 380
-    , map_height: 380
-  }
+    map_width: 380, 
+    map_height: 380,
+    markers: [
+      {
+        id: 0
+        , iconPath: "../../images/location.png"
+        , latitude: 39.0571
+        , longitude: 117.06020
+        , width: 30
+        , height: 30
+      }]
+  }, 
+
   //show current position
-  , onLoad: function (options) {
+  onLoad: function (options) {
     console.log(options.schedule_id);
+
+    
     var that = this;
+    wx.showToast({
+      icon: "loading",
+      title: "正在加载...",
+      duration: 2000000,
+    })
+    wx.request({
+      method: 'POST',
+      url: getApp().globalData.apiUrl,
+      data: {
+        action: 'get_channel_article_news'
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        if (res.data.result == 1) {
+          wx.hideToast()
+        }
+        that.setData({
+          list: res.data.data,
+        })
+        for(var index in list)
+        {
+          obj.id= id1=index.id;
+          obj.latitude=index.latitude;
+          obj.longtitude = index.longitude;
+          obj.width=30;
+          obj.height=30;
+          obj.icon = "../../images/location.png";
+          that.markers.push(obj);
+        }
+      }
+    });
+
+
     // 获取定位，并把位置标示出来
     that.setData({
-      longitude: 113.324520
-      , latitude: 23.099994
-      , markers: [
+      latitude: 39.0573, 
+      longitude: 117.06025,
+      /*
+      markers: [
         {
           id: 0
-          , iconPath: "../imgs/ic_position.png"
-          , longitude: 113.324520
-          , latitude: 23.099994
+          , iconPath: "../../images/location.png"
+          , latitude: 39.0571
+          , longitude: 117.06020
+          , width: 30
+          , height: 30
+        },
+        {
+          id: 1
+          , iconPath: "../../images/location.png"
+          , latitude: 39.0565
+          , longitude: 117.06034
           , width: 30
           , height: 30
         }
       ]
+      */
     })
-    //set the width and height
-    // 动态设置map的宽和高
-    wx.getSystemInfo({
-      success: function (res) {
-        console.log(res.windowWidth);
-        that.setData({
-          map_width: res.windowWidth
-          , map_height: res.windowWidth
-          , controls: [{
-            id: 1,
-            iconPath: '../imgs/ic_location.png',
-            position: {
-              left: res.windowWidth / 2 - 8,
-              top: res.windowWidth / 2 - 16,
-              width: 30,
-              height: 30
-            },
-            clickable: true
-          }]
-        })
-      }
-    })
-  }
-  //获取中间点的经纬度，并mark出来
-  , getLngLat: function () {
-    var that = this;
-    this.mapCtx = wx.createMapContext("map4select");
-    this.mapCtx.getCenterLocation({
-      success: function (res) {
-        that.setData({
-          longitude: 113.324520
-          , latitude: 23.099994
-          , markers: [
-            {
-              id: 0
-              , iconPath: "../imgs/ic_position.png"
-              , longitude: 113.324520
-              , latitude: 23.099994
-              , width: 30
-              , height: 30
-            }
-          ]
-        })
-      }
-    })
-  }
-  , regionchange(e) {
-    // 地图发生变化的时候，获取中间点，也就是用户选择的位置
-    if (e.type == 'end') {
-      this.getLngLat()
-    }
-  }
-  , markertap(e) {
+  }, 
+  
+  markertap(e) {
     console.log(e)
-  }
+  },
+
+
+ // 切换导航栏
+  swichNav: function (e) {
+    var that = this;
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      if (e.target.dataset.current == 0) {
+        wx.showToast({
+          icon: "loading",
+          title: "正在加载...",
+          duration: 2000000,
+        })
+        wx.request({
+          method: 'POST',
+          url: getApp().globalData.apiUrl,
+          data: {
+            action: 'get_channel_article_news'
+          },
+          header: {
+            'content-type': 'application/x-www-form-urlencoded' // 默认值
+          },
+          success: function (res) {
+            if (res.data.result == 1) {
+              wx.hideToast()
+            }
+            that.setData({
+              list: res.data.data,
+            })
+          }
+        });
+      }
+      if (e.target.dataset.current == 1) {
+        wx.showToast({
+          icon: "loading",
+          title: "正在加载...",
+          duration: 2000000,
+        })
+        wx.request({
+          method: 'POST',
+          url: getApp().globalData.apiUrl,
+          data: {
+            action: 'get_channel_article_food'
+          },
+          header: {
+            'content-type': 'application/x-www-form-urlencoded' // 默认值
+          },
+          success: function (res) {
+            if (res.data.result == 1) {
+              wx.hideToast()
+            }
+            that.setData({
+              list: res.data.data,
+            })
+          }
+        });
+      }
+      if (e.target.dataset.current == 2) {
+        wx.showToast({
+          icon: "loading",
+          title: "正在加载...",
+          duration: 2000000,
+        })
+        wx.request({
+          method: 'POST',
+          url: getApp().globalData.apiUrl,
+          data: {
+            action: 'get_channel_article_goods'
+          },
+          header: {
+            'content-type': 'application/x-www-form-urlencoded' // 默认值
+          },
+          success: function (res) {
+            if (res.data.result == 1) {
+              wx.hideToast()
+            }
+            console.log(res.data.data)
+            that.setData({
+              list: res.data.data,
+            })
+          }
+        });
+      }
+      that.setData({
+        currentTab: e.target.dataset.current
+      })
+    }
+  },
+
+
 })

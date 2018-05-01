@@ -166,10 +166,13 @@ Page({
             sub_title: res.data.data.sub_title,
             images: res.data.data.images,
             address: res.data.data.source,
-            phonecall: res.data.data.phone_number,
-            
-          }
+            //phonecall: res.data.data.phone_number,
+          },  
         })
+        that.setData({
+          phonecall:res.data.data.phone_number
+        }
+        )
       }
     });
     
