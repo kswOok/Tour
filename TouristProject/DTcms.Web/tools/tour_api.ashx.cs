@@ -36,15 +36,19 @@ namespace DTcms.Web.tools
                     OutPut(context, TourAPI.get_channel_article_goods());
                     break;
                 case "get_channel_article_goods_detail":
-                    OutPut(context, TourAPI.get_channel_article_goods_detail(
-                        DTRequest.GetFormIntValue("id")));
+                    OutPut(context, TourAPI.get_channel_article_goods_detail(DTRequest.GetFormIntValue("id")));
+                    break;
+                case "get_channel_article_content":
+                    OutPut(context, TourAPI.get_channel_article_content());
+                    break;
+                case "get_channel_article_content_detail":
+                    OutPut(context, TourAPI.get_channel_article_content_detail(DTRequest.GetFormIntValue("id")));
                     break;
                 case "get_channel_article_food":
                     OutPut(context, TourAPI.get_channel_article_food());
                     break;
                 case "get_channel_article_food_detail":
-                    OutPut(context, TourAPI.get_channel_article_food_detail(
-                        DTRequest.GetFormIntValue("id")));
+                    OutPut(context, TourAPI.get_channel_article_food_detail( DTRequest.GetFormIntValue("id")));
                     break;
                 case "get_channel_article_guidance":
                     OutPut(context, TourAPI.get_channel_article_guidance());

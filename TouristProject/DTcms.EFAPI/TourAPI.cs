@@ -473,7 +473,68 @@ namespace DTcms.EFAPI
             return Obj2Json(list);
         }
 
-        
+
+        public static string get_channel_article_content()
+        {
+            using (var db = new TouristDBEntities())
+            {
+                return Obj2Json(new
+                {
+                    data = (from t in db.dt_channel_article_content
+                            orderby t.sort_id
+                            select new
+                            {
+                                t.id,
+                                t.title,
+                                t.img_url,
+                                t.zhaiyao,
+                                t.is_hot,
+                                t.content
+                            }).ToList(),
+                    result = 1
+                });
+            }
+        }
+
+
+        public static string get_channel_article_content_detail(int id)
+        {
+            using (var db = new TouristDBEntities())
+            {
+                var obj = (from t in db.dt_channel_article_content
+                           orderby t.sort_id
+                           where t.id == id
+                           select new
+                           {
+                               t.id,
+                               t.title,
+                               t.img_url,
+                               t.zhaiyao,
+                               t.content,
+                               t.update_time
+                           }).FirstOrDefault();
+                var images = (from t in db.dt_article_albums
+                              where t.article_id == id
+                              select new
+                              {
+                                  img_url = t.original_path.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload")
+                              }).ToList();
+                return Obj2Json(new
+                {
+                    data = new
+                    {
+                        obj.id,
+                        obj.title,
+                        obj.img_url,
+                        obj.zhaiyao,
+                        obj.update_time,
+                        content = obj.content.Replace("src=\"/upload", "src=\"http://guomengtech.com/upload"),
+                        images
+                    },
+                    result = 1
+                });
+            }
+        }
 
         public static string get_channel_article_food()
         {

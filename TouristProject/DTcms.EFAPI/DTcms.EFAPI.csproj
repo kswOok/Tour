@@ -64,6 +64,9 @@
     <Compile Include="dt_article_category.cs">
       <DependentUpon>ModelTour.tt</DependentUpon>
     </Compile>
+    <Compile Include="dt_channel_article_content.cs">
+      <DependentUpon>ModelTour.tt</DependentUpon>
+    </Compile>
     <Compile Include="dt_channel_article_food.cs">
       <DependentUpon>ModelTour.tt</DependentUpon>
     </Compile>

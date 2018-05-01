@@ -33,5 +33,6 @@ namespace DTcms.EFAPI
         public virtual DbSet<dt_channel_article_goods> dt_channel_article_goods { get; set; }
         public virtual DbSet<dt_wx_token> dt_wx_token { get; set; }
         public virtual DbSet<dt_article_albums> dt_article_albums { get; set; }
+        public virtual DbSet<dt_channel_article_content> dt_channel_article_content { get; set; }
     }
 }

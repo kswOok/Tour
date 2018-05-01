@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="af50c7a734574f419bc4085a00578e50" Name="Diagram1" ZoomLevel="93">
+      <Diagram DiagramId="af50c7a734574f419bc4085a00578e50" Name="Diagram1" ZoomLevel="62">
         <EntityTypeShape EntityType="TouristDBModel.dt_channel_article_news" Width="2" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TouristDBModel.dt_channel_article_food" Width="2.75" PointX="3.375" PointY="0.75" />
         <EntityTypeShape EntityType="TouristDBModel.dt_channel_article_guidance" Width="2" PointX="6.75" PointY="0.75" />
@@ -13,6 +13,7 @@
         <EntityTypeShape EntityType="TouristDBModel.dt_channel_article_goods" Width="1.5" PointX="10.25" PointY="7.875" />
         <EntityTypeShape EntityType="TouristDBModel.dt_wx_token" Width="1.5" PointX="3.875" PointY="9.5" />
         <EntityTypeShape EntityType="TouristDBModel.dt_article_albums" Width="1.5" PointX="11" PointY="0.75" />
+        <EntityTypeShape EntityType="TouristDBModel.dt_channel_article_content" Width="1.5" PointX="0.75" PointY="10.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

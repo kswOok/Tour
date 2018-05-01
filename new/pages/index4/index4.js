@@ -174,6 +174,25 @@ Page({
         })
       }
     });
+
+    wx.request({
+      method: 'POST',
+      url: getApp().globalData.apiUrl,
+      data: {
+        action: 'get_channel_article_content'
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success: function (res) {
+        if (res.data.result == 1) {
+          wx.hideToast()
+        }
+        that.setData({
+          list_content: res.data.data,
+        })
+      }
+    });
   },
 
   bindChange: function (e) {
