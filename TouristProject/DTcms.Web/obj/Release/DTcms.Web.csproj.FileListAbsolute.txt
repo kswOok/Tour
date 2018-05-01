@@ -1,7 +1,6 @@
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.Web.dll.config
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.Web.dll
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.Web.pdb
-C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.API.dll
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.BLL.dll
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.Common.dll
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.Model.dll
@@ -11,7 +10,6 @@ C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\Enti
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.DAL.dll
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\Newtonsoft.Json.dll
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.DBUtility.dll
-C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.API.pdb
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.BLL.pdb
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.Common.pdb
 C:\Users\honkcal\Desktop\xiaocheng\Github\Tour\TouristProject\DTcms.Web\bin\DTcms.Model.pdb

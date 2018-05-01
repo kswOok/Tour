@@ -44,15 +44,19 @@ Page(
         that.setData({
           list: res.data.data,
         })
-        for(var index in list)
+        for (var index in res.data.data)
         {
-          obj.id= id1=index.id;
+          obj.id=index.id;
+          obj.iconPath = "../../images/location.png";
           obj.latitude=index.latitude;
           obj.longtitude = index.longitude;
           obj.width=30;
           obj.height=30;
-          obj.icon = "../../images/location.png";
-          that.markers.push(obj);
+          
+          that.data.markers=obj.concat(that.data.markers);
+          that.setData({
+            markers: that.data.markers
+          });
         }
       }
     });
@@ -60,29 +64,23 @@ Page(
 
     // 获取定位，并把位置标示出来
     that.setData({
-      latitude: 39.0573, 
-      longitude: 117.06025,
-      /*
+      latitude: wx.getStorageSync('latitude'),
+      longitude: wx.getStorageSync('longitude'),
+      
       markers: [
         {
           id: 0
           , iconPath: "../../images/location.png"
-          , latitude: 39.0571
-          , longitude: 117.06020
-          , width: 30
-          , height: 30
-        },
-        {
-          id: 1
-          , iconPath: "../../images/location.png"
-          , latitude: 39.0565
-          , longitude: 117.06034
+          , latitude: wx.getStorageSync('latitude')
+          , longitude: wx.getStorageSync('longitude')
           , width: 30
           , height: 30
         }
       ]
-      */
+    
     })
+
+  
   }, 
   
   markertap(e) {
